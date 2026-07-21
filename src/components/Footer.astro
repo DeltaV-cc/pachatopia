@@ -7,6 +7,7 @@ interface Props {
 
 const { lang = "fr" } = Astro.props;
 const t = useTranslations(lang);
+const base = "/pachatopia";
 
 const footerLinks = [
   { label: t("footer.discover"), path: "/a-propos-de-nous/" },
@@ -22,7 +23,7 @@ const footerLinks = [
     <div class="absolute bottom-0 right-[8%] h-56 w-56 rounded-full bg-golden/10 blur-3xl"></div>
   </div>
   <div class="site-container-compact relative py-14 text-center">
-    <a href={getLocalizedPath("/", lang)} class="inline-block mb-4">
+    <a href={base + getLocalizedPath("/", lang)} class="inline-block mb-4">
       <img src="/pachatopia/images/Logo.png" alt="Pachatopia logo" class="h-12 w-auto mx-auto" />
     </a>
     <p class="text-white/80 italic text-sm leading-relaxed mb-2">
@@ -35,7 +36,7 @@ const footerLinks = [
       <ul class="flex flex-wrap justify-center gap-6">
         {footerLinks.map((link) => (
           <li>
-            <a href={getLocalizedPath(link.path, lang)} class="text-white/80 hover:text-golden transition-colors duration-200 text-sm font-medium">
+            <a href={base + getLocalizedPath(link.path, lang)} class="text-white/80 hover:text-golden transition-colors duration-200 text-sm font-medium">
               {link.label}
             </a>
           </li>

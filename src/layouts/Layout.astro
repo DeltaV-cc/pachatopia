@@ -22,16 +22,18 @@ const {
 } = Astro.props;
 
 const siteUrl = "https://deltav-cc.github.io/pachatopia/";
-const currentPath = Astro.url.pathname;
-const canonicalUrl = new URL(currentPath, siteUrl).href;
+// Astro.url.pathname may include the base; strip it for routing logic
+const rawPath = Astro.url.pathname;
+const currentPath = rawPath.replace(/^\/pachatopia/, "") || "/";
+const canonicalUrl = new URL("/pachatopia" + currentPath, siteUrl).href;
 const ogImage = new URL(image, siteUrl).href;
 
 // Build alternate language URL
 const isEnglish = currentPath.startsWith("/en/") || currentPath === "/en";
 const frPath = isEnglish ? currentPath.replace(/^\/en\/?/, "/") : currentPath;
 const enPath = isEnglish ? currentPath : `/en${currentPath}`;
-const frUrl = new URL(frPath || "/", siteUrl).href;
-const enUrl = new URL(enPath, siteUrl).href;
+const frUrl = new URL("/pachatopia" + (frPath || "/"), siteUrl).href;
+const enUrl = new URL("/pachatopia" + enPath, siteUrl).href;
 
 // JSON-LD structured data
 const organizationSchema = {
@@ -97,7 +99,7 @@ const webPageSchema = {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <base href="https://deltav-cc.github.io/pachatopia/" />
 
     <!-- Favicon -->
     <link rel="icon" href="/pachatopia/favicon.ico" sizes="32x32" />
