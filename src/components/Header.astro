@@ -27,13 +27,12 @@ const primaryNav = [
   { key: "nav.coffee" as const, href: base + getLocalizedPath("/le-cafe/", lang) },
 ];
 
-// Secondary nav items (in dropdown / mobile)
-const secondaryNav = [
-  { key: "nav.support" as const, href: base + getLocalizedPath("/comment-participer/", lang) },
-  { key: "nav.experience" as const, href: base + getLocalizedPath("/venir-sur-place/", lang) },
-  { key: "nav.volunteer" as const, href: base + getLocalizedPath("/participer-volontariat/", lang) },
-  { key: "nav.faq" as const, href: base + getLocalizedPath("/faq/", lang) },
-  { key: "nav.contact" as const, href: base + getLocalizedPath("/contacts/", lang) },
+// Participer dropdown items
+const participerNav = [
+  { key: "nav.passeport" as const, href: base + getLocalizedPath("/passeport/", lang) },
+  { key: "nav.parrainage" as const, href: base + getLocalizedPath("/parrainer-une-culture/", lang) },
+  { key: "nav.partenaire" as const, href: base + getLocalizedPath("/devenir-partenaire/", lang) },
+  { key: "nav.volontariat_experience" as const, href: base + getLocalizedPath("/trouver-sa-place/", lang) },
 ];
 
 const homeHref = base + getLocalizedPath("/", lang);
@@ -81,8 +80,8 @@ const homeHref = base + getLocalizedPath("/", lang);
               </svg>
             </button>
             <!-- Dropdown -->
-            <div class="absolute top-full right-0 mt-1 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 z-50">
-              {secondaryNav.map((item) => (
+            <div class="absolute top-full right-0 mt-1 w-64 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 z-50">
+              {participerNav.map((item) => (
                 <a
                   href={item.href}
                   class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-cream hover:text-primary transition-colors"
@@ -92,6 +91,14 @@ const homeHref = base + getLocalizedPath("/", lang);
               ))}
             </div>
           </div>
+
+          <!-- Contact + FAQ -->
+          <a
+            href={base + getLocalizedPath("/contacts/", lang)}
+            class="relative px-3 py-2 text-sm font-medium text-white/80 rounded-lg transition-all duration-200 hover:text-white hover:bg-white/[0.07]"
+          >
+            {t("nav.contact_faq")}
+          </a>
         </nav>
 
         <!-- Right side: CTA + Language -->
@@ -186,7 +193,7 @@ const homeHref = base + getLocalizedPath("/", lang);
       {t("footer.participate")}
     </p>
     <ul class="flex flex-col gap-0.5 mb-6">
-      {secondaryNav.map((item) => (
+      {participerNav.map((item) => (
         <li>
           <a href={item.href} class="sidebar-nav-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-base text-white/80 hover:bg-white/[0.06] hover:text-white transition-colors">
             <span class="w-1.5 h-1.5 rounded-full bg-white/20"></span>
@@ -194,6 +201,25 @@ const homeHref = base + getLocalizedPath("/", lang);
           </a>
         </li>
       ))}
+    </ul>
+
+    <!-- Section: Contact + FAQ -->
+    <p class="px-3 mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-golden/70">
+      {t("nav.contact_faq")}
+    </p>
+    <ul class="flex flex-col gap-0.5">
+      <li>
+        <a href={base + getLocalizedPath("/contacts/", lang)} class="sidebar-nav-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-base text-white/80 hover:bg-white/[0.06] hover:text-white transition-colors">
+          <span class="w-1.5 h-1.5 rounded-full bg-golden/50"></span>
+          {t("nav.contact")}
+        </a>
+      </li>
+      <li>
+        <a href={base + getLocalizedPath("/faq/", lang)} class="sidebar-nav-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-base text-white/80 hover:bg-white/[0.06] hover:text-white transition-colors">
+          <span class="w-1.5 h-1.5 rounded-full bg-white/20"></span>
+          {t("nav.faq")}
+        </a>
+      </li>
     </ul>
 
     <!-- Language switcher -->
