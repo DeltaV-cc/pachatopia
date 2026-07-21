@@ -9,19 +9,19 @@ export const translations = {
   fr: {
     // Nav
     "nav.home": "Accueil",
-    "nav.vision": "Vision",
+    "nav.vision": "Le Mouvement",
     "nav.history": "Notre histoire",
-    "nav.actions": "Nos actions",
+    "nav.actions": "Le Laboratoire du Vivant",
     "nav.coffee": "Le café",
-    "nav.support": "Soutenir Pachatopia",
-    "nav.experience": "Expérience",
+    "nav.support": "Participer",
+    "nav.experience": "Venir vivre l'expérience",
     "nav.volunteer": "Participer / volontariat",
     "nav.faq": "FAQ",
     "nav.contact": "Contact",
 
     // Hero
-    "hero.welcome": "Pachatopia",
-    "hero.tagline": "Là où la Terre se régénère et où la paix peut repousser.",
+    "hero.welcome": "Le Mouvement Pachatopia",
+    "hero.tagline": "Reprendre notre place avec le vivant.",
     "hero.description":
       "Au cœur des montagnes de San Carlos en Colombie, Pachatopia est un projet de régénération écologique et humaine. Nous restaurons les sols, plantons des arbres et développons une agriculture inspirée des écosystèmes naturels. Un lieu où la nature, les humains et l'espoir grandissent ensemble.",
     "hero.cta.discover": "Découvrir le projet",
@@ -309,18 +309,18 @@ export const translations = {
   en: {
     // Nav
     "nav.home": "Home",
-    "nav.vision": "Vision",
+    "nav.vision": "Le Mouvement",
     "nav.history": "Our story",
-    "nav.actions": "Our actions",
+    "nav.actions": "The Living Laboratory",
     "nav.coffee": "Coffee",
-    "nav.support": "Support Pachatopia",
-    "nav.experience": "Experience",
+    "nav.support": "Participate",
+    "nav.experience": "Live the experience",
     "nav.volunteer": "Participate / Volunteer",
     "nav.faq": "FAQ",
     "nav.contact": "Contact",
 
     // Hero
-    "hero.welcome": "Pachatopia",
+    "hero.welcome": "Le Mouvement Pachatopia",
     "hero.tagline": "Where the Earth regenerates and peace can grow again.",
     "hero.description":
       "In the mountains of San Carlos, Colombia, Pachatopia is an ecological and human regeneration project. We restore soils, plant trees, and develop agriculture inspired by natural ecosystems. A place where nature, people, and hope grow together.",
