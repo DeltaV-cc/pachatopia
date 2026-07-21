@@ -2,17 +2,24 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import CallToAction from "../components/CallToAction.astro";
+import LucideIcon from "../components/LucideIcon.astro";
 const lang = "fr";
 ---
-<Layout title="Organiser une rencontre — Pachatopia" description="Essaimer le Mouvement par la rencontre" lang={lang}>
+<Layout title="Organiser une rencontre — Pachatopia" description="Faire circuler le Mouvement par la rencontre" lang={lang}>
   <Header lang={lang} />
   <main>
-    <section class="relative text-white py-24 md:py-32 bg-primary">
-      <div class="max-w-4xl mx-auto px-4 text-center">
+    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
+      <div class="absolute inset-0"><img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-primary/85"></div></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Organiser une rencontre</h1>
-        <p class="text-xl md:text-2xl text-white/90">Essaimer le Mouvement par la rencontre</p>
+        <p class="text-xl md:text-2xl text-white/90">Faire circuler le Mouvement par la rencontre</p>
       </div>
     </section>
+    <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
+<p>Certaines idees se lisent. D'autres se vivent. Le Mouvement Pachatopia a vocation a circuler a travers des rencontres, des conferences, des presentations et des echanges.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Pourquoi organiser une rencontre ?</h2><p>Parce qu'une rencontre peut parfois ouvrir ce qu'aucun document ne suffit a transmettre. Nous croyons que les grands mouvements grandissent autant par les conversations qu'ils rendent possibles que par les actions qu'ils menent.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Formes de rencontre</h2><ul class="list-disc pl-6 space-y-2"><li>Presentation du Mouvement</li><li>Conference sur la relation entre humains et vivant</li><li>Echange autour du cafe et de l'agroforesterie</li><li>Rencontre autour du projet en Colombie</li><li>Sensibilisation dans ecoles, associations, lieux culturels</li><li>Discussion intime dans un cercle, cafe, ferme ou tiers-lieu</li></ul><div class="bg-primary text-white rounded-2xl p-10 my-12 text-center"><h3 class="text-2xl font-heading font-bold mb-4">Organiser une rencontre</h3><p class="mb-6">Creer un espace d'echange. Faire circuler une vision.</p><a href="/contacts/" class="button-primary-dark">Organiser une rencontre avec le Mouvement</a></div>
+    </div></section>
+    <CallToAction lang={lang} />
   </main>
   <Footer lang={lang} />
 </Layout>
