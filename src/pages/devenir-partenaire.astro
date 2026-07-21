@@ -2,17 +2,23 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import CallToAction from "../components/CallToAction.astro";
 const lang = "fr";
 ---
-<Layout title="Devenir partenaire — Pachatopia" description="Construisons ensemble quelque chose de plus grand que nous" lang={lang}>
+<Layout title="Devenir partenaire — Pachatopia" description="Construisons ensemble quelque chose de plus grand" lang={lang}>
   <Header lang={lang} />
   <main>
-    <section class="relative text-white py-24 md:py-32 bg-primary">
-      <div class="max-w-4xl mx-auto px-4 text-center">
+    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
+      <div class="absolute inset-0"><img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-primary/85"></div></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Devenir partenaire</h1>
-        <p class="text-xl md:text-2xl text-white/90">Construisons ensemble quelque chose de plus grand que nous</p>
+        <p class="text-xl md:text-2xl text-white/90">Construisons ensemble quelque chose de plus grand</p>
       </div>
     </section>
+    <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
+<p>Entreprises, fondations, écoles, chercheurs, collectivités, associations, artisans ou entrepreneurs peuvent devenir partenaires.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Pourquoi devenir partenaire ?</h2><p>Les plus grandes transformations grandissent lorsqu'une multitude de structures avancent dans une même direction.</p><div class="bg-primary text-white rounded-2xl p-10 my-12 text-center"><h3 class="text-2xl font-heading font-bold mb-4">Devenir partenaire</h3><p class="mb-6">Construisons ensemble un avenir où le vivant retrouve toute sa place.</p><a href="/pachatopia/contacts/" class="button-primary-dark">Nous contacter</a></div>
+    </div></section>
+    <CallToAction lang={lang} />
   </main>
   <Footer lang={lang} />
 </Layout>

@@ -2,17 +2,23 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import CallToAction from "../components/CallToAction.astro";
 const lang = "fr";
 ---
-<Layout title="Livraison, retrait et points relais — Pachatopia" description="Faire avancer le Mouvement avec simplicite" lang={lang}>
+<Layout title="Livraison, retrait et points relais — Pachatopia" description="Faire avancer le Mouvement avec simplicité" lang={lang}>
   <Header lang={lang} />
   <main>
-    <section class="relative text-white py-24 md:py-32 bg-primary">
-      <div class="max-w-4xl mx-auto px-4 text-center">
+    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
+      <div class="absolute inset-0"><img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-primary/85"></div></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Livraison, retrait et points relais</h1>
-        <p class="text-xl md:text-2xl text-white/90">Faire avancer le Mouvement avec simplicite</p>
+        <p class="text-xl md:text-2xl text-white/90">Faire avancer le Mouvement avec simplicité</p>
       </div>
     </section>
+    <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
+<p>Nous mettons en place progressivement un système de livraison et de retrait.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Modalités de livraison</h2><ul class="list-disc pl-6 space-y-2"><li>Les frais de port ne sont pas inclus dans les montants des formules</li><li>Des points relais pourront être organisés selon les zones géographiques</li></ul><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Devenir point relais</h2><p>Si vous disposez d'un lieu (café, épicerie, association, tiers-lieu) et souhaitez devenir un point relais, contactez-nous.</p><div class="bg-primary text-white rounded-2xl p-10 my-12 text-center"><h3 class="text-2xl font-heading font-bold mb-4">Nous contacter</h3><p class="mb-6">Pour toute question sur la livraison, le retrait ou les points relais.</p><a href="/pachatopia/contacts/" class="button-primary-dark">Nous écrire</a></div>
+    </div></section>
+    <CallToAction lang={lang} />
   </main>
   <Footer lang={lang} />
 </Layout>

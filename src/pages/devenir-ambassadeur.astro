@@ -2,17 +2,23 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import CallToAction from "../components/CallToAction.astro";
 const lang = "fr";
 ---
-<Layout title="Devenir ambassadeur — Pachatopia" description="Porter l'elan du vivant autour de soi" lang={lang}>
+<Layout title="Devenir ambassadeur — Pachatopia" description="Porter l'élan du vivant autour de soi" lang={lang}>
   <Header lang={lang} />
   <main>
-    <section class="relative text-white py-24 md:py-32 bg-primary">
-      <div class="max-w-4xl mx-auto px-4 text-center">
+    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
+      <div class="absolute inset-0"><img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-primary/85"></div></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Devenir ambassadeur</h1>
-        <p class="text-xl md:text-2xl text-white/90">Porter l'elan du vivant autour de soi</p>
+        <p class="text-xl md:text-2xl text-white/90">Porter l'élan du vivant autour de soi</p>
       </div>
     </section>
+    <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
+<p>Devenir ambassadeur du Mouvement Pachatopia, c'est choisir de faire circuler l'élan là où vous êtes.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Que peut faire un ambassadeur ?</h2><ul class="list-disc pl-6 space-y-2"><li>Partager la vision</li><li>Organiser des rencontres</li><li>Relayer les nouvelles</li><li>Identifier des partenaires</li><li>Faire connaître le café</li></ul><div class="bg-primary text-white rounded-2xl p-10 my-12 text-center"><h3 class="text-2xl font-heading font-bold mb-4">Devenir ambassadeur</h3><p class="mb-6">Faites circuler l'élan.</p><a href="/pachatopia/contacts/" class="button-primary-dark">Devenir ambassadeur</a></div>
+    </div></section>
+    <CallToAction lang={lang} />
   </main>
   <Footer lang={lang} />
 </Layout>

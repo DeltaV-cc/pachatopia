@@ -2,17 +2,23 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import CallToAction from "../components/CallToAction.astro";
 const lang = "fr";
 ---
-<Layout title="Partager une idee — Pachatopia" description="Le vivant evolue par la diversite. Notre Mouvement aussi." lang={lang}>
+<Layout title="Partager une idée — Pachatopia" description="Le vivant évolue grâce à la diversité." lang={lang}>
   <Header lang={lang} />
   <main>
-    <section class="relative text-white py-24 md:py-32 bg-primary">
-      <div class="max-w-4xl mx-auto px-4 text-center">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Partager une idee</h1>
-        <p class="text-xl md:text-2xl text-white/90">Le vivant evolue par la diversite. Notre Mouvement aussi.</p>
+    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
+      <div class="absolute inset-0"><img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-primary/85"></div></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Partager une idée</h1>
+        <p class="text-xl md:text-2xl text-white/90">Le vivant évolue grâce à la diversité.</p>
       </div>
     </section>
+    <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
+<p>Aucun être vivant ne construit seul un écosystème. Le Mouvement Pachatopia s'inspire de cette intelligence du vivant.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Pourquoi partager une idée ?</h2><p>Parce que nous ne prétendons pas détenir toutes les réponses. Partager une idée, c'est contribuer à faire grandir une œuvre collective.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Que pouvez-vous partager ?</h2><ul class="list-disc pl-6 space-y-2"><li>Une intuition</li><li>Une expérience</li><li>Une recherche</li><li>Un contact</li><li>Une technique</li><li>Une idée de culture</li><li>Une question</li></ul><div class="bg-primary text-white rounded-2xl p-10 my-12 text-center"><h3 class="text-2xl font-heading font-bold mb-4">Partager une idée</h3><p class="mb-6">Une intuition. Une expérience. Une question.</p><a href="/pachatopia/contacts/" class="button-primary-dark">Partager une idée</a></div>
+    </div></section>
+    <CallToAction lang={lang} />
   </main>
   <Footer lang={lang} />
 </Layout>

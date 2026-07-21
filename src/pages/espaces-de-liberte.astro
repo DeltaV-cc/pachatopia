@@ -2,17 +2,23 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import CallToAction from "../components/CallToAction.astro";
 const lang = "fr";
 ---
-<Layout title="Espaces de liberte pour le vivant — Pachatopia" description="Laisser de la place au vivant, c'est deja participer a son avenir" lang={lang}>
+<Layout title="Espaces de liberté pour le vivant — Pachatopia" description="Laisser de la place au vivant" lang={lang}>
   <Header lang={lang} />
   <main>
-    <section class="relative text-white py-24 md:py-32 bg-primary">
-      <div class="max-w-4xl mx-auto px-4 text-center">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Espaces de liberte pour le vivant</h1>
-        <p class="text-xl md:text-2xl text-white/90">Laisser de la place au vivant, c'est deja participer a son avenir</p>
+    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
+      <div class="absolute inset-0"><img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-primary/85"></div></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Espaces de liberté pour le vivant</h1>
+        <p class="text-xl md:text-2xl text-white/90">Laisser de la place au vivant</p>
       </div>
     </section>
+    <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
+<p>Le parrainage des espaces de liberté pour le vivant permet d'accompagner la préservation d'espaces laissés au vivant : forêts, zones refuges, espaces d'observation.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Préserver sans exploiter</h2><p>L'idée n'est pas de posséder un morceau de nature, mais de laisser une place au vivant.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Comment soutenir</h2><p>1 m² = 1 EUR / CHF. Ce soutien est cumulable et peut être suivi via le Passeport.</p><div class="bg-primary text-white rounded-2xl p-10 my-12 text-center"><h3 class="text-2xl font-heading font-bold mb-4">Préserver des espaces de liberté</h3><p class="mb-6">Chaque mètre carré préservé est un espace offert au vivant.</p><a href="/pachatopia/formules/" class="button-primary-dark">Soutenir ces espaces</a></div>
+    </div></section>
+    <CallToAction lang={lang} />
   </main>
   <Footer lang={lang} />
 </Layout>

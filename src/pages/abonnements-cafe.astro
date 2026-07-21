@@ -2,17 +2,23 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import CallToAction from "../components/CallToAction.astro";
 const lang = "fr";
 ---
-<Layout title="Abonnements cafe — Pachatopia" description="Recevoir regulierement. Soutenir durablement." lang={lang}>
+<Layout title="Les formules d'abonnement café — Pachatopia" description="Recevoir régulièrement. Soutenir durablement." lang={lang}>
   <Header lang={lang} />
   <main>
-    <section class="relative text-white py-24 md:py-32 bg-primary">
-      <div class="max-w-4xl mx-auto px-4 text-center">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Abonnements cafe</h1>
-        <p class="text-xl md:text-2xl text-white/90">Recevoir regulierement. Soutenir durablement.</p>
+    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
+      <div class="absolute inset-0"><img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-primary/85"></div></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Les formules d'abonnement café</h1>
+        <p class="text-xl md:text-2xl text-white/90">Recevoir régulièrement. Soutenir durablement.</p>
       </div>
     </section>
+    <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
+<p>L'abonnement café a été pensé pour celles et ceux qui souhaitent inscrire leur soutien dans la durée.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Pourquoi une formule trimestrielle ?</h2><p>Nous privilégions des commandes trimestrielles payées d'avance.</p><div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8"><div class="surface-card p-6"><h4 class="font-bold text-primary text-lg">Découverte</h4><p class="text-sm">500 g par mois</p><p class="text-xl font-bold text-primary mt-2">20 EUR / mois</p></div><div class="surface-card p-6"><h4 class="font-bold text-primary text-lg">Rituel</h4><p class="text-sm">1 kg par mois</p><p class="text-xl font-bold text-primary mt-2">39 EUR / mois</p></div><div class="surface-card p-6"><h4 class="font-bold text-primary text-lg">Maison</h4><p class="text-sm">2 kg par mois</p><p class="text-xl font-bold text-primary mt-2">75 EUR / mois</p></div><div class="surface-card p-6"><h4 class="font-bold text-primary text-lg">Cercle</h4><p class="text-sm">5 kg par mois</p><p class="text-xl font-bold text-primary mt-2">180 EUR / mois</p></div></div><div class="bg-primary text-white rounded-2xl p-10 my-12 text-center"><h3 class="text-2xl font-heading font-bold mb-4">Choisir sa formule</h3><p class="mb-6">Recevoir régulièrement. Soutenir avec constance.</p><a href="/pachatopia/contacts/" class="button-primary-dark">Découvrir les formules</a></div>
+    </div></section>
+    <CallToAction lang={lang} />
   </main>
   <Footer lang={lang} />
 </Layout>

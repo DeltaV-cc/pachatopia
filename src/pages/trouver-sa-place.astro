@@ -2,17 +2,23 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import CallToAction from "../components/CallToAction.astro";
 const lang = "fr";
 ---
-<Layout title="Trouver sa place dans le Mouvement — Pachatopia" description="Il y a mille facons de contribuer. Une seule est essentielle : trouver la votre." lang={lang}>
+<Layout title="Trouver sa place dans le Mouvement — Pachatopia" description="Il y a mille façons de contribuer" lang={lang}>
   <Header lang={lang} />
   <main>
-    <section class="relative text-white py-24 md:py-32 bg-primary">
-      <div class="max-w-4xl mx-auto px-4 text-center">
+    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
+      <div class="absolute inset-0"><img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-primary/85"></div></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Trouver sa place dans le Mouvement</h1>
-        <p class="text-xl md:text-2xl text-white/90">Il y a mille facons de contribuer. Une seule est essentielle : trouver la votre.</p>
+        <p class="text-xl md:text-2xl text-white/90">Il y a mille façons de contribuer</p>
       </div>
     </section>
+    <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
+<p>Il n'existe pas une seule manière de contribuer au vivant.</p><div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6"><div class="surface-card p-6"><h4 class="font-bold text-primary">Devenir Gardien du Vivant</h4><p class="text-sm">Grâce au Passeport Pachatopia</p><a href="/pachatopia/passeport/" class="text-accent text-sm font-semibold">Découvrir</a></div><div class="surface-card p-6"><h4 class="font-bold text-primary">Parrainer une culture</h4><p class="text-sm">En transition agroforestière</p><a href="/pachatopia/parrainer-une-culture/" class="text-accent text-sm font-semibold">Découvrir</a></div><div class="surface-card p-6"><h4 class="font-bold text-primary">Préserver des espaces</h4><p class="text-sm">Protection de forêts vivantes</p><a href="/pachatopia/espaces-de-liberte/" class="text-accent text-sm font-semibold">En savoir plus</a></div><div class="surface-card p-6"><h4 class="font-bold text-primary">S'abonner au café</h4><p class="text-sm">Recevoir régulièrement</p><a href="/pachatopia/abonnements-cafe/" class="text-accent text-sm font-semibold">Voir les formules</a></div><div class="surface-card p-6"><h4 class="font-bold text-primary">Venir vivre l'expérience</h4><p class="text-sm">Sur le terrain</p><a href="/pachatopia/venir-sur-place/" class="text-accent text-sm font-semibold">Voir les expériences</a></div><div class="surface-card p-6"><h4 class="font-bold text-primary">Devenir volontaire</h4><p class="text-sm">Contribuer concrètement</p><a href="/pachatopia/participer-volontariat/" class="text-accent text-sm font-semibold">Découvrir</a></div><div class="surface-card p-6"><h4 class="font-bold text-primary">Devenir partenaire</h4><p class="text-sm">Construire ensemble</p><a href="/pachatopia/devenir-partenaire/" class="text-accent text-sm font-semibold">En savoir plus</a></div><div class="surface-card p-6"><h4 class="font-bold text-primary">Devenir ambassadeur</h4><p class="text-sm">Porter l'élan</p><a href="/pachatopia/devenir-ambassadeur/" class="text-accent text-sm font-semibold">En savoir plus</a></div></div><div class="bg-primary text-white rounded-2xl p-10 my-12 text-center"><h3 class="text-2xl font-heading font-bold mb-4">Une même direction, mille façons d'agir</h3><p class="mb-6">Une forêt ne grandit jamais grâce à une seule graine.</p><a href="/pachatopia/contacts/" class="button-primary-dark">Nous contacter</a></div>
+    </div></section>
+    <CallToAction lang={lang} />
   </main>
   <Footer lang={lang} />
 </Layout>
