@@ -3,21 +3,160 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import CallToAction from "../components/CallToAction.astro";
+import LucideIcon from "../components/LucideIcon.astro";
+
 const lang = "fr";
 ---
-<Layout title="Devenir partenaire — Pachatopia" description="Construisons ensemble quelque chose de plus grand" lang={lang}>
+
+<Layout
+  title="Devenir partenaire — Pachatopia"
+  description="Construisons ensemble quelque chose qui nous dépasse."
+  lang={lang}
+>
   <Header lang={lang} />
   <main>
-    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
-      <div class="absolute inset-0"><img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-primary/85"></div></div>
-      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+    <!-- Hero Banner -->
+    <section class="relative text-white py-24 md:py-32 overflow-hidden bg-primary">
+      <div class="absolute inset-0">
+        <img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-primary/85"></div>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Devenir partenaire</h1>
-        <p class="text-xl md:text-2xl text-white/90">Construisons ensemble quelque chose de plus grand</p>
+        <p class="text-xl md:text-2xl text-white/90">Construisons ensemble quelque chose qui nous dépasse.</p>
       </div>
     </section>
-    <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
-<p>Entreprises, fondations, écoles, chercheurs, collectivités, associations, artisans ou entrepreneurs peuvent devenir partenaires.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Pourquoi devenir partenaire ?</h2><p>Les plus grandes transformations grandissent lorsqu'une multitude de structures avancent dans une même direction.</p><div class="bg-primary text-white rounded-2xl p-10 my-12 text-center"><h3 class="text-2xl font-heading font-bold mb-4">Devenir partenaire</h3><p class="mb-6">Construisons ensemble un avenir où le vivant retrouve toute sa place.</p><a href="/pachatopia/contacts/" class="button-primary-dark">Nous contacter</a></div>
-    </div></section>
+
+    <!-- Introduction -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
+          <p class="text-xl text-primary/80 font-heading italic">Les plus grandes transformations ne se construisent jamais seuls.</p>
+          <p>Elles naissent lorsque des femmes et des hommes, des entreprises, des associations, des écoles, des chercheurs, des collectivités et des citoyens choisissent d'avancer dans une même direction.</p>
+          <p>À Pachatopia, nous croyons que chacun possède quelque chose d'unique à apporter. Des compétences. Du temps. Des connaissances. Des ressources. Des idées. Des expériences.</p>
+          <p>Notre ambition n'est pas de tout faire seuls. Notre ambition est de créer un mouvement capable de révéler le meilleur de chacun au service du vivant.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pourquoi devenir partenaire -->
+    <section class="relative py-20 md:py-28 bg-primary text-white overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <svg class="absolute -top-16 -right-16 w-96 h-96 opacity-[0.06]" viewBox="0 0 400 400" fill="none"><circle cx="200" cy="200" r="190" fill="white"/></svg>
+        <svg class="absolute -bottom-10 -left-10 w-72 h-72 opacity-[0.04]" viewBox="0 0 300 300" fill="none"><path d="M150 5C150 5 280 60 270 170C260 280 180 290 100 270C20 250 -10 140 20 60C50 -20 150 5 150 5Z" fill="white"/></svg>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-kicker w-fit border-white/10 bg-white/[0.05] shadow-none mb-6">
+          <LucideIcon name="Handshake" class="h-4 w-4 text-golden" />
+          Pourquoi devenir partenaire
+        </div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold mb-8">Des défis qui nous dépassent</h2>
+        <div class="space-y-5 text-lg text-white/90 leading-relaxed">
+          <p>Les défis auxquels nous faisons face dépassent les capacités d'une seule organisation.</p>
+          <p>Préserver les écosystèmes. Accompagner la transition agricole. Créer des emplois durables. Transmettre des connaissances. Reconnecter les êtres humains avec le vivant.</p>
+          <p class="text-xl text-golden font-heading font-bold mt-8">Aucun de ces défis ne peut être relevé seul.</p>
+          <p>Nous croyons profondément que la coopération est l'une des plus grandes forces du vivant.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quel partenaire souhaitez-vous être -->
+    <section class="py-20 md:py-28 bg-cream">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary text-center mb-6">Quel partenaire souhaitez-vous être ?</h2>
+        <div class="w-20 h-1 bg-golden rounded-full mx-auto mb-4"></div>
+        <p class="text-center text-lg text-gray-600 mb-12">Chaque partenariat est unique.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="Building2" class="w-8 h-8 text-primary mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary">Une entreprise</p>
+            <p class="text-sm text-gray-500 mt-2">Soutenir un projet de terrain</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="School" class="w-8 h-8 text-accent mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary">Une école</p>
+            <p class="text-sm text-gray-500 mt-2">Faire découvrir le vivant aux élèves</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="GraduationCap" class="w-8 h-8 text-earth mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary">Une université</p>
+            <p class="text-sm text-gray-500 mt-2">Mener des recherches</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="Heart" class="w-8 h-8 text-golden-dark mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary">Une fondation</p>
+            <p class="text-sm text-gray-500 mt-2">Accompagner un programme de long terme</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="Users" class="w-8 h-8 text-primary mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary">Une association</p>
+            <p class="text-sm text-gray-500 mt-2">Partager son expérience</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="Wrench" class="w-8 h-8 text-accent mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary">Un artisan</p>
+            <p class="text-sm text-gray-500 mt-2">Transmettre son savoir-faire</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="Palette" class="w-8 h-8 text-earth mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary">Un artiste</p>
+            <p class="text-sm text-gray-500 mt-2">Éveiller les consciences</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="Globe" class="w-8 h-8 text-golden-dark mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary">Une collectivité</p>
+            <p class="text-sm text-gray-500 mt-2">Ancrer le mouvement dans les territoires</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plus qu'un partenariat -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-8">
+          <LucideIcon name="Sparkles" class="w-8 h-8 text-accent" />
+        </div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-8">Plus qu'un partenariat</h2>
+        <div class="space-y-5 text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+          <p>Nous ne recherchons pas uniquement des soutiens financiers.</p>
+          <p>Nous recherchons des personnes et des organisations qui souhaitent construire avec nous.</p>
+          <p class="text-xl text-primary/80 font-heading italic mt-6">Partager des idées. Expérimenter. Imaginer. Créer. Transmettre.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Une œuvre collective -->
+    <section class="py-20 md:py-28 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-8">Une œuvre collective</h2>
+        <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
+          <p>Nous ne savons pas encore tout ce que deviendra Pachatopia. Et c'est une bonne nouvelle.</p>
+          <p>Parce que chaque partenaire apportera une part de cette histoire.</p>
+          <p class="text-xl text-primary/80 font-heading font-bold mt-6">Le Mouvement ne sera jamais l'œuvre d'une seule personne.</p>
+          <p>Il sera le fruit de toutes celles et ceux qui auront choisi d'y contribuer.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Une invitation -->
+    <section class="relative py-24 md:py-32 bg-primary text-white overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <svg class="absolute top-8 right-8 w-64 h-64 opacity-[0.05]" viewBox="0 0 300 300" fill="none"><circle cx="150" cy="150" r="140" fill="white"/></svg>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-5xl font-heading font-bold mb-6">Et si nous imaginions ensemble</h2>
+        <p class="text-2xl text-golden font-heading font-bold italic mb-6">ce qui n'existe pas encore ?</p>
+        <p class="text-lg text-white/80 leading-relaxed max-w-2xl mx-auto">Les plus beaux projets sont souvent ceux que personne ne pouvait construire seul.</p>
+        <div class="mt-10">
+          <a href="/pachatopia/contacts/" class="button-primary-dark text-lg">
+            Devenir partenaire
+            <LucideIcon name="ArrowRight" class="w-5 h-5 inline-block ml-2" />
+          </a>
+        </div>
+      </div>
+    </section>
+
     <CallToAction lang={lang} />
   </main>
   <Footer lang={lang} />

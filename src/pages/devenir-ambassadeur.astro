@@ -3,21 +3,201 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import CallToAction from "../components/CallToAction.astro";
+
 const lang = "fr";
 ---
-<Layout title="Devenir ambassadeur — Pachatopia" description="Porter l'élan du vivant autour de soi" lang={lang}>
+
+<Layout
+  title="Devenir ambassadeur — Pachatopia"
+  description="Transmettre l'élan du vivant autour de soi"
+  lang={lang}
+>
   <Header lang={lang} />
   <main>
+    <!-- Hero -->
     <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
-      <div class="absolute inset-0"><img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-primary/85"></div></div>
+      <div class="absolute inset-0">
+        <img
+          src="/pachatopia/images/farm-hero.jpg"
+          alt=""
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-primary/85"></div>
+      </div>
       <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Devenir ambassadeur</h1>
-        <p class="text-xl md:text-2xl text-white/90">Porter l'élan du vivant autour de soi</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
+          Devenir ambassadeur
+        </h1>
+        <p class="text-xl md:text-2xl text-white/90">
+          Transmettre l'élan du vivant
+        </p>
       </div>
     </section>
-    <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
-<p>Devenir ambassadeur du Mouvement Pachatopia, c'est choisir de faire circuler l'élan là où vous êtes.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Que peut faire un ambassadeur ?</h2><ul class="list-disc pl-6 space-y-2"><li>Partager la vision</li><li>Organiser des rencontres</li><li>Relayer les nouvelles</li><li>Identifier des partenaires</li><li>Faire connaître le café</li></ul><div class="bg-primary text-white rounded-2xl p-10 my-12 text-center"><h3 class="text-2xl font-heading font-bold mb-4">Devenir ambassadeur</h3><p class="mb-6">Faites circuler l'élan.</p><a href="/pachatopia/contacts/" class="button-primary-dark">Devenir ambassadeur</a></div>
-    </div></section>
+
+    <!-- Section 1 : Introduction -->
+    <section class="py-16 md:py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 text-lg text-gray-700 leading-relaxed space-y-6">
+        <p>
+          Les plus grandes idées grandissent lorsqu'elles commencent à circuler.
+          Une parole partagée. Une rencontre organisée. Une tasse offerte.
+          Une histoire racontée. Un message transmis au bon moment.
+        </p>
+        <p>
+          Le Mouvement Pachatopia grandit ainsi. Non pas seulement grâce aux projets
+          qu'il développe. Mais grâce aux femmes et aux hommes qui choisissent d'en
+          porter l'élan autour d'eux.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2 : Pourquoi devenir ambassadeur -->
+    <section class="py-16 md:py-20 bg-stone-50">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-8">
+          Pourquoi devenir ambassadeur&nbsp;?
+        </h2>
+        <div class="text-lg text-gray-700 leading-relaxed space-y-6">
+          <p>
+            Parce qu'une idée n'a pas besoin d'être immense pour commencer à
+            transformer le monde. Elle a simplement besoin d'être transmise.
+          </p>
+          <p>
+            Devenir ambassadeur, ce n'est pas représenter une marque. C'est
+            choisir de faire circuler une vision. Une vision où les êtres humains
+            retrouvent leur juste place dans le vivant.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3 : Une autre manière d'agir -->
+    <section class="py-16 md:py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-8">
+          Une autre manière d'agir
+        </h2>
+        <div class="text-lg text-gray-700 leading-relaxed space-y-6">
+          <p>
+            Tout le monde ne peut pas planter des arbres. Tout le monde ne peut pas
+            voyager jusqu'en Colombie. Tout le monde ne peut pas devenir partenaire
+            ou parrain.
+          </p>
+          <p>
+            Mais chacun peut transmettre une idée qui lui semble juste. Partager un
+            café. Parler du Mouvement autour de soi. Organiser une rencontre. Créer
+            un événement.
+          </p>
+          <p>
+            Parfois, une simple conversation peut devenir la première graine d'une
+            grande aventure.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4 : Être un passeur -->
+    <section class="py-16 md:py-20 bg-stone-50">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-8">
+          Être un passeur
+        </h2>
+        <div class="text-lg text-gray-700 leading-relaxed space-y-6">
+          <p>
+            Nous n'attendons pas des ambassadeurs qu'ils convainquent. Nous
+            espérons qu'ils transmettent. Avec sincérité. Avec simplicité. Avec
+            leur propre sensibilité.
+          </p>
+          <p>
+            Chacun devient ambassadeur à sa manière. Certains parlent. D'autres
+            écrivent. D'autres organisent. D'autres créent.
+          </p>
+          <p>
+            Il n'existe pas une seule façon d'être ambassadeur. Il existe celle
+            qui vous ressemble.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5 : Faire voyager le Mouvement -->
+    <section class="py-16 md:py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-8">
+          Faire voyager le Mouvement
+        </h2>
+        <div class="text-lg text-gray-700 leading-relaxed space-y-6">
+          <p>
+            Le café voyage. Les graines voyagent. Les idées aussi.
+          </p>
+          <p>
+            Le Mouvement Pachatopia a besoin de personnes capables de faire voyager
+            son élan. Chaque ambassadeur devient alors un relais. Un lien vivant
+            entre un territoire, une histoire, une communauté et toutes celles et
+            ceux qui pourraient, à leur tour, s'y reconnaître.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6 : Une responsabilité joyeuse -->
+    <section class="py-16 md:py-20 bg-stone-50">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-8">
+          Une responsabilité joyeuse
+        </h2>
+        <div class="text-lg text-gray-700 leading-relaxed space-y-6">
+          <p>
+            Être ambassadeur, ce n'est pas porter un poids. C'est porter une
+            lumière. C'est avoir la joie de partager quelque chose qui nous semble
+            juste, vivant et porteur d'espérance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7 : Invitation -->
+    <section class="py-16 md:py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-8">
+          Invitation
+        </h2>
+        <div class="text-lg text-gray-700 leading-relaxed space-y-6">
+          <p>
+            Peut-être qu'autour de vous, certaines personnes attendent simplement
+            d'entendre une parole différente.
+          </p>
+          <p class="font-semibold text-primary">
+            Nous ne cherchons pas des porte-parole. Nous cherchons des passeurs du
+            vivant.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA intégré -->
+    <section class="py-16 md:py-20 bg-primary">
+      <div class="max-w-3xl mx-auto px-4 text-center text-white">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold mb-6">
+          Devenir ambassadeur
+        </h2>
+        <p class="text-lg md:text-xl text-white/90 mb-4">
+          Partager une idée.
+        </p>
+        <p class="text-lg md:text-xl text-white/90 mb-4">
+          Créer une rencontre.
+        </p>
+        <p class="text-lg md:text-xl text-white/90 mb-8">
+          Faire circuler l'espérance.
+        </p>
+        <a
+          href="/pachatopia/contacts/"
+          class="inline-block bg-white text-primary font-semibold px-8 py-4 rounded-full text-lg hover:bg-white/90 transition-colors shadow-lg"
+        >
+          Devenir ambassadeur
+        </a>
+      </div>
+    </section>
+
     <CallToAction lang={lang} />
   </main>
   <Footer lang={lang} />

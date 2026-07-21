@@ -4,14 +4,13 @@ import Header from "../components/Header.astro";
 import Testimonials from "../components/Testimonials.astro";
 import CallToAction from "../components/CallToAction.astro";
 import Footer from "../components/Footer.astro";
-import LucideIcon from "../components/LucideIcon.astro";
 
 const lang = "fr";
 ---
 
 <Layout
   title="Le Laboratoire du Vivant - Pachatopia"
-  description="Régénérer la Terre et construire un futur durable : réserves naturelles, agriculture régénératrice, valorisation locale, aquaculture durable et participation collective."
+  description="Les grandes recherches du Mouvement Pachatopia : régénérer les sols, préparer l'avenir du café, relier l'eau et la terre, et explorer le monde invisible."
   lang={lang}
 >
   <Header lang={lang} />
@@ -31,173 +30,98 @@ const lang = "fr";
       </svg>
     </section>
 
-    <!-- Intro -->
+    <!-- Section 1 : Introduction -->
     <section class="py-16 bg-white">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">À Pachatopia, nous développons des initiatives concrètes pour restaurer les écosystèmes, soutenir les communautés locales et promouvoir un mode de vie respectueux du vivant. Nos actions s'articulent autour de plusieurs axes complémentaires.</p>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Introduction</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">Nous n'avons pas toutes les réponses. C'est précisément pour cela que le Laboratoire du Vivant existe. Chaque jour, nous observons, nous expérimentons, nous faisons parfois des erreurs, nous apprenons… puis nous recommençons. Le vivant est notre plus grand professeur.</p>
       </div>
     </section>
 
-    <!-- Action 1: Réserves naturelles (image left) -->
-    <section class="py-20 md:py-28 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-          <div class="md:col-span-5">
-            <div class="overflow-hidden rounded-2xl shadow-lg">
-              <img src="/pachatopia/images/reserve-naturelle.webp" alt="Réserve naturelle Pachatopia" class="w-full h-auto object-cover" loading="lazy" />
-            </div>
-          </div>
-          <div class="md:col-span-7">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Création de réserves naturelles</h2>
-            <p class="text-gray-600 leading-relaxed mb-4">La protection de la biodiversité est au cœur de notre engagement. Nous œuvrons à la création de réserves naturelles afin de préserver les forêts, la faune et la flore locales. Ces espaces contribuent également à la protection des sources d'eau douce et au maintien des équilibres écologiques.</p>
-            <p class="text-gray-600 leading-relaxed mb-4">En restaurant et en protégeant ces écosystèmes, nous participons aussi à la captation naturelle du carbone, contribuant ainsi à la lutte contre le changement climatique.</p>
-            <p class="text-gray-600 leading-relaxed">Notre ambition est de transformer ces terres en refuges pour la biodiversité et en espaces d'apprentissage pour les générations futures.</p>
-            <a href="/pachatopia/contacts/" class="inline-flex items-center gap-2 mt-6 text-golden-dark font-semibold hover:text-primary transition-colors">
-              En savoir plus
-              <LucideIcon name="ArrowRight" class="w-4 h-4" />
-            </a>
-          </div>
-        </div>
+    <!-- Section 2 : Régénérer les sols -->
+    <section class="py-16 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Régénérer les sols</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">Un sol vivant nourrit des plantes plus résilientes, retient mieux l'eau et soutient davantage de biodiversité. Nous explorons différentes pratiques : composts, bokashis, micro-organismes, couverts végétaux, biomasse, arbres producteurs d'humus et fertilisants biologiques produits localement.</p>
       </div>
     </section>
 
-    <!-- Action 2: Agriculture régénératrice (image right) -->
-    <section class="py-20 md:py-28 bg-cream">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-          <div class="md:col-span-7 md:order-1">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Développer une agriculture régénératrice</h2>
-            <p class="text-gray-600 leading-relaxed mb-4">Nous développons progressivement un modèle agricole inspiré des écosystèmes naturels. Notre objectif est de mettre en place des systèmes agroforestiers diversifiés, où les cultures coexistent avec les arbres et la biodiversité.</p>
-            <p class="text-gray-600 leading-relaxed mb-4">Ce modèle permet d'améliorer la fertilité des sols, de réduire l'utilisation d'intrants chimiques, de favoriser la biodiversité et de produire des aliments de meilleure qualité.</p>
-            <p class="text-gray-600 leading-relaxed">Nous avançons dans cette transition pas à pas, en apprenant directement sur le terrain et en nous inspirant des pratiques agricoles traditionnelles et des connaissances agroécologiques.</p>
-          </div>
-          <div class="md:col-span-5 md:order-2">
-            <div class="overflow-hidden rounded-2xl shadow-lg">
-              <img src="/pachatopia/images/agriculture-durable.webp" alt="Agriculture durable Pachatopia" class="w-full h-auto object-cover" loading="lazy" />
-            </div>
-          </div>
-        </div>
+    <!-- Section 3 : Préparer l'avenir du café -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Préparer l'avenir du café</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">Le café fait vivre des millions de familles, mais le changement climatique fragilise déjà sa culture. Nous expérimentons des associations d'arbres d'ombrage, de biomasse, de diversité végétale et de couverture du sol afin de construire des systèmes plus résilients.</p>
       </div>
     </section>
 
-    <!-- Action 3: Productions locales (image left) -->
-    <section class="py-20 md:py-28 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-          <div class="md:col-span-5">
-            <div class="overflow-hidden rounded-2xl shadow-lg">
-              <img src="/pachatopia/images/production-cafe.webp" alt="Production de café Pachatopia" class="w-full h-auto object-cover" loading="lazy" />
-            </div>
-          </div>
-          <div class="md:col-span-7">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Valoriser les productions locales</h2>
-            <p class="text-gray-600 leading-relaxed mb-4">Nous cherchons à valoriser au maximum les ressources produites sur le territoire. Le café est aujourd'hui l'une de nos productions principales. Nous souhaitons développer progressivement une torréfaction locale, afin de créer une filière régionale plus autonome et plus durable.</p>
-            <p class="text-gray-600 leading-relaxed mb-4">Nous explorons également différentes façons de valoriser les sous-produits agricoles : transformation de la pulpe de café, fermentation et production d'engrais naturels, et utilisation des déchets agricoles pour produire de l'énergie.</p>
-            <p class="text-gray-600 leading-relaxed">L'objectif est de développer une économie circulaire, où chaque ressource est utilisée de manière intelligente et durable.</p>
-            <a href="/pachatopia/le-cafe/" class="inline-flex items-center gap-2 mt-6 text-golden-dark font-semibold hover:text-primary transition-colors">
-              Découvrir le café
-              <LucideIcon name="ArrowRight" class="w-4 h-4" />
-            </a>
-          </div>
-        </div>
+    <!-- Section 4 : Relier l'eau, la terre et la production -->
+    <section class="py-16 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Relier l'eau, la terre et la production</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">San Carlos possède une richesse exceptionnelle : l'eau. Nous explorons des systèmes capables de mieux relier l'eau, les sols et les productions agricoles : protection des sources, valorisation des cycles naturels, recherches autour de productions adaptées comme la spiruline.</p>
       </div>
     </section>
 
-    <!-- Action 4: Aquaculture (image right) -->
-    <section class="py-20 md:py-28 bg-cream">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-          <div class="md:col-span-7 md:order-1">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Développer une aquaculture durable</h2>
-            <p class="text-gray-600 leading-relaxed mb-4">La région de San Carlos est riche en ressources hydriques et possède un potentiel important pour la production piscicole. Nous souhaitons développer des systèmes d'aquaculture plus durables, capables de produire des aliments de qualité tout en limitant les impacts environnementaux.</p>
-            <p class="text-gray-600 leading-relaxed">En valorisant les déchets organiques et en intégrant différents systèmes de production, nous cherchons à transformer ces pratiques en modèles plus écologiques et plus efficaces.</p>
-          </div>
-          <div class="md:col-span-5 md:order-2">
-            <div class="overflow-hidden rounded-2xl shadow-lg">
-              <img src="/pachatopia/images/aquaculture.webp" alt="Aquaculture durable Pachatopia" class="w-full h-auto object-cover" loading="lazy" />
-            </div>
-          </div>
-        </div>
+    <!-- Section 5 : Faire dialoguer pisciculture et agroforesterie -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Faire dialoguer pisciculture et agroforesterie</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">La pisciculture peut nourrir des familles, mais elle peut aussi fragiliser les cours d'eau. Nous cherchons à comprendre comment créer un dialogue entre pisciculture et agroforesterie : nourrir les poissons avec les ressources locales, valoriser les effluents pour les sols.</p>
       </div>
     </section>
 
-    <!-- Participate call-out -->
-    <section class="relative isolate overflow-hidden bg-primary py-20 text-white md:py-28">
-      <div class="absolute inset-0 -z-10" aria-hidden="true">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(255,197,90,0.18),transparent_26%)]"></div>
-        <svg class="absolute inset-0 h-full w-full text-white/8" viewBox="0 0 1200 900" fill="none">
-          <defs>
-            <pattern id="actions-participate-grid-fr" width="44" height="44" patternUnits="userSpaceOnUse">
-              <circle cx="2" cy="2" r="2" fill="currentColor" />
-            </pattern>
-          </defs>
-          <rect width="1200" height="900" fill="url(#actions-participate-grid-fr)" />
-        </svg>
+    <!-- Section 6 : Explorer le monde invisible -->
+    <section class="py-16 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Explorer le monde invisible</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">Sous nos pieds existe un univers encore largement méconnu. Champignons, mycorhizes, micro-organismes : ce monde invisible joue un rôle fondamental dans la fertilité et la santé des écosystèmes.</p>
       </div>
-      <div class="site-container">
-        <div class="grid grid-cols-1 gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
-          <div>
-            <div class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur">
-              <LucideIcon name="Compass" class="h-4 w-4 text-golden" />
-              Participer a l'aventure
-            </div>
-            <h2 class="mt-6 max-w-3xl text-3xl font-heading font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
-              Un projet vivant a soutenir, habiter et faire grandir
-            </h2>
-            <p class="mt-6 max-w-2xl text-lg leading-8 text-white/80">
-              Pachatopia est un projet collectif. Chacun peut contribuer, non seulement par un soutien ponctuel, mais en prenant part a une dynamique de regeneration qui relie nature, territoire et communaute.
-            </p>
+    </section>
 
-            <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2">
-              <article class="border-t border-white/15 pt-6">
-                <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10">
-                  <LucideIcon name="Trees" class="h-5 w-5 text-golden" />
-                </div>
-                <h3 class="mt-4 text-xl font-heading font-bold text-white">Planter</h3>
-                <p class="mt-3 text-sm leading-6 text-white/75">Soutenir la plantation d'arbres et la restauration des ecosystemes.</p>
-              </article>
-              <article class="border-t border-white/15 pt-6">
-                <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10">
-                  <LucideIcon name="Coffee" class="h-5 w-5 text-golden" />
-                </div>
-                <h3 class="mt-4 text-xl font-heading font-bold text-white">Decouvrir</h3>
-                <p class="mt-3 text-sm leading-6 text-white/75">Choisir notre cafe et soutenir une filiere locale en transition.</p>
-              </article>
-              <article class="border-t border-white/15 pt-6">
-                <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10">
-                  <LucideIcon name="Shovel" class="h-5 w-5 text-golden" />
-                </div>
-                <h3 class="mt-4 text-xl font-heading font-bold text-white">Participer</h3>
-                <p class="mt-3 text-sm leading-6 text-white/75">Prendre part aux activites sur le terrain et a la vie du projet.</p>
-              </article>
-              <article class="border-t border-white/15 pt-6">
-                <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10">
-                  <LucideIcon name="HeartHandshake" class="h-5 w-5 text-golden" />
-                </div>
-                <h3 class="mt-4 text-xl font-heading font-bold text-white">Soutenir</h3>
-                <p class="mt-3 text-sm leading-6 text-white/75">Aider financierement les actions qui donnent de la profondeur au projet.</p>
-              </article>
-            </div>
-          </div>
+    <!-- Section 7 : Transformer les déchets en ressources -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Transformer les déchets en ressources</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">Dans la nature, rien ne devient un déchet. Tout nourrit autre chose. Pulpe de café, résidus végétaux, fumiers, bois de taille, biomasse : nous cherchons à transformer ces matières en composts, fertilisants liquides, bokashis.</p>
+      </div>
+    </section>
 
-          <aside class="lg:border-l lg:border-white/15 lg:pl-8">
-            <div class="overflow-hidden">
-              <img src="/pachatopia/images/community.jpg" alt="Communaute Pachatopia" class="aspect-[4/3] w-full object-cover rounded-lg" loading="lazy" />
-            </div>
-            <p class="mt-6 text-xs font-semibold uppercase tracking-[0.24em] text-primary/45">Pourquoi participer</p>
-            <p class="mt-4 text-2xl font-heading font-bold leading-tight text-white">Ensemble, nous pouvons regenerer la Terre et construire un futur plus harmonieux.</p>
-            <p class="mt-5 text-base leading-7 text-white/78">Chaque geste compte : soutenir une action, choisir un produit, venir sur place, ou contribuer au developpement du projet. C'est l'accumulation de ces engagements qui rend la regeneration tangible.</p>
-            <div class="mt-8 flex flex-wrap gap-4">
-              <a href="/pachatopia/comment-participer/" class="button-primary group">
-                Soutenir Pachatopia
-                <LucideIcon name="ArrowRight" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-              </a>
-              <a href="/pachatopia/contacts/" class="button-secondary">
-                Nous contacter
-              </a>
-            </div>
-          </aside>
-        </div>
+    <!-- Section 8 : Utiliser l'énergie du soleil -->
+    <section class="py-16 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Utiliser l'énergie du soleil</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">Le soleil est déjà la principale source d'énergie du vivant. Nous cherchons à mieux utiliser cette ressource pour sécher les récoltes, conserver les aliments, limiter les pertes après récolte.</p>
+      </div>
+    </section>
+
+    <!-- Section 9 : Créer plus de valeur sans prélever davantage -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Créer plus de valeur sans prélever davantage</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">Une même plante peut parfois nourrir bien plus qu'un seul usage. Nous explorons la transformation en huiles essentielles, huiles végétales, cosmétiques naturels, produits d'entretien, compléments alimentaires.</p>
+      </div>
+    </section>
+
+    <!-- Section 10 : Conclusion -->
+    <section class="py-16 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Notre objectif</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">Notre objectif n'est pas seulement de produire davantage. Nous cherchons à créer davantage de vie. Davantage de fertilité. Davantage de biodiversité. Davantage d'emplois. Davantage de connaissances. Davantage de coopération.</p>
+      </div>
+    </section>
+
+    <!-- Section 11 : Une recherche qui reste ouverte -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Une recherche qui reste ouverte</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">Le Laboratoire du Vivant n'aura jamais terminé d'apprendre. Chaque saison apporte de nouvelles observations. Chaque rencontre ouvre de nouvelles pistes. Chaque erreur devient un enseignement.</p>
+      </div>
+    </section>
+
+    <!-- Tagline -->
+    <section class="py-20 bg-primary text-white text-center">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-3xl md:text-4xl font-heading font-bold tracking-wide">NOUS APPRENONS DU VIVANT.</p>
       </div>
     </section>
 
