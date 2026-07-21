@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
-import Testimonials from "../components/Testimonials.astro";
 import CallToAction from "../components/CallToAction.astro";
 import Footer from "../components/Footer.astro";
 import LucideIcon from "../components/LucideIcon.astro";
@@ -10,207 +9,107 @@ const lang = "fr";
 ---
 
 <Layout
-  title="Notre histoire - Pachatopia"
-  description="De la guerre à la régénération : l'histoire de Pachatopia à San Carlos, Colombie."
+  title="Notre histoire — Pachatopia"
+  description="Toutes les histoires commencent quelque part. La nôtre a commencé par une question."
   lang={lang}
 >
   <Header lang={lang} />
   <main>
-    <section class="relative isolate overflow-hidden py-24 text-white md:py-32">
+    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
       <div class="absolute inset-0">
-        <img src="/pachatopia/images/farm-hero.jpg" alt="" class="h-full w-full object-cover" aria-hidden="true" />
-        <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(22,47,42,0.92),rgba(10,91,75,0.74))]"></div>
+        <img src="/pachatopia/images/hero-bg.jpg" alt="" class="w-full h-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-primary/80"></div>
       </div>
-      <div class="absolute inset-0 -z-0 overflow-hidden" aria-hidden="true">
-        <div class="absolute left-[8%] top-10 h-44 w-44 rounded-full bg-white/8 blur-3xl"></div>
-        <div class="absolute bottom-0 right-[10%] h-72 w-72 rounded-full bg-golden/15 blur-3xl"></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Notre histoire</h1>
+        <p class="text-xl md:text-2xl text-white/90">Toutes les histoires commencent quelque part. La nôtre a commencé par une question.</p>
       </div>
-      <div class="site-container relative z-10">
-        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
-          <div class="max-w-3xl">
-            <div class="section-kicker mb-6 w-fit border-white/15 bg-white/10 text-white shadow-none">
-              <LucideIcon name="ScrollText" class="h-4 w-4 text-golden" />
-              San Carlos, Colombie
-            </div>
-            <h1 class="text-4xl font-heading font-bold tracking-tight md:text-5xl lg:text-6xl">Notre histoire</h1>
-            <p class="mt-6 max-w-2xl text-xl leading-8 text-white/85 md:text-2xl">De la guerre à la régénération.</p>
-          </div>
-
-          <div class="lg:justify-self-end">
-            <div class="grid grid-cols-3 gap-4 border-t border-white/15 pt-6 text-sm text-white/75">
-              <div>
-                <p class="font-semibold uppercase tracking-[0.18em] text-white/50">Avant</p>
-                <p class="mt-2 leading-6">Un territoire marque par le conflit.</p>
-              </div>
-              <div>
-                <p class="font-semibold uppercase tracking-[0.18em] text-white/50">Aujourd'hui</p>
-                <p class="mt-2 leading-6">Une reconstruction encore fragile.</p>
-              </div>
-              <div>
-                <p class="font-semibold uppercase tracking-[0.18em] text-white/50">Demain</p>
-                <p class="mt-2 leading-6">Un lieu de régénération partagée.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="white"></path>
-      </svg>
     </section>
 
-    <section class="bg-white py-20 md:py-28">
-      <div class="site-container">
-        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-          <div>
-            <div class="section-kicker w-fit border-primary/10 bg-primary/[0.03] shadow-none">
-              <LucideIcon name="MapPinned" class="h-4 w-4 text-accent" />
-              Un territoire marque par l'histoire
-            </div>
-            <h2 class="mt-6 text-3xl font-heading font-bold tracking-tight text-primary md:text-4xl">Une terre d'une grande richesse, mais aussi d'une grande mémoire</h2>
-            <div class="mt-10 overflow-hidden rounded-[2rem] shadow-[0_24px_60px_rgba(10,91,75,0.14)]">
-              <img src="/pachatopia/images/reserve-naturelle.webp" alt="Montagnes de San Carlos" class="aspect-[4/5] w-full object-cover" loading="lazy" />
-            </div>
-            <p class="mt-6 text-xs font-semibold uppercase tracking-[0.24em] text-primary/45">Point de bascule</p>
-            <p class="mt-3 max-w-md text-base leading-7 text-gray-700">La reconstruction d'un territoire ne passe pas seulement par les batiments ou l'economie, mais aussi par la capacite a refaire circuler la confiance.</p>
-          </div>
+    <!-- Une question qui ne nous a jamais quittés -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-kicker w-fit mb-6">
+          <LucideIcon name="HelpCircle" class="h-4 w-4 text-accent" />
+          Nos origines
+        </div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Une question qui ne nous a jamais quittés</h2>
+        <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
+          <p>Comment répondre aux besoins des êtres humains tout en respectant le vivant dont nous dépendons ? Cette question est née bien avant Pachatopia. Elle ne cherchait pas seulement une réponse écologique. Elle cherchait une manière plus juste d'habiter le monde.</p>
+          <p>Pendant des années, cette question nous a conduits à observer, à voyager, à rencontrer des femmes et des hommes passionnés, à apprendre de la nature comme des êtres humains. Nous ne savions pas encore où ce chemin nous mènerait. Mais nous savions qu'il fallait commencer quelque part.</p>
+        </div>
+      </div>
+    </section>
 
-          <div class="relative">
-            <div class="absolute bottom-0 left-[1.05rem] top-0 w-px bg-primary/10"></div>
-            <div class="space-y-10">
-              <article class="relative pl-12">
-                <div class="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-xs font-semibold text-white">1</div>
-                <p class="text-lg leading-8 text-gray-700">Au cœur des montagnes verdoyantes de San Carlos, dans le département d'Antioquia en Colombie, la nature est d'une richesse exceptionnelle. Pourtant, ce territoire a aussi été profondément marqué par l'histoire du conflit armé colombien à la fin des années 1990 et au début des années 2000.</p>
-              </article>
-              <article class="relative pl-12">
-                <div class="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-accent text-xs font-semibold text-white">2</div>
-                <p class="text-lg leading-8 text-gray-700">Pendant plusieurs années, les habitants de la région ont vécu la violence, les déplacements et les divisions. De nombreuses familles ont dû quitter leurs terres, et les paysages comme les communautés ont porté les cicatrices de cette période difficile.</p>
-              </article>
-              <article class="relative pl-12">
-                <div class="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-golden-dark text-xs font-semibold text-primary">3</div>
-                <p class="text-lg leading-8 text-gray-700">Aujourd'hui, San Carlos est engagé dans un processus de reconstruction. Les habitants reviennent, les villages se reconstruisent, et peu à peu la vie reprend sa place.</p>
-              </article>
-              <article class="relative pl-12">
-                <div class="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-xs font-semibold text-primary">4</div>
-                <p class="text-xl font-semibold italic leading-8 text-primary">C'est dans ce contexte qu'est ne Pachatopia.</p>
-              </article>
-            </div>
+    <!-- Une terre qui nous a choisis -->
+    <section class="py-20 md:py-28 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Une terre qui nous a choisis</h2>
+        <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
+          <p>Ce chemin nous a conduits jusqu'aux montagnes de San Carlos, en Colombie. Et, peu à peu, nous avons eu le sentiment que cette terre nous accueillait autant que nous apprenions à l'habiter.</p>
+          <p>Un territoire d'une beauté exceptionnelle. Un territoire marqué par les blessures du conflit armé. Là où certains voyaient des terres meurtries… Nous avons vu une formidable capacité de résilience. Les habitants reconstruisaient leur avenir. La forêt repoussait. Les rivières continuaient de couler. Le vivant poursuivait silencieusement son œuvre.</p>
+          <p>Nous avons compris que cette terre avait autant à nous apprendre que nous pouvions espérer lui apporter.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Les premières graines -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Les premières graines</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
+            <p>Pachatopia n'est pas né d'un grand plan parfaitement établi. Il est né de milliers de petits pas. Une rencontre. Une parcelle. Quelques arbres. Des producteurs. Des volontaires. Des amitiés. Des doutes. Des erreurs. Des apprentissages.</p>
+            <p>Chaque difficulté est devenue une occasion de mieux comprendre le vivant. Chaque rencontre a enrichi le projet. Petit à petit, une vision prenait racine.</p>
+          </div>
+          <div class="surface-card p-8 flex flex-col justify-center">
+            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-primary/45 mb-4">Le début</p>
+            <p class="text-lg text-gray-700 italic">"Nous n'étions pas des experts. Nous étions des personnes qui se posaient une question. Et cette question nous a conduits plus loin que toutes les réponses que nous aurions pu imaginer."</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="relative isolate overflow-hidden bg-cream py-20 md:py-28">
-      <div class="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
-        <svg class="absolute right-[max(50%,26rem)] top-0 h-[54rem] w-[58rem] translate-x-1/3 text-primary/8 [mask-image:radial-gradient(28rem_28rem_at_top,white,transparent)]" viewBox="0 0 1024 1024" fill="none">
-          <defs>
-            <pattern id="history-sequence-grid-fr" width="140" height="140" patternUnits="userSpaceOnUse">
-              <path d="M140 0H0V140" stroke="currentColor" stroke-width="1" />
-            </pattern>
-          </defs>
-          <rect width="1024" height="1024" fill="url(#history-sequence-grid-fr)" />
-        </svg>
-      </div>
-      <div class="site-container">
-        <div class="site-container-compact px-0 text-center">
-          <div class="section-kicker mx-auto mb-4 w-fit">
-            <LucideIcon name="Sprout" class="h-4 w-4 text-accent" />
-            Ce qui donne naissance au projet
-          </div>
-            <h2 class="section-title text-3xl md:text-4xl lg:text-5xl">Une conviction simple, suivie d'effets très concrets</h2>
-          <div class="section-divider"></div>
-        </div>
-
-        <div class="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
-          <div class="space-y-8">
-            <p class="text-xl font-heading font-bold leading-9 text-primary">Notre projet est né d'une conviction simple : en régénérant la Terre, nous pouvons aussi contribuer à régénérer les relations humaines.</p>
-            <p class="text-lg leading-8 text-gray-700">Sur ces terres, nous travaillons avec des habitants de la region, certains ayant vecu la guerre de pres, d'autres l'ayant subie, pour transformer un territoire marque par le conflit en un espace de cooperation, de biodiversite et d'espoir.</p>
-            <p class="text-lg leading-8 text-gray-700">A travers l'agroforesterie, la restauration des sols et la creation de reserves naturelles, nous cherchons a faire renaitre des ecosystemes vivants.</p>
-          </div>
-
-          <div class="space-y-8">
-            <div class="border-t border-primary/10 pt-6">
-              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary/45">01</p>
-              <h3 class="mt-3 text-2xl font-heading font-bold text-primary">Les arbres repoussent</h3>
-            </div>
-            <div class="border-t border-primary/10 pt-6">
-              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary/45">02</p>
-              <h3 class="mt-3 text-2xl font-heading font-bold text-primary">Les sols se regenerent</h3>
-            </div>
-            <div class="border-t border-primary/10 pt-6">
-              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary/45">03</p>
-              <h3 class="mt-3 text-2xl font-heading font-bold text-primary">La biodiversite revient</h3>
-            </div>
-          </div>
+    <!-- Une aventure collective -->
+    <section class="py-20 md:py-28 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Une aventure collective</h2>
+        <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
+          <p>Très vite, nous avons compris qu'un projet comme celui-ci ne pouvait appartenir à une seule personne. Des familles. Des agriculteurs. Des voisins. Des volontaires venus du monde entier. Des soutiens. Des partenaires. Chacun a apporté une pierre à l'édifice.</p>
+          <p>Le Mouvement Pachatopia grandissait. Non seulement par les arbres plantés. Mais aussi par les liens qui se créaient.</p>
         </div>
       </div>
     </section>
 
-    <section class="bg-white py-20 md:py-28">
-      <div class="site-container">
-        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-start lg:gap-16">
-          <div class="overflow-hidden rounded-[2.25rem] shadow-[0_28px_70px_rgba(10,91,75,0.14)]">
-            <img src="/pachatopia/images/community.jpg" alt="Communaute Pachatopia" class="aspect-[5/6] w-full object-cover" loading="lazy" />
-          </div>
-
-          <div>
-            <div class="section-kicker w-fit">
-              <LucideIcon name="HeartHandshake" class="h-4 w-4 text-accent" />
-              Une transformation humaine
-            </div>
-            <h2 class="mt-6 text-3xl font-heading font-bold tracking-tight text-primary md:text-4xl">La paix se cultive aussi, comme un jardin</h2>
-            <div class="mt-8 space-y-8">
-              <div class="border-t border-primary/10 pt-6">
-                <h3 class="text-2xl font-heading font-bold text-primary">Reconstruire la confiance</h3>
-                <p class="mt-3 text-lg leading-8 text-gray-700">Travailler la terre ensemble, planter des arbres, cultiver le cafe et prendre soin de la foret deviennent des moyens de reconstruire la confiance et d'imaginer un futur commun.</p>
-              </div>
-              <div class="border-t border-primary/10 pt-6">
-                <h3 class="text-2xl font-heading font-bold text-primary">Cultiver des gestes simples</h3>
-                <p class="mt-3 text-lg leading-8 text-gray-700">A Pachatopia, nous croyons que la paix se cultive aussi, comme un jardin. Elle nait des gestes simples : planter, proteger, cooperer et transmettre.</p>
-              </div>
-              <div class="border-t border-primary/10 pt-6">
-                <h3 class="text-2xl font-heading font-bold text-primary">Ouvrir un autre avenir</h3>
-                <p class="mt-3 text-lg leading-8 text-gray-700">Notre ambition est de contribuer a faire de ces terres un lieu ou la nature se regenere et ou les communautes peuvent avancer ensemble vers un avenir plus harmonieux.</p>
-              </div>
-            </div>
-          </div>
+    <!-- Plus qu'une ferme -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Plus qu'une ferme</h2>
+        <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
+          <p>Au fil des années, une évidence s'est imposée. Nous n'étions pas seulement en train de développer une ferme agroforestière. Nous étions en train d'apprendre. À observer. À coopérer. À transmettre. Pachatopia devenait un laboratoire du vivant. Un lieu où nous apprenons autant à cultiver la terre qu'à habiter le monde.</p>
         </div>
       </div>
     </section>
 
-    <section class="bg-primary py-20 text-white md:py-28">
-      <div class="site-container">
-        <div class="grid grid-cols-1 gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-          <div>
-            <div class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur">
-              <LucideIcon name="ArrowUpRight" class="h-4 w-4 text-golden" />
-              Une invitation à participer
-            </div>
-            <h2 class="mt-6 max-w-3xl text-3xl font-heading font-bold tracking-tight text-white md:text-4xl lg:text-5xl">Chacun peut prendre part à cette régénération</h2>
-          </div>
-
-          <div class="space-y-5 text-base leading-7 text-white/78">
-            <p class="flex items-start gap-4"><span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-white/10"><LucideIcon name="Trees" class="h-4 w-4 text-golden" /></span><span>En soutenant la plantation d'arbres</span></p>
-            <p class="flex items-start gap-4"><span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-white/10"><LucideIcon name="Coffee" class="h-4 w-4 text-golden" /></span><span>En parrainant un cafeier</span></p>
-            <p class="flex items-start gap-4"><span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-white/10"><LucideIcon name="Leaf" class="h-4 w-4 text-golden" /></span><span>En decouvrant notre cafe agroforestier</span></p>
-            <p class="flex items-start gap-4"><span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-white/10"><LucideIcon name="Map" class="h-4 w-4 text-golden" /></span><span>En venant partager cette experience sur place</span></p>
-          </div>
+    <!-- Et demain ? -->
+    <section class="relative py-24 md:py-32 bg-primary text-white overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <svg class="absolute -top-10 -right-10 w-80 h-80 opacity-[0.05]" viewBox="0 0 300 300" fill="none"><circle cx="150" cy="150" r="140" fill="white"/></svg>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-heading font-bold mb-8">Et demain ?</h2>
+        <div class="space-y-5 text-lg text-white/90 leading-relaxed">
+          <p>Aujourd'hui, Pachatopia continue d'évoluer. Les arbres grandissent. Les projets se développent. Les rencontres se multiplient. Et le Mouvement continue de grandir avec celles et ceux qui choisissent de le rejoindre.</p>
+          <p>Nous ne savons pas exactement à quoi ressemblera Pachatopia dans vingt ans. Mais nous savons dans quelle direction nous voulons avancer. Celle du vivant.</p>
+          <p>L'histoire de Pachatopia ne s'écrira jamais uniquement avec celles et ceux qui l'ont commencée. Elle s'écrira avec toutes les personnes qui choisiront, un jour, d'y apporter une idée, un arbre, un savoir, un sourire, une rencontre ou un peu de leur temps.</p>
         </div>
-
-        <div class="mt-12 flex flex-wrap items-center justify-between gap-6 border-t border-white/12 pt-8">
-          <div class="space-y-2">
-            <p class="text-lg font-semibold italic text-white">Ensemble, nous pouvons transformer ces terres en un espace de biodiversite, de resilience et de paix.</p>
-            <p class="text-lg font-semibold italic text-white/85">La ou la foret repousse, l'espoir repousse aussi.</p>
-          </div>
-          <a href="/comment-participer/" class="button-primary group">
-            Participer au projet
-            <LucideIcon name="ArrowRight" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-          </a>
+        <p class="text-xl text-golden font-heading italic mt-10">Peut-être que la prochaine page de cette histoire attend simplement votre rencontre.</p>
+        <div class="mt-10">
+          <a href="/contacts/" class="button-primary-dark text-lg">Rejoignez le Mouvement</a>
         </div>
       </div>
     </section>
 
-    <Testimonials lang={lang} />
     <CallToAction lang={lang} />
   </main>
   <Footer lang={lang} />
