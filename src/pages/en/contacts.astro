@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
+import CallToAction from "../../components/CallToAction.astro";
 import { useTranslations } from "../../i18n/translations";
 
 const lang = "en";
@@ -251,5 +252,6 @@ const t = useTranslations(lang);
 
 
   </main>
+    <CallToAction lang={lang} />
   <Footer lang={lang} />
 </Layout>

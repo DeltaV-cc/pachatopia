@@ -102,7 +102,7 @@ const homeHref = base + getLocalizedPath("/", lang);
             class="hidden sm:inline-flex items-center gap-1.5 bg-golden hover:bg-golden-dark text-primary font-semibold text-sm px-4 py-2 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-golden/20"
           >
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C12 2 18 7 18 13C18 17 15 20 12 20C9 20 6 17 6 13C6 7 12 2 12 2Z"/></svg>
-            <span>{lang === "en" ? "Support" : "Soutenir"}</span>
+            <span>{t("footer.support")}</span>
           </a>
 
           <!-- Language switch -->
@@ -168,7 +168,7 @@ const homeHref = base + getLocalizedPath("/", lang);
   <nav class="px-4 py-6">
     <!-- Section: Découvrir -->
     <p class="px-3 mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-golden/70">
-      {lang === "en" ? "Discover" : "Découvrir"}
+      {t("footer.discover")}
     </p>
     <ul class="flex flex-col gap-0.5 mb-6">
       {primaryNav.map((item) => (
@@ -183,7 +183,7 @@ const homeHref = base + getLocalizedPath("/", lang);
 
     <!-- Section: Participer -->
     <p class="px-3 mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-golden/70">
-      {lang === "en" ? "Participate" : "Participer"}
+      {t("footer.participate")}
     </p>
     <ul class="flex flex-col gap-0.5 mb-6">
       {secondaryNav.map((item) => (
