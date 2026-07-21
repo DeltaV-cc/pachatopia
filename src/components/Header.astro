@@ -10,108 +10,131 @@ interface Props {
 
 const { lang = "fr" } = Astro.props;
 const t = useTranslations(lang);
-
 const otherLang = lang === "fr" ? "en" : "fr";
 
-// Build the current path without the language prefix so we can switch languages
-// Astro.url.pathname includes the base, so strip /pachatopia first
 const currentPath = Astro.url.pathname.replace(/^\/pachatopia/, "") || "/";
 const pathWithoutLang = currentPath.replace(/^\/en/, "") || "/";
 const switchLangPath = "/pachatopia" + getLocalizedPath(pathWithoutLang, otherLang);
 
-// Navigation items linking to actual pages
 const base = "/pachatopia";
-const navItems = [
+
+// Primary nav items (shown in desktop bar)
+const primaryNav = [
   { key: "nav.home" as const, href: base + getLocalizedPath("/", lang) },
   { key: "nav.vision" as const, href: base + getLocalizedPath("/a-propos-de-nous/", lang) },
   { key: "nav.history" as const, href: base + getLocalizedPath("/notre-histoire/", lang) },
   { key: "nav.actions" as const, href: base + getLocalizedPath("/nos-actions/", lang) },
   { key: "nav.coffee" as const, href: base + getLocalizedPath("/le-cafe/", lang) },
+];
+
+// Secondary nav items (in dropdown / mobile)
+const secondaryNav = [
   { key: "nav.support" as const, href: base + getLocalizedPath("/comment-participer/", lang) },
   { key: "nav.experience" as const, href: base + getLocalizedPath("/venir-sur-place/", lang) },
   { key: "nav.volunteer" as const, href: base + getLocalizedPath("/participer-volontariat/", lang) },
   { key: "nav.faq" as const, href: base + getLocalizedPath("/faq/", lang) },
   { key: "nav.contact" as const, href: base + getLocalizedPath("/contacts/", lang) },
 ];
+
+const homeHref = base + getLocalizedPath("/", lang);
 ---
 
 <header
   data-testid="header"
   id="main-header"
-  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-primary/95 backdrop-blur-sm"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
 >
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="grid h-16 grid-cols-3 items-center">
-      <!-- Hamburger Button (left) -->
-      <div class="justify-self-start">
-        <button
-          data-testid="mobile-menu-button"
-          id="sidebar-toggle"
-          type="button"
-          class="inline-flex items-center justify-center rounded-md p-2 text-white/85 transition-colors duration-200 hover:bg-white/10 hover:text-white"
-          aria-expanded="false"
-          aria-controls="sidebar-menu"
-          aria-label="Toggle navigation menu"
-        >
-          <svg
-            id="hamburger-icon"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-          </svg>
-        </button>
-      </div>
-
-      <!-- Logo (center) -->
-      <div class="justify-self-center">
-        <a
-          href={base + getLocalizedPath("/", lang)}
-          class="group flex items-center gap-2 shrink-0"
-        >
+  <!-- Top bar -->
+  <div class="bg-primary/95 backdrop-blur-md border-b border-white/[0.08]">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Logo -->
+        <a href={homeHref} class="flex items-center gap-3 shrink-0 group">
           <img
             src="/pachatopia/images/logoo.png"
             alt="Pachatopia logo"
             class="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
           />
+          <span class="hidden sm:block font-heading text-lg font-bold text-white tracking-wide">
+            Pachatopia
+          </span>
         </a>
-      </div>
 
-      <!-- Language Switcher (right) -->
-      <div class="justify-self-end">
-        <a
-          data-testid="language-switcher"
-          href={switchLangPath}
-          class="flex items-center gap-1.5 rounded-full border border-white/30 px-3 py-1.5 text-sm font-semibold text-white transition-all duration-200 hover:border-white/60 hover:bg-white/10"
-          aria-label={`Switch language to ${otherLang === "en" ? "English" : "Français"}`}
-        >
-          <svg
-            class="h-4 w-4 opacity-70"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
+        <!-- Desktop navigation -->
+        <nav class="hidden lg:flex items-center gap-1" aria-label="Navigation principale">
+          {primaryNav.map((item) => (
+            <a
+              href={item.href}
+              class="relative px-3 py-2 text-sm font-medium text-white/80 rounded-lg transition-all duration-200 hover:text-white hover:bg-white/[0.07]"
+            >
+              {t(item.key)}
+            </a>
+          ))}
+          
+          <!-- More dropdown -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-white/80 rounded-lg transition-all duration-200 hover:text-white hover:bg-white/[0.07]">
+              <span>{t("nav.support")}</span>
+              <svg class="w-3.5 h-3.5 opacity-60 transition-transform group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="m6 9 6 6 6-6"/>
+              </svg>
+            </button>
+            <!-- Dropdown -->
+            <div class="absolute top-full right-0 mt-1 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 z-50">
+              {secondaryNav.map((item) => (
+                <a
+                  href={item.href}
+                  class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-cream hover:text-primary transition-colors"
+                >
+                  {t(item.key)}
+                </a>
+              ))}
+            </div>
+          </div>
+        </nav>
+
+        <!-- Right side: CTA + Language -->
+        <div class="flex items-center gap-3">
+          <!-- CTA button (desktop) -->
+          <a
+            href={base + getLocalizedPath("/comment-participer/", lang)}
+            class="hidden sm:inline-flex items-center gap-1.5 bg-golden hover:bg-golden-dark text-primary font-semibold text-sm px-4 py-2 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-golden/20"
           >
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M2 12h20"></path>
-            <path
-              d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-            ></path>
-          </svg>
-          <span class={lang === "fr" ? "text-white" : "text-white/50"}>FR</span>
-          <span class="text-white/40">|</span>
-          <span class={lang === "en" ? "text-white" : "text-white/50"}>EN</span>
-        </a>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C12 2 18 7 18 13C18 17 15 20 12 20C9 20 6 17 6 13C6 7 12 2 12 2Z"/></svg>
+            <span>{lang === "en" ? "Support" : "Soutenir"}</span>
+          </a>
+
+          <!-- Language switch -->
+          <a
+            data-testid="language-switcher"
+            href={switchLangPath}
+            class="flex items-center gap-1 rounded-full border border-white/20 px-2.5 py-1.5 text-xs font-semibold text-white/70 transition-all duration-200 hover:border-white/50 hover:text-white hover:bg-white/5"
+            aria-label={`Switch language to ${otherLang === "en" ? "English" : "Français"}`}
+          >
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span class={lang === "fr" ? "text-white" : ""}>FR</span>
+            <span class="opacity-40">|</span>
+            <span class={lang === "en" ? "text-white" : ""}>EN</span>
+          </a>
+
+          <!-- Hamburger (mobile) -->
+          <button
+            data-testid="mobile-menu-button"
+            id="sidebar-toggle"
+            type="button"
+            class="lg:hidden inline-flex items-center justify-center rounded-lg p-2 text-white/85 hover:bg-white/10 hover:text-white transition-colors"
+            aria-expanded="false"
+            aria-controls="sidebar-menu"
+            aria-label="Toggle navigation menu"
+          >
+            <svg id="hamburger-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -124,85 +147,60 @@ const navItems = [
   aria-hidden="true"
 ></div>
 
-<!-- Sidebar Menu -->
+<!-- Mobile Sidebar -->
 <aside
   id="sidebar-menu"
-  class="fixed top-0 left-0 z-50 h-full w-72 bg-primary-dark transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto"
+  class="fixed top-0 left-0 z-50 h-full w-80 bg-gradient-to-b from-primary via-primary to-primary-dark transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto"
   aria-label="Main navigation"
 >
-  <!-- Sidebar Header -->
-  <div class="flex items-center justify-between px-5 py-4 border-b border-white/10">
-    <a
-      href={base + getLocalizedPath("/", lang)}
-      class="group flex items-center gap-2"
-    >
-      <img
-        src="/pachatopia/images/logoo.png"
-        alt="Pachatopia logo"
-        class="h-8 w-auto"
-      />
+  <div class="flex items-center justify-between px-5 py-5 border-b border-white/[0.08]">
+    <a href={homeHref} class="flex items-center gap-2.5">
+      <img src="/pachatopia/images/logoo.png" alt="Pachatopia logo" class="h-9 w-auto"/>
+      <span class="font-heading font-bold text-white text-lg">Pachatopia</span>
     </a>
-    <!-- Close Button -->
-    <button
-      id="sidebar-close"
-      type="button"
-      class="rounded-md p-2 text-white/70 transition-colors duration-200 hover:bg-white/10 hover:text-white"
-      aria-label="Close navigation menu"
-    >
-      <svg
-        class="h-5 w-5"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="currentColor"
-        aria-hidden="true"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M6 18L18 6M6 6l12 12"></path>
+    <button id="sidebar-close" type="button" class="rounded-lg p-2 text-white/60 hover:bg-white/10 hover:text-white transition-colors" aria-label="Close navigation menu">
+      <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
       </svg>
     </button>
   </div>
 
-  <!-- Navigation Links -->
-  <nav class="px-3 py-4">
-    <ul class="flex flex-col gap-1">
-      {
-        navItems.map((item) => (
-          <li>
-            <a
-              href={item.href}
-              class="sidebar-nav-link block rounded-lg px-4 py-3 text-base font-medium text-white/85 transition-colors duration-200 hover:bg-white/10 hover:text-white"
-            >
-              {t(item.key)}
-            </a>
-          </li>
-        ))
-      }
+  <nav class="px-4 py-6">
+    <!-- Section: Découvrir -->
+    <p class="px-3 mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-golden/70">
+      {lang === "en" ? "Discover" : "Découvrir"}
+    </p>
+    <ul class="flex flex-col gap-0.5 mb-6">
+      {primaryNav.map((item) => (
+        <li>
+          <a href={item.href} class="sidebar-nav-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-base text-white/80 hover:bg-white/[0.06] hover:text-white transition-colors">
+            <span class="w-1.5 h-1.5 rounded-full bg-golden/50"></span>
+            {t(item.key)}
+          </a>
+        </li>
+      ))}
     </ul>
 
-    <!-- Language switcher in sidebar -->
-    <div class="mt-4 border-t border-white/10 pt-4 px-4">
-      <a
-        href={switchLangPath}
-        class="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:border-white/60 hover:bg-white/10"
-      >
-        <svg
-          class="h-4 w-4 opacity-70"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          aria-hidden="true"
-        >
-          <circle cx="12" cy="12" r="10"></circle>
-          <path d="M2 12h20"></path>
-          <path
-            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-          ></path>
+    <!-- Section: Participer -->
+    <p class="px-3 mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-golden/70">
+      {lang === "en" ? "Participate" : "Participer"}
+    </p>
+    <ul class="flex flex-col gap-0.5 mb-6">
+      {secondaryNav.map((item) => (
+        <li>
+          <a href={item.href} class="sidebar-nav-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-base text-white/80 hover:bg-white/[0.06] hover:text-white transition-colors">
+            <span class="w-1.5 h-1.5 rounded-full bg-white/20"></span>
+            {t(item.key)}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Language switcher -->
+    <div class="mt-6 pt-5 border-t border-white/[0.08]">
+      <a href={switchLangPath} class="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2.5 text-sm font-medium text-white hover:border-white/50 hover:bg-white/5 transition-all">
+        <svg class="w-4 h-4 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
         </svg>
         {otherLang === "en" ? "Switch to English" : "Passer en Français"}
       </a>
@@ -210,7 +208,6 @@ const navItems = [
   </nav>
 </aside>
 
-<!-- Spacer to offset fixed header -->
 <div class="h-16"></div>
 
 <script>
@@ -221,9 +218,7 @@ const navItems = [
     const overlay = document.getElementById("sidebar-overlay");
     const header = document.getElementById("main-header");
 
-    if (!sidebarToggle || !sidebarClose || !sidebar || !overlay) {
-      return;
-    }
+    if (!sidebarToggle || !sidebarClose || !sidebar || !overlay) return;
 
     let isOpen = false;
 
@@ -247,50 +242,28 @@ const navItems = [
       document.body.style.overflow = "";
     }
 
-    // Toggle on hamburger click
-    sidebarToggle.addEventListener("click", () => {
-      isOpen ? closeSidebar() : openSidebar();
-    });
-
-    // Close on X button
+    sidebarToggle.addEventListener("click", () => isOpen ? closeSidebar() : openSidebar());
     sidebarClose.addEventListener("click", closeSidebar);
-
-    // Close on overlay click
     overlay.addEventListener("click", closeSidebar);
-
-    // Close on nav link click
     sidebar.querySelectorAll(".sidebar-nav-link").forEach((link) => {
       link.addEventListener("click", closeSidebar);
     });
-
-    // Close on Escape key
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && isOpen) {
-        closeSidebar();
-        sidebarToggle.focus();
-      }
+      if (event.key === "Escape" && isOpen) { closeSidebar(); sidebarToggle.focus(); }
     });
 
-    // Header scroll effect
     function handleScroll() {
       if (header) {
         if (window.scrollY > 10) {
-          header.classList.add("shadow-lg", "shadow-black/20");
-          header.classList.remove("bg-primary/95");
-          header.classList.add("bg-primary");
+          header.querySelector('.bg-primary\\/95')?.classList.add("shadow-lg", "shadow-black/20");
         } else {
-          header.classList.remove("shadow-lg", "shadow-black/20");
-          header.classList.remove("bg-primary");
-          header.classList.add("bg-primary/95");
+          header.querySelector('.bg-primary\\/95')?.classList.remove("shadow-lg", "shadow-black/20");
         }
       }
     }
-
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
   }
 
-  // Initialize on page load
   document.addEventListener("astro:page-load", initHeader);
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initHeader);
