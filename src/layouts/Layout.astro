@@ -15,13 +15,13 @@ const {
   title,
   description = "Pachatopia - Association pour l'agriculture durable, la création de réserves naturelles et un mode de vie éco-responsable, inspirée par la sagesse amérindienne et le respect de la Pachamama.",
   lang = "fr",
-  image = "/images/farm-hero.jpg",
+  image = "/pachatopia/images/farm-hero.jpg",
   type = "website",
   noindex = false,
   ogImageAlt = lang === "en" ? "Pachatopia regenerative landscape" : "Paysage regeneratif de Pachatopia",
 } = Astro.props;
 
-const siteUrl = "https://pachatopia.org";
+const siteUrl = "https://deltav-cc.github.io/pachatopia/";
 const currentPath = Astro.url.pathname;
 const canonicalUrl = new URL(currentPath, siteUrl).href;
 const ogImage = new URL(image, siteUrl).href;
@@ -39,7 +39,7 @@ const organizationSchema = {
   "@type": "NonprofitOrganization",
   name: "Pachatopia",
   url: siteUrl,
-  logo: new URL("/images/logoo.png", siteUrl).href,
+  logo: new URL("/pachatopia/images/logoo.png", siteUrl).href,
   description: lang === "en"
     ? "Non-profit association dedicated to sustainable agriculture, natural reserve creation, and eco-responsible living inspired by Indigenous wisdom."
     : "Association dédiée à l'agriculture durable, la création de réserves naturelles et un mode de vie éco-responsable inspiré de la sagesse amérindienne.",
@@ -100,10 +100,10 @@ const webPageSchema = {
     <meta name="format-detection" content="telephone=no, address=no, email=no" />
 
     <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
-    <link rel="icon" type="image/png" href="/favicon-192.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" href="/pachatopia/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/pachatopia/favicon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/pachatopia/apple-touch-icon.png" />
+    <link rel="manifest" href="/pachatopia/site.webmanifest" />
 
     <!-- Primary Meta Tags -->
     <title>{title}</title>

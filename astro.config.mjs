@@ -7,7 +7,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://pachatopia.org',
+  site: 'https://deltav-cc.github.io/pachatopia',
+  base: '/pachatopia/',
   vite: {
     plugins: [tailwindcss()]
   },

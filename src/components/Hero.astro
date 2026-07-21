@@ -15,9 +15,9 @@ const t = useTranslations(lang);
   class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden"
 >
   <!-- Background image with overlay -->
-  <div class="absolute inset-0 -z-10" aria-hidden="true">
+  <div class="absolute inset-0" style="z-index: 0" aria-hidden="true">
     <img
-      src="/images/hero-bg.jpg"
+      src="/pachatopia/images/hero-bg.jpg"
       alt=""
       class="absolute inset-0 w-full h-full object-cover"
     />
@@ -25,7 +25,7 @@ const t = useTranslations(lang);
   </div>
 
   <!-- Decorative SVG elements -->
-  <div class="absolute inset-0 -z-5 overflow-hidden pointer-events-none" aria-hidden="true">
+  <div class="absolute inset-0 overflow-hidden pointer-events-none" style="z-index: 1" aria-hidden="true">
     <!-- Large soft circle top-right -->
     <svg
       class="hero-circle-1 absolute -top-24 -right-24 w-[500px] h-[500px] opacity-[0.07]"
@@ -158,7 +158,7 @@ const t = useTranslations(lang);
   </div>
 
   <!-- Main content -->
-  <div class="hero-content relative z-10 max-w-4xl mx-auto px-6 py-24 text-center">
+  <div class="hero-content relative z-20 max-w-4xl mx-auto px-6 py-24 text-center">
     <!-- Decorative top flourish -->
     <div class="hero-flourish flex items-center justify-center gap-3 mb-8">
       <span class="block w-12 h-px bg-golden/50"></span>
@@ -363,92 +363,62 @@ const t = useTranslations(lang);
 
   /* ── Decorative element animations ── */
   .hero-circle-1 {
-    opacity: 0;
-    animation:
-      hero-scale-in 1.2s ease-out 0.3s forwards,
-      hero-float-slow 8s ease-in-out 1.5s infinite;
+    opacity: 0.07;
+    animation: hero-float-slow 8s ease-in-out 1.5s infinite;
   }
 
   .hero-circle-2 {
-    opacity: 0;
-    animation:
-      hero-scale-in 1.2s ease-out 0.5s forwards,
-      hero-float-slow 10s ease-in-out 1.7s infinite;
+    opacity: 0.06;
+    animation: hero-float-slow 10s ease-in-out 1.7s infinite;
   }
 
   .hero-circle-3 {
-    opacity: 0;
-    animation:
-      hero-scale-in 1.2s ease-out 0.7s forwards,
-      hero-float 7s ease-in-out 1.9s infinite;
+    opacity: 0.05;
+    animation: hero-float 7s ease-in-out 1.9s infinite;
   }
 
   .hero-leaf-1 {
-    opacity: 0;
-    animation:
-      hero-slide-right 1s ease-out 0.6s forwards,
-      hero-float-slow 6s ease-in-out 1.6s infinite;
+    opacity: 0.12;
+    animation: hero-float-slow 6s ease-in-out 1.6s infinite;
   }
 
   .hero-leaf-2 {
-    opacity: 0;
-    animation:
-      hero-slide-left 1s ease-out 0.8s forwards,
-      hero-float-slow 7s ease-in-out 1.8s infinite;
+    opacity: 0.10;
+    animation: hero-float-slow 7s ease-in-out 1.8s infinite;
   }
 
   .hero-leaf-3 {
-    opacity: 0;
-    animation:
-      hero-fade-up 1s ease-out 1s forwards,
-      hero-float 9s ease-in-out 2s infinite;
+    opacity: 0.09;
+    animation: hero-float 9s ease-in-out 2s infinite;
   }
 
   .hero-blob {
-    opacity: 0;
-    animation:
-      hero-scale-in 1.4s ease-out 0.9s forwards,
-      hero-float-slow 11s ease-in-out 2.3s infinite;
+    opacity: 0.05;
+    animation: hero-float-slow 11s ease-in-out 2.3s infinite;
   }
 
   .hero-dots {
-    opacity: 0;
-    animation:
-      hero-fade-in 1s ease-out 1s forwards,
-      hero-float 5s ease-in-out 2s infinite;
+    opacity: 0.15;
+    animation: hero-float 5s ease-in-out 2s infinite;
   }
 
   .hero-dots-2 {
-    opacity: 0;
-    animation:
-      hero-fade-in 1s ease-out 1.1s forwards,
-      hero-float 6s ease-in-out 2.1s infinite;
+    opacity: 0.12;
+    animation: hero-float 6s ease-in-out 2.1s infinite;
   }
 
   .hero-dots-3 {
-    opacity: 0;
-    animation:
-      hero-fade-in 1s ease-out 1.2s forwards,
-      hero-float 7s ease-in-out 2.2s infinite;
+    opacity: 0.10;
+    animation: hero-float 7s ease-in-out 2.2s infinite;
   }
 
   .hero-wave {
-    opacity: 0;
-    animation: hero-fade-in 1.5s ease-out 0.8s forwards;
+    opacity: 0.08;
+    animation: none;
   }
 
   /* ── Ensure final opacity values match design intent ── */
-  .hero-circle-1 { --final-opacity: 0.07; }
-  .hero-circle-2 { --final-opacity: 0.06; }
-  .hero-circle-3 { --final-opacity: 0.05; }
-  .hero-leaf-1 { --final-opacity: 0.12; }
-  .hero-leaf-2 { --final-opacity: 0.10; }
-  .hero-leaf-3 { --final-opacity: 0.09; }
-  .hero-blob { --final-opacity: 0.05; }
-  .hero-dots { --final-opacity: 0.15; }
-  .hero-dots-2 { --final-opacity: 0.12; }
-  .hero-dots-3 { --final-opacity: 0.10; }
-  .hero-wave { --final-opacity: 0.08; }
+  /* (now handled directly above — CSS variables no longer needed) */
 
   /* ── Respect reduced motion preference ── */
   @media (prefers-reduced-motion: reduce) {
