@@ -31,11 +31,15 @@ const primaryNav = [
 const participerNav = [
   { key: "nav.passeport" as const, href: base + getLocalizedPath("/passeport/", lang) },
   { key: "nav.parrainage" as const, href: base + getLocalizedPath("/parrainer-une-culture/", lang) },
+  { key: "nav.parrainage_espaces" as const, href: base + getLocalizedPath("/espaces-de-liberte/", lang) },
   { key: "nav.partenaire" as const, href: base + getLocalizedPath("/devenir-partenaire/", lang) },
-  { key: "nav.volontariat_experience" as const, href: base + getLocalizedPath("/trouver-sa-place/", lang) },
+  { key: "nav.ambassadeur" as const, href: base + getLocalizedPath("/devenir-ambassadeur/", lang), indent: true },
+  { key: "nav.depots_ventes" as const, href: base + getLocalizedPath("/livraison-retrait/", lang), indent: true },
+  { key: "nav.volontariat" as const, href: base + getLocalizedPath("/participer-volontariat/", lang) },
 ];
 
 const homeHref = base + getLocalizedPath("/", lang);
+const participateHref = base + getLocalizedPath("/trouver-sa-place/", lang);
 ---
 
 <header
@@ -73,20 +77,26 @@ const homeHref = base + getLocalizedPath("/", lang);
           
           <!-- More dropdown -->
           <div class="relative group">
-            <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-white/80 rounded-lg transition-all duration-200 hover:text-white hover:bg-white/[0.07]">
+            <a
+              href={participateHref}
+              class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-white/80 rounded-lg transition-all duration-200 hover:text-white hover:bg-white/[0.07]"
+            >
               <span>{t("nav.support")}</span>
               <svg class="w-3.5 h-3.5 opacity-60 transition-transform group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <path d="m6 9 6 6 6-6"/>
               </svg>
-            </button>
+            </a>
             <!-- Dropdown -->
-            <div class="absolute top-full right-0 mt-1 w-64 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 z-50">
+            <div class="absolute top-full right-0 mt-1 w-72 bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 z-50">
               {participerNav.map((item) => (
                 <a
                   href={item.href}
-                  class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-cream hover:text-primary transition-colors"
+                  class:list={[
+                    "block py-2.5 text-sm text-gray-700 hover:bg-cream hover:text-primary transition-colors",
+                    item.indent ? "px-8 text-gray-600" : "px-4",
+                  ]}
                 >
-                  {t(item.key)}
+                  {item.indent ? "↳ " : ""}{t(item.key)}
                 </a>
               ))}
             </div>
@@ -195,8 +205,17 @@ const homeHref = base + getLocalizedPath("/", lang);
     <ul class="flex flex-col gap-0.5 mb-6">
       {participerNav.map((item) => (
         <li>
-          <a href={item.href} class="sidebar-nav-link flex items-center gap-3 rounded-lg px-3 py-2.5 text-base text-white/80 hover:bg-white/[0.06] hover:text-white transition-colors">
-            <span class="w-1.5 h-1.5 rounded-full bg-white/20"></span>
+          <a
+            href={item.href}
+            class:list={[
+              "sidebar-nav-link flex items-center gap-3 rounded-lg py-2.5 text-base text-white/80 hover:bg-white/[0.06] hover:text-white transition-colors",
+              item.indent ? "pl-7 pr-3 text-sm text-white/65" : "px-3",
+            ]}
+          >
+            <span class:list={[
+              "rounded-full bg-white/20",
+              item.indent ? "w-1 h-1" : "w-1.5 h-1.5",
+            ]}></span>
             {t(item.key)}
           </a>
         </li>

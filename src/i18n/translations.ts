@@ -16,7 +16,11 @@ export const translations = {
     "nav.support": "Participer",
     "nav.passeport": "Passeport Pachatopia",
     "nav.parrainage": "Parrainage de culture",
+    "nav.parrainage_espaces": "Parrainage d'espaces de liberté",
     "nav.partenaire": "Devenir partenaire",
+    "nav.ambassadeur": "Devenir ambassadeur",
+    "nav.depots_ventes": "Dépôts-ventes / points relais",
+    "nav.volontariat": "Volontariat",
     "nav.volontariat_experience": "Volontariat / Vivre l'expérience",
     "nav.contact_faq": "Contact + FAQ",
     "nav.experience": "Venir vivre l'expérience",
@@ -27,9 +31,22 @@ export const translations = {
     // Hero
     "hero.welcome": "Le Mouvement Pachatopia",
     "hero.tagline": "Reprendre notre place avec le vivant.",
-    "hero.description":
-      "Au cœur des montagnes de San Carlos en Colombie, Pachatopia est un projet de régénération écologique et humaine. Nous restaurons les sols, plantons des arbres et développons une agriculture inspirée des écosystèmes naturels. Un lieu où la nature, les humains et l'espoir grandissent ensemble.",
-    "hero.cta.discover": "Découvrir le projet",
+    "hero.taglineSub":
+      "Et si nous pouvions laisser la Terre plus vivante que nous l'avons trouvée ?",
+    "hero.description": `Un mouvement de femmes et d'hommes qui choisissent de faire grandir le vivant en eux, autour d'eux et de le transmettre aux générations futures.
+Le Mouvement Pachatopia est né d'une conviction simple : l'être humain peut redevenir une force de régénération pour le vivant.
+À San Carlos, au cœur des montagnes colombiennes, nous expérimentons une manière de vivre qui cherche à réconcilier les êtres humains avec le vivant.
+
+Nous apprenons du vivant.
+
+En nous inspirant du vivant, nous restaurons les sols, développons des systèmes agroforestiers, protégeons la biodiversité et créons des liens durables entre l'être humain et la nature.
+
+Pachatopia est plus qu'un lieu.
+C'est une invitation.
+
+Une invitation à observer, apprendre, transmettre et agir pour construire un avenir où le vivant retrouve toute sa place.
+Bienvenue dans le Mouvement Pachatopia.`,
+    "hero.cta.discover": "Découvrir le mouvement",
     "hero.cta.support": "Soutenir Pachatopia",
 
     // About (homepage section)
@@ -321,7 +338,11 @@ export const translations = {
     "nav.support": "Participate",
     "nav.passeport": "Pachatopia Passport",
     "nav.parrainage": "Culture Sponsorship",
+    "nav.parrainage_espaces": "Freedom Spaces Sponsorship",
     "nav.partenaire": "Become a Partner",
+    "nav.ambassadeur": "Become an Ambassador",
+    "nav.depots_ventes": "Drop-off and sales points",
+    "nav.volontariat": "Volunteering",
     "nav.volontariat_experience": "Volunteer / Live the Experience",
     "nav.contact_faq": "Contact + FAQ",
     "nav.experience": "Live the experience",
@@ -332,9 +353,11 @@ export const translations = {
     // Hero
     "hero.welcome": "Le Mouvement Pachatopia",
     "hero.tagline": "Where the Earth regenerates and peace can grow again.",
+    "hero.taglineSub":
+      "What if we could leave the Earth more alive than we found it?",
     "hero.description":
       "In the mountains of San Carlos, Colombia, Pachatopia is an ecological and human regeneration project. We restore soils, plant trees, and develop agriculture inspired by natural ecosystems. A place where nature, people, and hope grow together.",
-    "hero.cta.discover": "Discover the project",
+    "hero.cta.discover": "Discover the movement",
     "hero.cta.support": "Support Pachatopia",
 
     // About (homepage section)
