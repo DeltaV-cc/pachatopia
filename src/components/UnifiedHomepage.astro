@@ -1,0 +1,247 @@
+---
+import { useTranslations, getLocalizedPath } from "../i18n/translations";
+import Hero from "./Hero.astro";
+import CallToAction from "./CallToAction.astro";
+import LucideIcon from "./LucideIcon.astro";
+
+interface Props {
+  lang: "fr" | "en";
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const base = "/pachatopia";
+---
+<main>
+  <Hero lang={lang} />
+
+  <!-- ── Section 1: Une terre qui renaît / A land reborn ── -->
+  <section class="py-20 md:py-28 bg-white relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+      <svg class="absolute -top-6 right-0 w-64 h-64 opacity-[0.06]" viewBox="0 0 200 200" fill="none">
+        <path d="M140 20C140 20 180 60 170 110C160 160 120 180 80 170C40 160 20 120 30 80C40 40 80 20 140 20Z" fill="#0A5B4B"/>
+      </svg>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-8">{t("home.land.title")}</h2>
+          <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
+            <p>{t("home.land.p1")}</p>
+            <p>{t("home.land.p2")}</p>
+            <p>{t("home.land.p3")}</p>
+          </div>
+        </div>
+        <div class="relative flex items-center justify-center">
+          <div class="relative w-full max-w-md overflow-hidden rounded-2xl shadow-xl">
+            <img src="/pachatopia/images/farm-hero.jpg" alt={t("home.land.imageAlt")} class="w-full h-auto object-cover" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Section 2: Notre laboratoire du vivant / The Living Laboratory ── -->
+  <section class="py-20 md:py-28 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-4">{t("home.lab.title")}</h2>
+        <div class="flex items-center justify-center gap-2 mb-6">
+          <span class="block w-8 h-[2px] bg-accent rounded-full"></span>
+          <LucideIcon name="Leaf" class="w-5 h-5 text-accent" />
+          <span class="block w-8 h-[2px] bg-accent rounded-full"></span>
+        </div>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">{t("home.lab.desc")}</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          { icon: "Sprout", color: "primary", n: 1 },
+          { icon: "Coffee", color: "earth", n: 2 },
+          { icon: "Trees", color: "accent", n: 3 },
+          { icon: "Bird", color: "golden-dark", n: 4 },
+          { icon: "Droplets", color: "primary", n: 5 },
+          { icon: "Users", color: "accent", n: 6 },
+        ].map((card) => (
+          <div class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            <div class={`w-16 h-16 bg-${card.color}/10 rounded-full flex items-center justify-center mx-auto mb-6`}>
+              <LucideIcon name={card.icon} class={`w-8 h-8 text-${card.color}`} />
+            </div>
+            <h3 class="text-lg font-heading font-bold text-primary mb-3">{t(`home.lab.card${card.n}.title` as any)}</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">{t(`home.lab.card${card.n}.desc` as any)}</p>
+          </div>
+        ))}
+      </div>
+      <p class="text-center text-lg text-gray-600 mt-10 max-w-3xl mx-auto">{t("home.lab.footer")}</p>
+    </div>
+  </section>
+
+  <!-- ── Section 3: Une communauté qui grandit / A growing community ── -->
+  <section class="relative py-24 md:py-32 bg-gradient-to-br from-primary via-primary to-accent/90 overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <svg class="absolute -top-10 -right-20 w-[500px] h-[500px] opacity-[0.07]" viewBox="0 0 500 500" fill="none"><circle cx="250" cy="250" r="240" fill="white"/></svg>
+      <svg class="absolute -bottom-16 -left-16 w-[350px] h-[350px] opacity-[0.05]" viewBox="0 0 400 400" fill="none"><path d="M200 10C200 10 380 80 370 220C360 360 240 390 160 370C80 350 10 240 30 140C50 40 200 10 200 10Z" fill="white"/></svg>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm mb-8">
+        <LucideIcon name="Heart" class="w-8 h-8 text-golden" />
+      </div>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-10">{t("home.community.title")}</h2>
+      <div class="max-w-3xl mx-auto space-y-5">
+        <p class="text-lg md:text-xl text-white/90 leading-relaxed">{t("home.community.p1")}</p>
+        <p class="text-lg md:text-xl text-white/85 leading-relaxed">{t("home.community.p2")}</p>
+      </div>
+      <div class="max-w-3xl mx-auto mt-10 space-y-4 text-white/90">
+        <h3 class="text-2xl md:text-3xl font-heading font-bold text-cream">{t("home.community.subtitle")}</h3>
+        <p class="text-lg md:text-xl leading-relaxed">{t("home.community.p3")}</p>
+        <p class="text-lg md:text-xl leading-relaxed">{t("home.community.p4")}</p>
+        <p class="text-lg md:text-xl leading-relaxed">{t("home.community.p5")}</p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4 mt-10 text-white/90 text-lg">
+        {["pill1", "pill2", "pill3", "pill4", "pill5", "pill6"].map((n) => (
+          <span class="bg-white/10 rounded-full px-6 py-2">{t(`home.community.${n}` as any)}</span>
+        ))}
+      </div>
+      <p class="text-golden font-heading italic text-xl mt-8">{t("home.community.closing")}</p>
+    </div>
+  </section>
+
+  <!-- ── Section 4: Rejoindre le Mouvement / Join the Movement ── -->
+  <section class="py-20 md:py-28 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-4">{t("home.join.title")}</h2>
+        <div class="w-20 h-1 bg-golden rounded-full mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">{t("home.join.subtitle")}</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { icon: "Ticket", color: "primary", n: 1, href: "/passeport/" },
+          { icon: "Coffee", color: "earth", n: 2, href: "/parrainer-une-culture/" },
+          { icon: "Trees", color: "accent", n: 3, href: "/espaces-de-liberte/" },
+          { icon: "TentTree", color: "golden-dark", n: 4, href: "/venir-sur-place/" },
+          { icon: "Handshake", color: "primary", n: 5, href: "/devenir-partenaire/" },
+          { icon: "Megaphone", color: "accent", n: 6, href: "/devenir-ambassadeur/" },
+        ].map((card) => (
+          <a href={base + getLocalizedPath(card.href, lang)} class="group surface-card p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 no-underline">
+            <div class={`w-12 h-12 bg-${card.color}/10 rounded-full flex items-center justify-center mx-auto mb-4`}>
+              <LucideIcon name={card.icon} class={`w-6 h-6 text-${card.color}`} />
+            </div>
+            <h3 class="font-heading font-bold text-primary mb-2">{t(`home.join.card${card.n}.title` as any)}</h3>
+            <p class="text-gray-600 text-sm">{t(`home.join.card${card.n}.sub` as any)}</p>
+          </a>
+        ))}
+      </div>
+      <div class="text-center text-primary font-heading italic text-lg mt-10 space-y-2">
+        <p>{t("home.join.footer1")}</p>
+        <p>{t("home.join.footer2")}</p>
+        <p>{t("home.join.footer3")}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Section 5: L'écosystème Pachatopia / The Pachatopia ecosystem ── -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-4">{t("home.ecosystem.title")}</h2>
+        <div class="w-20 h-1 bg-golden rounded-full mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">{t("home.ecosystem.subtitle")}</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+        {[
+          { icon: "Trees", color: "primary", n: 1 },
+          { icon: "Coffee", color: "earth", n: 2 },
+          { icon: "Sprout", color: "accent", n: 3 },
+          { icon: "House", color: "golden-dark", n: 4 },
+          { icon: "Utensils", color: "primary", n: 5 },
+        ].map((card) => (
+          <div class={`bg-cream rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300 ${card.n === 5 ? 'col-span-2 sm:col-span-1' : ''}`}>
+            <div class={`w-12 h-12 bg-${card.color}/10 rounded-full flex items-center justify-center mx-auto mb-3`}>
+              <LucideIcon name={card.icon} class={`w-6 h-6 text-${card.color}`} strokeWidth={1.75} />
+            </div>
+            <h3 class="font-heading font-bold text-primary text-sm">{t(`home.ecosystem.card${card.n}` as any)}</h3>
+          </div>
+        ))}
+      </div>
+      <p class="text-center text-lg text-gray-600 mt-10 max-w-3xl mx-auto">{t("home.ecosystem.footer")}</p>
+    </div>
+  </section>
+
+  <!-- ── Section 6: Un projet vivant / A living project ── -->
+  <section class="relative py-24 md:py-32 bg-gradient-to-br from-primary via-primary to-accent/90 overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <svg class="absolute -top-10 -right-20 w-[500px] h-[500px] opacity-[0.07]" viewBox="0 0 500 500" fill="none"><circle cx="250" cy="250" r="240" fill="white"/></svg>
+      <svg class="absolute -bottom-16 -left-16 w-[350px] h-[350px] opacity-[0.05]" viewBox="0 0 400 400" fill="none"><path d="M200 10C200 10 380 80 370 220C360 360 240 390 160 370C80 350 10 240 30 140C50 40 200 10 200 10Z" fill="white"/></svg>
+      <svg class="absolute top-20 left-[8%] w-14 h-14 opacity-[0.12] text-cream" viewBox="0 0 100 100" fill="currentColor"><path d="M50 5C50 5 90 30 90 65C90 82 72 95 50 95C28 95 10 82 10 65C10 30 50 5 50 5Z"/></svg>
+      <svg class="absolute bottom-16 right-[12%] w-10 h-10 opacity-[0.10] text-golden" viewBox="0 0 100 100" fill="currentColor"><path d="M50 5C50 5 90 30 90 65C90 82 72 95 50 95C28 95 10 82 10 65C10 30 50 5 50 5Z"/></svg>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm mb-8">
+        <LucideIcon name="Sprout" class="w-8 h-8 text-golden" strokeWidth={1.75} />
+      </div>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-10">{t("home.living.title")}</h2>
+      <div class="max-w-3xl mx-auto space-y-5">
+        <p class="text-lg md:text-xl text-white/90 leading-relaxed">{t("home.living.p1")}</p>
+        <p class="text-lg md:text-xl text-white/85 leading-relaxed">{t("home.living.p2")}</p>
+      </div>
+      <div class="flex items-center justify-center gap-3 my-10">
+        <span class="block w-12 h-[1px] bg-golden/40"></span>
+        <LucideIcon name="Leaf" class="w-5 h-5 text-golden/70" />
+        <span class="block w-12 h-[1px] bg-golden/40"></span>
+      </div>
+      <blockquote>
+        <p class="text-xl md:text-2xl text-golden font-heading font-semibold italic leading-relaxed">{t("home.living.quote")}</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ── Section 7: Notre conviction / Our conviction ── -->
+  <section class="relative py-24 md:py-32 bg-cream overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <svg class="absolute top-0 right-0 w-72 h-72 opacity-[0.04]" viewBox="0 0 300 300" fill="none"><path d="M150 5C150 5 290 60 280 170C270 280 180 295 100 275C20 255 -10 150 20 70C50 -10 150 5 150 5Z" fill="#0A5B4B"/></svg>
+      <svg class="absolute bottom-0 left-0 w-56 h-56 opacity-[0.04]" viewBox="0 0 250 250" fill="none"><circle cx="125" cy="125" r="120" fill="#0A5B4B"/></svg>
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-4">{t("home.conviction.title")}</h2>
+        <div class="w-20 h-1 bg-golden rounded-full mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600">{t("home.conviction.intro")}</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          { icon: "HeartHandshake", color: "primary", gradient: "from-primary to-accent", n: 1 },
+          { icon: "Trees", color: "accent", gradient: "from-accent to-golden", n: 2 },
+          { icon: "Sparkles", color: "golden-dark", gradient: "from-golden to-earth", n: 3 },
+        ].map((card) => (
+          <div class="group relative bg-white rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-1" style="box-shadow: 0 2px 12px rgba(11,91,75,0.06);">
+            <div class={`absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r ${card.gradient}`}></div>
+            <div class={`w-16 h-16 rounded-full bg-${card.color}/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-${card.color}/15 transition-colors duration-300`}>
+              <LucideIcon name={card.icon} class={`w-8 h-8 text-${card.color}`} strokeWidth={1.75} />
+            </div>
+            <p class="text-lg font-medium text-gray-800 leading-relaxed">{t(`home.conviction.card${card.n}` as any)}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Section 8: Entre comme tu es. / Enter as you are. ── -->
+  <section class="py-20 md:py-28 bg-white relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <svg class="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[600px] opacity-[0.03]" viewBox="0 0 600 600" fill="none"><circle cx="300" cy="300" r="280" fill="#0A5B4B"/></svg>
+    </div>
+    <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-10">{t("home.enter.title")}</h2>
+      <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+        <p><span class="text-primary font-heading font-bold text-xl">{t("home.enter.observe")}</span> {lang === "fr" ? "avec humilité." : "with humility."}</p>
+        <p><span class="text-primary font-heading font-bold text-xl">{t("home.enter.learn")}</span> {lang === "fr" ? "du vivant." : "from life."}</p>
+        <p><span class="text-primary font-heading font-bold text-xl">{t("home.enter.transmit")}</span> {lang === "fr" ? "ce que tu auras reçu." : "what you have received."}</p>
+        <p>{t("home.enter.leave")}</p>
+      </div>
+      <p class="mt-10 text-xl text-primary font-heading font-bold italic">{t("home.enter.closing")}</p>
+    </div>
+  </section>
+
+  <CallToAction lang={lang} />
+</main>

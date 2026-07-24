@@ -327,11 +327,103 @@ Bienvenue dans le Mouvement Pachatopia.`,
     "footer.newsletter.placeholder": "Votre adresse email",
     "footer.newsletter.button": "S'inscrire",
     "footer.rights": "Tous droits réservés",
+
+    // ── Unified Homepage Sections ──
+
+    // Land Reborn
+    "home.land.title": "Une terre qui renaît",
+    "home.land.p1": "San Carlos est un territoire d'une beauté exceptionnelle. C'est aussi un territoire marqué par l'histoire du conflit armé colombien.",
+    "home.land.p2": "Aujourd'hui, les habitants reconstruisent leur avenir. La nature repousse. Les rivières continuent de couler. Les forêts retrouvent peu à peu leur place.",
+    "home.land.p3": "À Pachatopia, nous croyons que la régénération d'un territoire est à la fois écologique, humaine et culturelle. En prenant soin du vivant, nous contribuons aussi à recréer des liens entre les personnes.",
+    "home.land.imageAlt": "Paysage de San Carlos",
+
+    // Living Laboratory (6 cards)
+    "home.lab.title": "Notre laboratoire du vivant",
+    "home.lab.desc": "Pachatopia est un lieu d'expérimentation où nous apprenons directement auprès du vivant, pour construire des systèmes capables de produire tout en régénérant les écosystèmes. Chaque jour, nous observons, expérimentons, partageons et améliorons nos pratiques.",
+    "home.lab.card1.title": "L'agroforesterie régénérative",
+    "home.lab.card1.desc": "Produire tout en régénérant les sols, en s'inspirant du fonctionnement des écosystèmes naturels.",
+    "home.lab.card2.title": "Le café et le cacao",
+    "home.lab.card2.desc": "Des cultures en transition agroforestière, cultivées dans le respect des équilibres naturels.",
+    "home.lab.card3.title": "Les espaces de liberté pour le vivant",
+    "home.lab.card3.desc": "Des zones laissées au vivant, pour que la biodiversité puisse continuer d'évoluer librement.",
+    "home.lab.card4.title": "La protection de la biodiversité",
+    "home.lab.card4.desc": "Préserver les espèces animales et végétales qui font la richesse du territoire.",
+    "home.lab.card5.title": "La préservation de l'eau",
+    "home.lab.card5.desc": "Protéger les sources, les rivières et les cycles de l'eau dont dépend toute forme de vie.",
+    "home.lab.card6.title": "La coopération avec les communautés",
+    "home.lab.card6.desc": "Travailler avec les habitants du territoire pour construire un avenir partagé.",
+    "home.lab.footer": "Notre ambition n'est pas seulement de produire autrement. Nous souhaitons démontrer qu'il est possible de réconcilier la nature avec les activités humaines pour les générations futures.",
+
+    // Growing Community
+    "home.community.title": "Une communauté qui grandit",
+    "home.community.p1": "Le Mouvement Pachatopia souhaite réveiller des gardiens du vivant, des femmes et des hommes qui choisissent de protéger la Terre, l'eau, les forêts et toutes les formes de vie dont dépend notre avenir commun.",
+    "home.community.p2": "Nous ne demandons pas au monde de croire en notre rêve. Nous invitons chacun à planter sa propre graine d'espérance au service du vivant.",
+    "home.community.subtitle": "Une même direction, mille façons d'agir",
+    "home.community.p3": "Il n'existe pas une seule manière de contribuer au vivant.",
+    "home.community.p4": "Chaque personne possède une histoire, des talents et une sensibilité qui lui sont propres.",
+    "home.community.p5": "Le Mouvement Pachatopia existe pour permettre à chacun d'apporter le meilleur de lui-même au service du bien commun.",
+    "home.community.pill1": "Un arbre",
+    "home.community.pill2": "Une idée",
+    "home.community.pill3": "Du temps",
+    "home.community.pill4": "Une compétence",
+    "home.community.pill5": "Un sourire",
+    "home.community.pill6": "Une rencontre",
+    "home.community.closing": "Chacun peut apporter quelque chose d'unique",
+
+    // Join the Movement (CTA cards)
+    "home.join.title": "Rejoindre le Mouvement",
+    "home.join.subtitle": "Aujourd'hui, vous pouvez participer de nombreuses façons.",
+    "home.join.card1.title": "Devenir Gardien du Vivant",
+    "home.join.card1.sub": "Grâce au Passeport Pachatopia",
+    "home.join.card2.title": "Parrainer une culture",
+    "home.join.card2.sub": "En transition agroforestière",
+    "home.join.card3.title": "Parrainer des espaces de liberté pour le vivant",
+    "home.join.card3.sub": "",
+    "home.join.card4.title": "Venir vivre l'expérience",
+    "home.join.card4.sub": "Sur le terrain",
+    "home.join.card5.title": "Devenir partenaire",
+    "home.join.card5.sub": "Du Mouvement",
+    "home.join.card6.title": "Inspirer autour de vous",
+    "home.join.card6.sub": "Devenir ambassadeur",
+    "home.join.footer1": "Une forêt ne grandit jamais grâce à une seule graine. Un mouvement non plus.",
+    "home.join.footer2": "Le vivant nous attend tous.",
+    "home.join.footer3": "À votre tour de planter une graine d'espérance.",
+
+    // Ecosystem (5 cards)
+    "home.ecosystem.title": "L'écosystème Pachatopia",
+    "home.ecosystem.subtitle": "Pachatopia est conçu comme un lieu où les différentes activités se soutiennent mutuellement.",
+    "home.ecosystem.card1": "Réserve naturelle",
+    "home.ecosystem.card2": "Café et cacao",
+    "home.ecosystem.card3": "Pépinière d'arbres",
+    "home.ecosystem.card4": "Espace d'accueil",
+    "home.ecosystem.card5": "Cuisine locale",
+    "home.ecosystem.footer": "Un projet qui cherche à démontrer qu'il est possible de produire, protéger et partager en harmonie avec la nature.",
+
+    // Living Project
+    "home.living.title": "Un projet vivant",
+    "home.living.p1": "Pachatopia est un projet qui évolue.",
+    "home.living.p2": "Chaque année, nous plantons des arbres, restaurons de nouvelles parcelles et développons des initiatives pour renforcer la biodiversité et la résilience du territoire.",
+    "home.living.quote": "\"Petit à petit, une forêt et un écosystème régénératif prennent forme.\"",
+
+    // Conviction
+    "home.conviction.title": "Notre conviction",
+    "home.conviction.intro": "Nous croyons que…",
+    "home.conviction.card1": "Régénérer la Terre peut aider à régénérer les relations humaines",
+    "home.conviction.card2": "Planter des arbres est un acte d'espérance",
+    "home.conviction.card3": "Chaque action positive peut inspirer un changement plus large",
+
+    // Enter as you are
+    "home.enter.title": "Entre comme tu es.",
+    "home.enter.observe": "Observe",
+    "home.enter.learn": "Apprends",
+    "home.enter.transmit": "Transmets",
+    "home.enter.leave": "Et repars en laissant la Terre un peu plus vivante que tu ne l'as trouvée.",
+    "home.enter.closing": "Nous apprenons du vivant.",
   },
   en: {
     // Nav
     "nav.home": "Home",
-    "nav.vision": "Le Mouvement",
+    "nav.vision": "The Movement",
     "nav.history": "Our story",
     "nav.actions": "The Living Laboratory",
     "nav.coffee": "Coffee",
@@ -351,13 +443,13 @@ Bienvenue dans le Mouvement Pachatopia.`,
     "nav.contact": "Contact",
 
     // Hero
-    "hero.welcome": "Le Mouvement Pachatopia",
-    "hero.tagline": "Where the Earth regenerates and peace can grow again.",
+    "hero.welcome": "The Pachatopia Movement",
+    "hero.tagline": "Reclaiming our place within the living world.",
     "hero.taglineSub":
       "What if we could leave the Earth more alive than we found it?",
     "hero.description":
-      "In the mountains of San Carlos, Colombia, Pachatopia is an ecological and human regeneration project. We restore soils, plant trees, and develop agriculture inspired by natural ecosystems. A place where nature, people, and hope grow together.",
-    "hero.cta.discover": "Discover the movement",
+      "A movement of women and men who choose to nurture life within themselves, around themselves, and to pass it on to future generations.\nThe Pachatopia Movement was born from a simple conviction: human beings can once again become a force of regeneration for the living world.\nIn San Carlos, in the heart of the Colombian mountains, we are experimenting with a way of life that seeks to reconcile human beings with the living world.\n\nWe learn from life.\n\nInspired by the living world, we restore soils, develop agroforestry systems, protect biodiversity, and create lasting bonds between human beings and nature.\n\nPachatopia is more than a place.\nIt is an invitation.\n\nAn invitation to observe, learn, transmit, and act to build a future where life reclaims its rightful place.\nWelcome to the Pachatopia Movement.",
+    "hero.cta.discover": "Discover the Movement",
     "hero.cta.support": "Support Pachatopia",
 
     // About (homepage section)
@@ -466,7 +558,7 @@ Bienvenue dans le Mouvement Pachatopia.`,
       "PachaCoin: Where your investment blooms into green futures",
     "currencyPage.intro.title": "Introduction to PachaCoin",
     "currencyPage.intro.text":
-      "PachaCoin is our innovative ecological currency, designed to directly support our environmental and community projects.",
+      "PachaCoin is an innovative initiative aimed at supporting environmental preservation and promoting sustainable agriculture. Each PachaCoin (PC) is worth 60 CHF or EUR for the virtual currency and 70 CHF or EUR for the physical version. The funds are equally distributed between forest conservation, agricultural production, and ecological habitat development.",
     "currencyPage.howItWorks.title": "How Does PachaCoin Work?",
     "currencyPage.howItWorks.text":
       "Each PachaCoin is distributed in three equal parts: forest preservation, agricultural sponsorship, and ecological habitat creation.",
@@ -638,6 +730,98 @@ Bienvenue dans le Mouvement Pachatopia.`,
     "footer.newsletter.placeholder": "Your email address",
     "footer.newsletter.button": "Subscribe",
     "footer.rights": "All rights reserved",
+
+    // ── Unified Homepage Sections ──
+
+    // Land Reborn
+    "home.land.title": "A land reborn",
+    "home.land.p1": "San Carlos is a region of great natural beauty, but one deeply marked by the history of the Colombian armed conflict.",
+    "home.land.p2": "Today, the inhabitants are rebuilding their future. Nature is regrowing. The rivers continue to flow. The forests are gradually reclaiming their place.",
+    "home.land.p3": "At Pachatopia, we believe that the regeneration of a territory is ecological, human, and cultural all at once. By caring for the living world, we also help rebuild bonds between people.",
+    "home.land.imageAlt": "San Carlos landscape",
+
+    // Living Laboratory (6 cards)
+    "home.lab.title": "The Living Laboratory",
+    "home.lab.desc": "Pachatopia is a place of experimentation where we learn directly from nature, building systems that produce while regenerating ecosystems. Every day, we observe, experiment, share, and improve our practices.",
+    "home.lab.card1.title": "Regenerative agroforestry",
+    "home.lab.card1.desc": "Producing while regenerating soils, inspired by how natural ecosystems function.",
+    "home.lab.card2.title": "Coffee and cacao",
+    "home.lab.card2.desc": "Crops in agroforestry transition, cultivated in respect of natural balances.",
+    "home.lab.card3.title": "Freedom spaces for life",
+    "home.lab.card3.desc": "Areas left to nature, so biodiversity can continue to evolve freely.",
+    "home.lab.card4.title": "Biodiversity protection",
+    "home.lab.card4.desc": "Preserving the animal and plant species that make up the richness of the territory.",
+    "home.lab.card5.title": "Water preservation",
+    "home.lab.card5.desc": "Protecting springs, rivers, and water cycles on which all life depends.",
+    "home.lab.card6.title": "Cooperation with communities",
+    "home.lab.card6.desc": "Working with local residents to build a shared future.",
+    "home.lab.footer": "Our ambition is not only to produce differently. We aim to demonstrate that it is possible to reconcile nature with human activities for future generations.",
+
+    // Growing Community
+    "home.community.title": "A growing community",
+    "home.community.p1": "The Pachatopia Movement seeks to awaken guardians of life — women and men who choose to protect the Earth, water, forests, and all forms of life on which our shared future depends.",
+    "home.community.p2": "We do not ask the world to believe in our dream. We invite everyone to plant their own seed of hope in service of life.",
+    "home.community.subtitle": "One direction, a thousand ways to act",
+    "home.community.p3": "There is no single way to contribute to life.",
+    "home.community.p4": "Every person has a unique story, talents, and sensibility.",
+    "home.community.p5": "The Pachatopia Movement exists so that everyone can bring the best of themselves in service of the common good.",
+    "home.community.pill1": "A tree",
+    "home.community.pill2": "An idea",
+    "home.community.pill3": "Time",
+    "home.community.pill4": "A skill",
+    "home.community.pill5": "A smile",
+    "home.community.pill6": "A meeting",
+    "home.community.closing": "Everyone can bring something unique",
+
+    // Join the Movement (CTA cards)
+    "home.join.title": "Join the Movement",
+    "home.join.subtitle": "Today, there are many ways to participate.",
+    "home.join.card1.title": "Become a Guardian of Life",
+    "home.join.card1.sub": "With the Pachatopia Passport",
+    "home.join.card2.title": "Sponsor a crop",
+    "home.join.card2.sub": "In agroforestry transition",
+    "home.join.card3.title": "Sponsor freedom spaces for life",
+    "home.join.card3.sub": "",
+    "home.join.card4.title": "Come live the experience",
+    "home.join.card4.sub": "On the ground",
+    "home.join.card5.title": "Become a partner",
+    "home.join.card5.sub": "Of the Movement",
+    "home.join.card6.title": "Inspire those around you",
+    "home.join.card6.sub": "Become an ambassador",
+    "home.join.footer1": "A forest never grows from a single seed. Neither does a movement.",
+    "home.join.footer2": "Life is waiting for all of us.",
+    "home.join.footer3": "Your turn to plant a seed of hope.",
+
+    // Ecosystem (5 cards)
+    "home.ecosystem.title": "The Pachatopia ecosystem",
+    "home.ecosystem.subtitle": "Pachatopia is designed as a place where different activities support each other.",
+    "home.ecosystem.card1": "Nature reserve",
+    "home.ecosystem.card2": "Coffee and cacao",
+    "home.ecosystem.card3": "Tree nursery",
+    "home.ecosystem.card4": "Visitor space",
+    "home.ecosystem.card5": "Local cuisine",
+    "home.ecosystem.footer": "A project that seeks to demonstrate that it is possible to produce, protect and share in harmony with nature.",
+
+    // Living Project
+    "home.living.title": "A living project",
+    "home.living.p1": "Pachatopia is an evolving project.",
+    "home.living.p2": "Every year, we plant trees, restore new plots and develop initiatives to strengthen biodiversity and territorial resilience.",
+    "home.living.quote": "\"Little by little, a forest and a regenerative ecosystem are taking shape.\"",
+
+    // Conviction
+    "home.conviction.title": "Our conviction",
+    "home.conviction.intro": "We believe that…",
+    "home.conviction.card1": "Regenerating the Earth can help regenerate human relationships",
+    "home.conviction.card2": "Planting trees is an act of hope",
+    "home.conviction.card3": "Every positive action can inspire a broader change",
+
+    // Enter as you are
+    "home.enter.title": "Enter as you are.",
+    "home.enter.observe": "Observe",
+    "home.enter.learn": "Learn",
+    "home.enter.transmit": "Transmit",
+    "home.enter.leave": "And leave the Earth a little more alive than you found it.",
+    "home.enter.closing": "We learn from life.",
   },
 } as const;
 
