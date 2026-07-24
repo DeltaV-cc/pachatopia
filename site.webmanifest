@@ -1,0 +1,22 @@
+{
+  "name": "Pachatopia",
+  "short_name": "Pachatopia",
+  "description": "Projet de regeneration ecologique et humaine a San Carlos, Colombie.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fffdf9",
+  "theme_color": "#0A5B4B",
+  "icons": [
+    {
+      "src": "/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

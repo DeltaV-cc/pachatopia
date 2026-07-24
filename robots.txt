@@ -1,0 +1,34 @@
+# Pachatopia - https://pachatopia.org
+# Allow all crawlers including AI/LLM agents
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://pachatopia.org/sitemap-index.xml
+Host: https://pachatopia.org
+
+# AI/LLM crawlers welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Cohere-AI
+Allow: /

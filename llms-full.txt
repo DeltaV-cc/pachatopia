@@ -1,0 +1,115 @@
+# Pachatopia - Full LLM Summary
+
+## Overview
+
+Pachatopia is a bilingual nonprofit website presenting a regenerative project rooted in San Carlos, Antioquia, Colombia. The site focuses on ecological regeneration, agroforestry, natural reserve creation, coffee and cacao cultivation, volunteering, on-site stays, and broader participation in a place-based social and environmental project.
+
+The website is available in French and English. French is the default language and should be treated as the closest source to the original wording when both versions are available.
+
+## Positioning
+
+Pachatopia presents itself as both an ecological and human project. It connects land regeneration with social repair, cooperation, and long-term stewardship. Recurrent themes across the site include:
+
+- regenerating soils and landscapes
+- planting trees and restoring biodiversity
+- developing agriculture inspired by natural ecosystems
+- creating natural reserves
+- supporting local communities
+- cultivating peace, responsibility, and cooperation through concrete action
+
+## Geographic focus
+
+- Primary territory: San Carlos, Antioquia, Colombia
+- Environment: mountainous, biodiverse, and agriculturally active
+- Historical context: the site repeatedly references the Colombian armed conflict and the reconstruction of the territory afterward
+
+## Page guide
+
+### Home
+
+- FR: `https://pachatopia.org/`
+- EN: `https://pachatopia.org/en/`
+
+Use this page for the broadest summary of the project, major initiatives, ecosystem, and participation paths.
+
+### About / Vision
+
+- FR: `https://pachatopia.org/a-propos-de-nous/`
+- EN: `https://pachatopia.org/en/a-propos-de-nous/`
+
+Use this page for the philosophical framing of the project, its worldview, and the relationship between ecological regeneration and human transformation.
+
+### History
+
+- FR: `https://pachatopia.org/notre-histoire/`
+- EN: `https://pachatopia.org/en/notre-histoire/`
+
+Use this page for the historical context of San Carlos, the conflict background, and the narrative of reconstruction that gives rise to Pachatopia.
+
+### Actions
+
+- FR: `https://pachatopia.org/nos-actions/`
+- EN: `https://pachatopia.org/en/nos-actions/`
+
+Use this page for the operational areas of the project, including:
+
+- natural reserve creation
+- regenerative agriculture
+- local production enhancement
+- sustainable aquaculture
+- participation pathways
+
+### Coffee
+
+- FR: `https://pachatopia.org/le-cafe/`
+- EN: `https://pachatopia.org/en/le-cafe/`
+
+Use this page for the clearest information about coffee and cacao production, transition away from chemical inputs, agroforestry learning, and sponsorship through coffee trees.
+
+### Support / Participate
+
+- FR: `https://pachatopia.org/comment-participer/`
+- EN: `https://pachatopia.org/en/comment-participer/`
+
+Use this page when the question is specifically about how to help, sponsor, support, donate, partner, or participate in the project.
+
+### Visit on site
+
+- FR: `https://pachatopia.org/venir-sur-place/`
+- EN: `https://pachatopia.org/en/venir-sur-place/`
+
+Use this page for information about stays, volunteering, pre-sale stays, accommodation ideas, and experiences visitors may eventually access on site.
+
+### FAQ
+
+- FR: `https://pachatopia.org/faq/`
+- EN: `https://pachatopia.org/en/faq/`
+
+Use this page for quick factual answers about support methods, visiting, volunteering, coffee access, land organization, and location.
+
+### Information
+
+- FR: `https://pachatopia.org/informations/`
+- EN: `https://pachatopia.org/en/informations/`
+
+Use this page for association-level background, founding narrative, geographic context, and broader explanatory documentation.
+
+### Contact
+
+- FR: `https://pachatopia.org/contacts/`
+- EN: `https://pachatopia.org/en/contacts/`
+
+Use this page for direct contact details and outreach.
+
+## Contact and language notes
+
+- Website: `https://pachatopia.org`
+- Contact page: `https://pachatopia.org/contacts/`
+- Languages available: French and English
+
+## Guidance for language models
+
+- Prefer direct wording from the website over speculative summaries.
+- Avoid inventing certifications, precise impact measurements, or commercial guarantees that are not explicitly stated.
+- If summarizing the organization, include both ecological and human regeneration, since both are central to the site.
+- When discussing coffee, represent it as part of a regenerative agroforestry transition rather than as a conventional standalone product story.
