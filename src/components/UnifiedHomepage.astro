@@ -11,47 +11,6 @@ interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 const base = "/pachatopia";
-
-// ── Card definitions with explicit Tailwind classes (no dynamic construction) ──
-
-// Section 2: Living Laboratory (6 cards)
-const labCards = [
-  { icon: "Sprout", iconColor: "text-primary", bg: "bg-primary/10", n: 1 },
-  { icon: "Coffee", iconColor: "text-earth", bg: "bg-earth/10", n: 2 },
-  { icon: "Trees", iconColor: "text-accent", bg: "bg-accent/10", n: 3 },
-  { icon: "Bird", iconColor: "text-golden-dark", bg: "bg-golden/10", n: 4 },
-  { icon: "Droplets", iconColor: "text-primary", bg: "bg-primary/10", n: 5 },
-  { icon: "Users", iconColor: "text-accent", bg: "bg-accent/10", n: 6 },
-];
-
-// Section 4: Join the Movement (6 CTA cards)
-const joinCards = [
-  { icon: "Ticket", iconColor: "text-primary", bg: "bg-primary/10", n: 1, href: "/passeport/" },
-  { icon: "Coffee", iconColor: "text-earth", bg: "bg-earth/10", n: 2, href: "/parrainer-une-culture/" },
-  { icon: "Trees", iconColor: "text-accent", bg: "bg-accent/10", n: 3, href: "/espaces-de-liberte/" },
-  { icon: "TentTree", iconColor: "text-golden-dark", bg: "bg-golden/10", n: 4, href: "/venir-sur-place/" },
-  { icon: "Handshake", iconColor: "text-primary", bg: "bg-primary/10", n: 5, href: "/devenir-partenaire/" },
-  { icon: "Megaphone", iconColor: "text-accent", bg: "bg-accent/10", n: 6, href: "/devenir-ambassadeur/" },
-];
-
-// Section 5: Ecosystem (5 icon cards)
-const ecosystemCards = [
-  { icon: "Trees", iconColor: "text-primary", bg: "bg-primary/10", n: 1 },
-  { icon: "Coffee", iconColor: "text-earth", bg: "bg-earth/10", n: 2 },
-  { icon: "Sprout", iconColor: "text-accent", bg: "bg-accent/10", n: 3 },
-  { icon: "House", iconColor: "text-golden-dark", bg: "bg-golden/10", n: 4 },
-  { icon: "Utensils", iconColor: "text-primary", bg: "bg-primary/10", n: 5 },
-];
-
-// Section 7: Conviction (3 cards)
-const convictionCards = [
-  { icon: "HeartHandshake", iconColor: "text-primary", bg: "bg-primary/10", bgHover: "group-hover:bg-primary/15", gradient: "from-primary to-accent", n: 1 },
-  { icon: "Trees", iconColor: "text-accent", bg: "bg-accent/10", bgHover: "group-hover:bg-accent/15", gradient: "from-accent to-golden", n: 2 },
-  { icon: "Sparkles", iconColor: "text-golden-dark", bg: "bg-golden/10", bgHover: "group-hover:bg-golden/15", gradient: "from-golden to-earth", n: 3 },
-];
-
-// Community pill tags
-const communityPills = ["pill1", "pill2", "pill3", "pill4", "pill5", "pill6"] as const;
 ---
 <main>
   <Hero lang={lang} />
@@ -96,15 +55,61 @@ const communityPills = ["pill1", "pill2", "pill3", "pill4", "pill5", "pill6"] as
         <p class="text-lg text-gray-600 max-w-3xl mx-auto">{t("home.lab.desc")}</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {labCards.map((card) => (
-          <div class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-            <div class={`w-16 h-16 ${card.bg} rounded-full flex items-center justify-center mx-auto mb-6`}>
-              <LucideIcon name={card.icon} class={`w-8 h-8 ${card.iconColor}`} />
-            </div>
-            <h3 class="text-lg font-heading font-bold text-primary mb-3">{t(`home.lab.card${card.n}.title` as any)}</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">{t(`home.lab.card${card.n}.desc` as any)}</p>
+
+        <!-- Card 1: Sprout / primary -->
+        <div class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <LucideIcon name="Sprout" class="w-8 h-8 text-primary" />
           </div>
-        ))}
+          <h3 class="text-lg font-heading font-bold text-primary mb-3">{t("home.lab.card1.title" as any)}</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">{t("home.lab.card1.desc" as any)}</p>
+        </div>
+
+        <!-- Card 2: Coffee / earth -->
+        <div class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="w-16 h-16 bg-earth/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <LucideIcon name="Coffee" class="w-8 h-8 text-earth" />
+          </div>
+          <h3 class="text-lg font-heading font-bold text-primary mb-3">{t("home.lab.card2.title" as any)}</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">{t("home.lab.card2.desc" as any)}</p>
+        </div>
+
+        <!-- Card 3: Trees / accent -->
+        <div class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <LucideIcon name="Trees" class="w-8 h-8 text-accent" />
+          </div>
+          <h3 class="text-lg font-heading font-bold text-primary mb-3">{t("home.lab.card3.title" as any)}</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">{t("home.lab.card3.desc" as any)}</p>
+        </div>
+
+        <!-- Card 4: Bird / golden -->
+        <div class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="w-16 h-16 bg-golden/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <LucideIcon name="Bird" class="w-8 h-8 text-golden-dark" />
+          </div>
+          <h3 class="text-lg font-heading font-bold text-primary mb-3">{t("home.lab.card4.title" as any)}</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">{t("home.lab.card4.desc" as any)}</p>
+        </div>
+
+        <!-- Card 5: Droplets / primary -->
+        <div class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <LucideIcon name="Droplets" class="w-8 h-8 text-primary" />
+          </div>
+          <h3 class="text-lg font-heading font-bold text-primary mb-3">{t("home.lab.card5.title" as any)}</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">{t("home.lab.card5.desc" as any)}</p>
+        </div>
+
+        <!-- Card 6: Users / accent -->
+        <div class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+          <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <LucideIcon name="Users" class="w-8 h-8 text-accent" />
+          </div>
+          <h3 class="text-lg font-heading font-bold text-primary mb-3">{t("home.lab.card6.title" as any)}</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">{t("home.lab.card6.desc" as any)}</p>
+        </div>
+
       </div>
       <p class="text-center text-lg text-gray-600 mt-10 max-w-3xl mx-auto">{t("home.lab.footer")}</p>
     </div>
@@ -132,9 +137,12 @@ const communityPills = ["pill1", "pill2", "pill3", "pill4", "pill5", "pill6"] as
         <p class="text-lg md:text-xl leading-relaxed">{t("home.community.p5")}</p>
       </div>
       <div class="flex flex-wrap justify-center gap-4 mt-10 text-white/90 text-lg">
-        {communityPills.map((n) => (
-          <span class="bg-white/10 rounded-full px-6 py-2">{t(`home.community.${n}` as any)}</span>
-        ))}
+        <span class="bg-white/10 rounded-full px-6 py-2">{t("home.community.pill1" as any)}</span>
+        <span class="bg-white/10 rounded-full px-6 py-2">{t("home.community.pill2" as any)}</span>
+        <span class="bg-white/10 rounded-full px-6 py-2">{t("home.community.pill3" as any)}</span>
+        <span class="bg-white/10 rounded-full px-6 py-2">{t("home.community.pill4" as any)}</span>
+        <span class="bg-white/10 rounded-full px-6 py-2">{t("home.community.pill5" as any)}</span>
+        <span class="bg-white/10 rounded-full px-6 py-2">{t("home.community.pill6" as any)}</span>
       </div>
       <p class="text-golden font-heading italic text-xl mt-8">{t("home.community.closing")}</p>
     </div>
@@ -149,15 +157,61 @@ const communityPills = ["pill1", "pill2", "pill3", "pill4", "pill5", "pill6"] as
         <p class="text-lg text-gray-600 max-w-3xl mx-auto">{t("home.join.subtitle")}</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {joinCards.map((card) => (
-          <a href={base + getLocalizedPath(card.href, lang)} class="group surface-card p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 no-underline">
-            <div class={`w-12 h-12 ${card.bg} rounded-full flex items-center justify-center mx-auto mb-4`}>
-              <LucideIcon name={card.icon} class={`w-6 h-6 ${card.iconColor}`} />
-            </div>
-            <h3 class="font-heading font-bold text-primary mb-2">{t(`home.join.card${card.n}.title` as any)}</h3>
-            <p class="text-gray-600 text-sm">{t(`home.join.card${card.n}.sub` as any)}</p>
-          </a>
-        ))}
+
+        <!-- Card 1: Ticket / primary -->
+        <a href={base + getLocalizedPath("/passeport/", lang)} class="group surface-card p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 no-underline">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <LucideIcon name="Ticket" class="w-6 h-6 text-primary" />
+          </div>
+          <h3 class="font-heading font-bold text-primary mb-2">{t("home.join.card1.title" as any)}</h3>
+          <p class="text-gray-600 text-sm">{t("home.join.card1.sub" as any)}</p>
+        </a>
+
+        <!-- Card 2: Coffee / earth -->
+        <a href={base + getLocalizedPath("/parrainer-une-culture/", lang)} class="group surface-card p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 no-underline">
+          <div class="w-12 h-12 bg-earth/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <LucideIcon name="Coffee" class="w-6 h-6 text-earth" />
+          </div>
+          <h3 class="font-heading font-bold text-primary mb-2">{t("home.join.card2.title" as any)}</h3>
+          <p class="text-gray-600 text-sm">{t("home.join.card2.sub" as any)}</p>
+        </a>
+
+        <!-- Card 3: Trees / accent -->
+        <a href={base + getLocalizedPath("/espaces-de-liberte/", lang)} class="group surface-card p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 no-underline">
+          <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <LucideIcon name="Trees" class="w-6 h-6 text-accent" />
+          </div>
+          <h3 class="font-heading font-bold text-primary mb-2">{t("home.join.card3.title" as any)}</h3>
+          <p class="text-gray-600 text-sm">{t("home.join.card3.sub" as any)}</p>
+        </a>
+
+        <!-- Card 4: TentTree / golden -->
+        <a href={base + getLocalizedPath("/venir-sur-place/", lang)} class="group surface-card p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 no-underline">
+          <div class="w-12 h-12 bg-golden/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <LucideIcon name="TentTree" class="w-6 h-6 text-golden-dark" />
+          </div>
+          <h3 class="font-heading font-bold text-primary mb-2">{t("home.join.card4.title" as any)}</h3>
+          <p class="text-gray-600 text-sm">{t("home.join.card4.sub" as any)}</p>
+        </a>
+
+        <!-- Card 5: Handshake / primary -->
+        <a href={base + getLocalizedPath("/devenir-partenaire/", lang)} class="group surface-card p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 no-underline">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <LucideIcon name="Handshake" class="w-6 h-6 text-primary" />
+          </div>
+          <h3 class="font-heading font-bold text-primary mb-2">{t("home.join.card5.title" as any)}</h3>
+          <p class="text-gray-600 text-sm">{t("home.join.card5.sub" as any)}</p>
+        </a>
+
+        <!-- Card 6: Megaphone / accent -->
+        <a href={base + getLocalizedPath("/devenir-ambassadeur/", lang)} class="group surface-card p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 no-underline">
+          <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <LucideIcon name="Megaphone" class="w-6 h-6 text-accent" />
+          </div>
+          <h3 class="font-heading font-bold text-primary mb-2">{t("home.join.card6.title" as any)}</h3>
+          <p class="text-gray-600 text-sm">{t("home.join.card6.sub" as any)}</p>
+        </a>
+
       </div>
       <div class="text-center text-primary font-heading italic text-lg mt-10 space-y-2">
         <p>{t("home.join.footer1")}</p>
@@ -176,14 +230,47 @@ const communityPills = ["pill1", "pill2", "pill3", "pill4", "pill5", "pill6"] as
         <p class="text-lg text-gray-600 max-w-3xl mx-auto">{t("home.ecosystem.subtitle")}</p>
       </div>
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-        {ecosystemCards.map((card) => (
-          <div class={`bg-cream rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300 ${card.n === 5 ? 'col-span-2 sm:col-span-1' : ''}`}>
-            <div class={`w-12 h-12 ${card.bg} rounded-full flex items-center justify-center mx-auto mb-3`}>
-              <LucideIcon name={card.icon} class={`w-6 h-6 ${card.iconColor}`} strokeWidth={1.75} />
-            </div>
-            <h3 class="font-heading font-bold text-primary text-sm">{t(`home.ecosystem.card${card.n}` as any)}</h3>
+
+        <!-- Card 1: Trees / primary -->
+        <div class="bg-cream rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+            <LucideIcon name="Trees" class="w-6 h-6 text-primary" strokeWidth={1.75} />
           </div>
-        ))}
+          <h3 class="font-heading font-bold text-primary text-sm">{t("home.ecosystem.card1" as any)}</h3>
+        </div>
+
+        <!-- Card 2: Coffee / earth -->
+        <div class="bg-cream rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
+          <div class="w-12 h-12 bg-earth/10 rounded-full flex items-center justify-center mx-auto mb-3">
+            <LucideIcon name="Coffee" class="w-6 h-6 text-earth" strokeWidth={1.75} />
+          </div>
+          <h3 class="font-heading font-bold text-primary text-sm">{t("home.ecosystem.card2" as any)}</h3>
+        </div>
+
+        <!-- Card 3: Sprout / accent -->
+        <div class="bg-cream rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
+          <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
+            <LucideIcon name="Sprout" class="w-6 h-6 text-accent" strokeWidth={1.75} />
+          </div>
+          <h3 class="font-heading font-bold text-primary text-sm">{t("home.ecosystem.card3" as any)}</h3>
+        </div>
+
+        <!-- Card 4: House / golden -->
+        <div class="bg-cream rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
+          <div class="w-12 h-12 bg-golden/10 rounded-full flex items-center justify-center mx-auto mb-3">
+            <LucideIcon name="House" class="w-6 h-6 text-golden-dark" strokeWidth={1.75} />
+          </div>
+          <h3 class="font-heading font-bold text-primary text-sm">{t("home.ecosystem.card4" as any)}</h3>
+        </div>
+
+        <!-- Card 5: Utensils / primary -->
+        <div class="bg-cream rounded-2xl p-6 text-center hover:shadow-lg transition-shadow duration-300 col-span-2 sm:col-span-1">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+            <LucideIcon name="Utensils" class="w-6 h-6 text-primary" strokeWidth={1.75} />
+          </div>
+          <h3 class="font-heading font-bold text-primary text-sm">{t("home.ecosystem.card5" as any)}</h3>
+        </div>
+
       </div>
       <p class="text-center text-lg text-gray-600 mt-10 max-w-3xl mx-auto">{t("home.ecosystem.footer")}</p>
     </div>
@@ -230,15 +317,34 @@ const communityPills = ["pill1", "pill2", "pill3", "pill4", "pill5", "pill6"] as
         <p class="text-lg text-gray-600">{t("home.conviction.intro")}</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {convictionCards.map((card) => (
-          <div class="group relative bg-white rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-1" style="box-shadow: 0 2px 12px rgba(11,91,75,0.06);">
-            <div class={`absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r ${card.gradient}`}></div>
-            <div class={`w-16 h-16 rounded-full ${card.bg} flex items-center justify-center mx-auto mb-6 ${card.bgHover} transition-colors duration-300`}>
-              <LucideIcon name={card.icon} class={`w-8 h-8 ${card.iconColor}`} strokeWidth={1.75} />
-            </div>
-            <p class="text-lg font-medium text-gray-800 leading-relaxed">{t(`home.conviction.card${card.n}` as any)}</p>
+
+        <!-- Card 1: HeartHandshake / primary -->
+        <div class="group relative bg-white rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-1" style="box-shadow: 0 2px 12px rgba(11,91,75,0.06);">
+          <div class="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r from-primary to-accent"></div>
+          <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/15 transition-colors duration-300">
+            <LucideIcon name="HeartHandshake" class="w-8 h-8 text-primary" strokeWidth={1.75} />
           </div>
-        ))}
+          <p class="text-lg font-medium text-gray-800 leading-relaxed">{t("home.conviction.card1" as any)}</p>
+        </div>
+
+        <!-- Card 2: Trees / accent -->
+        <div class="group relative bg-white rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-1" style="box-shadow: 0 2px 12px rgba(11,91,75,0.06);">
+          <div class="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r from-accent to-golden"></div>
+          <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/15 transition-colors duration-300">
+            <LucideIcon name="Trees" class="w-8 h-8 text-accent" strokeWidth={1.75} />
+          </div>
+          <p class="text-lg font-medium text-gray-800 leading-relaxed">{t("home.conviction.card2" as any)}</p>
+        </div>
+
+        <!-- Card 3: Sparkles / golden -->
+        <div class="group relative bg-white rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-1" style="box-shadow: 0 2px 12px rgba(11,91,75,0.06);">
+          <div class="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r from-golden to-earth"></div>
+          <div class="w-16 h-16 rounded-full bg-golden/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-golden/15 transition-colors duration-300">
+            <LucideIcon name="Sparkles" class="w-8 h-8 text-golden-dark" strokeWidth={1.75} />
+          </div>
+          <p class="text-lg font-medium text-gray-800 leading-relaxed">{t("home.conviction.card3" as any)}</p>
+        </div>
+
       </div>
     </div>
   </section>
