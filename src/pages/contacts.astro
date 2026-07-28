@@ -2,41 +2,256 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import CallToAction from "../components/CallToAction.astro";
+import LucideIcon from "../components/LucideIcon.astro";
+
 const lang = "fr";
+
+const contactTypes = [
+  {
+    id: "depot",
+    icon: "Package",
+    label: "Dépôt vente / point relais",
+    title: "Créer un point relais vivant",
+    description: "Aider à faire circuler le café, les produits et les idées du Mouvement dans votre territoire.",
+    fields: ["name", "email", "phone", "city", "organization", "relay", "availability", "message"],
+  },
+  {
+    id: "partenaire",
+    icon: "Handshake",
+    label: "Devenir partenaire",
+    title: "Construire un partenariat",
+    description: "Entreprises, associations, écoles, chercheurs, collectivités ou fondations : dites-nous ce que nous pouvons imaginer ensemble.",
+    fields: ["name", "email", "phone", "city", "organization", "availability", "message"],
+  },
+  {
+    id: "ambassadeur",
+    icon: "Megaphone",
+    label: "Devenir ambassadeur",
+    title: "Faire circuler le Mouvement",
+    description: "Organiser une rencontre, présenter Pachatopia, partager un café ou faire voyager une idée autour de vous.",
+    fields: ["name", "email", "phone", "city", "availability", "message"],
+  },
+  {
+    id: "volontaire",
+    icon: "TentTree",
+    label: "Venir comme volontaire",
+    title: "Préparer une venue sur place",
+    description: "Présentez votre période, votre énergie, vos expériences et ce que vous souhaitez apprendre ou offrir au lieu.",
+    fields: ["name", "email", "phone", "city", "dates", "duration", "skills", "languages", "needs", "commitment", "message"],
+  },
+  {
+    id: "idee",
+    icon: "Lightbulb",
+    label: "Partager une idée",
+    title: "Une idée, une intuition, une question",
+    description: "Partagez ce que vous portez, même si ce n'est pas encore parfaitement formulé.",
+    fields: ["name", "email", "city", "message"],
+  },
+];
+
+const shareItems = [
+  "Une intuition",
+  "Une expérience",
+  "Une recherche",
+  "Un contact",
+  "Une technique",
+  "Une idée de culture",
+  "Une solution locale",
+  "Une question",
+];
 ---
-<Layout title="Nous contacter — Pachatopia" description="Chaque rencontre peut devenir une graine d'espérance." lang={lang}>
+
+<Layout
+  title="Nous contacter — Pachatopia"
+  description="Partager une idée, proposer un partenariat, devenir ambassadeur, point relais ou volontaire avec Pachatopia."
+  lang={lang}
+>
   <Header lang={lang} />
   <main>
-    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
-      <div class="absolute inset-0"><img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-primary/85"></div></div>
-      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Nous contacter</h1>
-        <p class="text-xl md:text-2xl text-white/90">Chaque rencontre peut devenir une graine d'espérance.</p>
+    <section class="relative overflow-hidden bg-primary py-24 text-white md:py-32">
+      <div class="absolute inset-0">
+        <img src="/pachatopia/images/farm-hero.jpg" alt="" class="h-full w-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-primary/85"></div>
+      </div>
+      <div class="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+        <h1 class="mb-6 font-heading text-4xl font-bold md:text-5xl lg:text-6xl">Nous contacter</h1>
+        <p class="text-xl text-white/90 md:text-2xl">Chaque rencontre peut devenir une graine d'espérance.</p>
       </div>
     </section>
-    <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
-<p>Le Mouvement Pachatopia est né d'une question. Il continue de grandir grâce aux rencontres. Une idée partagée, une envie de soutenir, une proposition de partenariat. Parfois, il suffit d'un premier message pour ouvrir un nouveau chemin.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Pourquoi nous écrire ?</h2><p>Vous pouvez nous contacter si vous souhaitez :</p><ul class="list-disc pl-6 space-y-2"><li>Rejoindre le Mouvement</li><li>Obtenir votre Passeport Pachatopia</li><li>Parrainer une culture</li><li>Préserver des espaces de liberté pour le vivant</li><li>Découvrir nos cafés et nos abonnements</li><li>Venir vivre une expérience sur le terrain</li><li>Proposer un partenariat</li><li>Partager une idée, une compétence ou une recherche</li><li>Organiser une rencontre, une conférence ou une présentation</li><li>Ou simplement entrer en relation avec nous</li></ul><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">À qui s'adresse cette porte d'entrée ?</h2><p>À toutes celles et ceux qui se reconnaissent dans l'élan du Mouvement. Habitants du territoire, soutiens en Colombie, amis du projet en France et en Suisse, volontaires, voyageurs, producteurs, chercheurs, écoles, artisans, entreprises, fondations, curieux. Le vivant relie déjà des mondes très différents. Pachatopia cherche simplement à leur donner un lieu de rencontre.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Un mouvement ancré en Colombie, relié à d'autres territoires</h2><p>Le premier laboratoire de Pachatopia se développe à San Carlos, en Antioquia, Colombie. Mais le Mouvement relie déjà plusieurs territoires, plusieurs langues et plusieurs formes d'engagement.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Une relation simple, vivante et sincère</h2><p>Nous ne cherchons pas à multiplier les échanges artificiels. Nous préférons des relations simples, humaines et vraies. Si vous nous écrivez, nous ferons de notre mieux pour vous répondre avec attention, honnêteté et cohérence avec la réalité du terrain.</p><div class="bg-primary text-white rounded-2xl p-10 my-12 text-center"><h3 class="text-2xl font-heading font-bold mb-4">Nous contacter</h3><p class="mb-6">Poser une question. Partager une idée. Ouvrir une relation.</p><a href="mailto:contact@pachatopia.org" class="button-primary-dark">Entrer en contact avec le Mouvement</a></div>
-    </div></section>
-    <CallToAction lang={lang} />
-    
-    <!-- FAQ Section -->
-    <section class="py-16 bg-cream">
-      <div class="max-w-4xl mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary text-center mb-4">Questions fréquentes</h2>
-        <div class="w-20 h-1 bg-golden rounded-full mx-auto mb-10"></div>
-        <div class="space-y-3">
-          <details class="group bg-white rounded-xl overflow-hidden"><summary class="flex items-center justify-between cursor-pointer p-5 font-heading font-bold text-primary hover:text-accent transition-colors">Qu'est-ce que Pachatopia ?<span class="text-primary/40 group-open:rotate-180 transition-transform">▼</span></summary><div class="px-5 pb-5 text-gray-700">Pachatopia est un mouvement qui cherche à retrouver une relation plus harmonieuse entre les êtres humains et le vivant. C'est à la fois un laboratoire du vivant, un lieu d'expérimentation et une aventure collective.</div></details>
-          <details class="group bg-white rounded-xl overflow-hidden"><summary class="flex items-center justify-between cursor-pointer p-5 font-heading font-bold text-primary hover:text-accent transition-colors">Comment rejoindre le Mouvement ?<span class="text-primary/40 group-open:rotate-180 transition-transform">▼</span></summary><div class="px-5 pb-5 text-gray-700">La manière la plus simple est d'obtenir le Passeport Pachatopia. Il marque votre entrée dans la communauté et permet de suivre vos soutiens dans le temps.</div></details>
-          <details class="group bg-white rounded-xl overflow-hidden"><summary class="flex items-center justify-between cursor-pointer p-5 font-heading font-bold text-primary hover:text-accent transition-colors">Quelles cultures peut-on parrainer ?<span class="text-primary/40 group-open:rotate-180 transition-transform">▼</span></summary><div class="px-5 pb-5 text-gray-700">Aujourd'hui, les premières cultures proposées au parrainage sont le café et le cacao. Le café est déjà en production. Le cacao est encore en croissance.</div></details>
-          <details class="group bg-white rounded-xl overflow-hidden"><summary class="flex items-center justify-between cursor-pointer p-5 font-heading font-bold text-primary hover:text-accent transition-colors">Peut-on venir sur place ?<span class="text-primary/40 group-open:rotate-180 transition-transform">▼</span></summary><div class="px-5 pb-5 text-gray-700">Oui. Pachatopia est un lieu d'accueil. Il est possible de venir vivre une expérience sur le terrain ou comme volontaire, avec sincérité et engagement.</div></details>
-          <details class="group bg-white rounded-xl overflow-hidden"><summary class="flex items-center justify-between cursor-pointer p-5 font-heading font-bold text-primary hover:text-accent transition-colors">Peut-on devenir partenaire ?<span class="text-primary/40 group-open:rotate-180 transition-transform">▼</span></summary><div class="px-5 pb-5 text-gray-700">Oui. Entreprises, fondations, écoles, chercheurs, associations, artisans ou entrepreneurs peuvent devenir partenaires du Mouvement.</div></details>
+
+    <section class="bg-white py-16">
+      <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+        <span class="section-kicker mb-6">
+          <LucideIcon name="Lightbulb" class="h-4 w-4 text-accent" />
+          Entrer en relation
+        </span>
+        <h2 class="mb-6 font-heading text-3xl font-bold text-primary md:text-4xl">Une intelligence collective au service du vivant</h2>
+        <div class="space-y-5 text-lg leading-relaxed text-gray-700">
+          <p>Aucun être vivant ne construit seul un écosystème. Les arbres, les champignons, les insectes, les rivières, les oiseaux et les micro-organismes jouent chacun un rôle.</p>
+          <p>Le Mouvement Pachatopia avance avec une vision et une expérience de terrain, mais il grandit aussi grâce aux personnes qui portent des savoir-faire, des questions, des lieux, des réseaux ou une envie sincère de contribuer.</p>
         </div>
-        <div class="text-center mt-8">
-          <a href="/pachatopia/faq/" class="inline-flex items-center gap-2 text-accent font-semibold hover:underline">Voir toutes les questions fréquentes →</a>
+        <div class="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {shareItems.map((item) => (
+            <span class="rounded-full border border-primary/10 bg-primary/[0.04] px-4 py-3 text-sm font-semibold text-primary">{item}</span>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cream py-16 md:py-24">
+      <div class="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 sm:px-6 lg:grid-cols-[0.82fr_1.18fr] lg:px-8">
+        <aside class="surface-card p-6 md:p-8 lg:sticky lg:top-24 lg:self-start">
+          <h2 class="font-heading text-2xl font-bold text-primary">Votre demande</h2>
+          <p class="mt-3 text-sm leading-6 text-gray-600">Choisissez le chemin qui correspond le mieux à votre intention. Le formulaire s'adapte automatiquement.</p>
+          <div class="mt-6 space-y-3">
+            {contactTypes.map((type) => (
+              <button
+                type="button"
+                class="contact-type flex w-full items-center gap-3 rounded-xl border border-primary/10 bg-white p-4 text-left transition hover:border-accent hover:shadow-md"
+                data-type={type.id}
+                data-title={type.title}
+                data-description={type.description}
+                data-fields={type.fields.join(",")}
+              >
+                <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10">
+                  <LucideIcon name={type.icon} class="h-5 w-5 text-primary" />
+                </span>
+                <span>
+                  <span class="block font-heading text-lg font-bold text-primary">{type.label}</span>
+                  <span class="mt-1 block text-sm text-gray-500">{type.description}</span>
+                </span>
+              </button>
+            ))}
+          </div>
+        </aside>
+
+        <div class="surface-card p-6 md:p-8">
+          <div class="mb-8">
+            <p id="form-kicker" class="text-sm font-semibold text-accent">Partager une idée</p>
+            <h2 id="form-title" class="mt-2 font-heading text-3xl font-bold text-primary">Une idée, une intuition, une question</h2>
+            <p id="form-description" class="mt-3 text-gray-600">Partagez ce que vous portez, même si ce n'est pas encore parfaitement formulé.</p>
+          </div>
+
+          <form id="contact-form" class="space-y-5" action="mailto:contact@pachatopia.org" method="post" enctype="text/plain">
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+              <label class="form-field block" data-field="name">
+                <span class="text-sm font-semibold text-primary">Nom et prénom</span>
+                <input id="field-name" name="Nom et prénom" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="Votre nom" />
+              </label>
+              <label class="form-field block" data-field="email">
+                <span class="text-sm font-semibold text-primary">Email</span>
+                <input id="field-email" name="Email" type="email" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="vous@email.com" />
+              </label>
+              <label class="form-field block" data-field="phone">
+                <span class="text-sm font-semibold text-primary">Téléphone / WhatsApp</span>
+                <input id="field-phone" name="Téléphone WhatsApp" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="+33..." />
+              </label>
+              <label class="form-field block" data-field="city">
+                <span class="text-sm font-semibold text-primary">Ville / pays</span>
+                <input id="field-city" name="Ville pays" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="Votre territoire" />
+              </label>
+              <label class="form-field block" data-field="organization">
+                <span class="text-sm font-semibold text-primary">Organisation</span>
+                <input id="field-organization" name="Organisation" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="Entreprise, école, association..." />
+              </label>
+              <label class="form-field block" data-field="relay">
+                <span class="text-sm font-semibold text-primary">Type de relais</span>
+                <select id="field-relay" name="Type de relais" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent">
+                  <option>Point relais</option>
+                  <option>Dépôt vente</option>
+                  <option>Distribution locale</option>
+                  <option>Autre proposition</option>
+                </select>
+              </label>
+              <label class="form-field block" data-field="dates">
+                <span class="text-sm font-semibold text-primary">Période souhaitée</span>
+                <input id="field-dates" name="Période souhaitée" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="Mois, dates ou saison" />
+              </label>
+              <label class="form-field block" data-field="duration">
+                <span class="text-sm font-semibold text-primary">Durée souhaitée</span>
+                <input id="field-duration" name="Durée souhaitée" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="1 semaine, 1 mois..." />
+              </label>
+              <label class="form-field block" data-field="skills">
+                <span class="text-sm font-semibold text-primary">Expériences utiles</span>
+                <input id="field-skills" name="Expériences utiles" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="Agroforesterie, cuisine, construction..." />
+              </label>
+              <label class="form-field block" data-field="languages">
+                <span class="text-sm font-semibold text-primary">Langues parlées</span>
+                <input id="field-languages" name="Langues parlées" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="Français, espagnol, anglais..." />
+              </label>
+              <label class="form-field block md:col-span-2" data-field="needs">
+                <span class="text-sm font-semibold text-primary">Besoins particuliers</span>
+                <input id="field-needs" name="Besoins particuliers" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="Santé, alimentation, mobilité..." />
+              </label>
+              <label class="form-field flex items-start gap-3 rounded-xl border border-primary/10 bg-white p-4 md:col-span-2" data-field="commitment">
+                <input id="field-commitment" name="Engagement compris" type="checkbox" class="mt-1 h-5 w-5 rounded border-primary/20 text-accent" />
+                <span class="text-sm leading-6 text-gray-700">Je comprends que Pachatopia n'est pas un séjour touristique classique, mais un lieu vivant qui demande écoute, humilité et engagement.</span>
+              </label>
+            </div>
+
+            <label class="form-field block" data-field="availability">
+              <span class="text-sm font-semibold text-primary">Disponibilité pour être recontacté</span>
+              <input id="field-availability" name="Disponibilité" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="Jours, horaires, canal préféré..." />
+            </label>
+
+            <label class="form-field block" data-field="message">
+              <span class="text-sm font-semibold text-primary">Message</span>
+              <textarea id="field-message" name="Message" rows="6" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="Racontez-nous votre intention."></textarea>
+            </label>
+
+            <div class="flex justify-end">
+              <button type="submit" class="button-primary-dark justify-center">Envoyer ma demande</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16">
+      <div class="mx-auto max-w-4xl px-4 text-center">
+        <h2 class="mb-4 font-heading text-3xl font-bold text-primary md:text-4xl">Questions fréquentes</h2>
+        <div class="mx-auto mb-10 h-1 w-20 rounded-full bg-golden"></div>
+        <div class="space-y-3 text-left">
+          <details class="group overflow-hidden rounded-xl bg-cream"><summary class="flex cursor-pointer items-center justify-between p-5 font-heading font-bold text-primary transition-colors hover:text-accent">Comment rejoindre le Mouvement ?<span class="text-primary/40 transition-transform group-open:rotate-180">▼</span></summary><div class="px-5 pb-5 text-gray-700">La manière la plus simple est d'obtenir le Passeport Pachatopia ou de choisir une forme de participation qui vous ressemble.</div></details>
+          <details class="group overflow-hidden rounded-xl bg-cream"><summary class="flex cursor-pointer items-center justify-between p-5 font-heading font-bold text-primary transition-colors hover:text-accent">Peut-on venir sur place ?<span class="text-primary/40 transition-transform group-open:rotate-180">▼</span></summary><div class="px-5 pb-5 text-gray-700">Oui. Les volontaires peuvent venir avec sincérité, engagement et envie d'apprendre du vivant.</div></details>
+          <details class="group overflow-hidden rounded-xl bg-cream"><summary class="flex cursor-pointer items-center justify-between p-5 font-heading font-bold text-primary transition-colors hover:text-accent">Peut-on devenir partenaire ?<span class="text-primary/40 transition-transform group-open:rotate-180">▼</span></summary><div class="px-5 pb-5 text-gray-700">Oui. Entreprises, fondations, écoles, chercheurs, associations, artisans ou entrepreneurs peuvent proposer un partenariat.</div></details>
         </div>
       </div>
     </section>
   </main>
   <Footer lang={lang} />
 </Layout>
+
+<script define:vars={{ contactTypes }}>
+  const typeButtons = [...document.querySelectorAll(".contact-type")];
+  const formFields = [...document.querySelectorAll(".form-field")];
+  const formKicker = document.getElementById("form-kicker");
+  const formTitle = document.getElementById("form-title");
+  const formDescription = document.getElementById("form-description");
+  let activeType = contactTypes[0];
+
+  function setActiveType(typeId) {
+    activeType = contactTypes.find((type) => type.id === typeId) || contactTypes[0];
+    const visibleFields = new Set(activeType.fields);
+
+    typeButtons.forEach((button) => {
+      const isActive = button.dataset.type === activeType.id;
+      button.classList.toggle("border-accent", isActive);
+      button.classList.toggle("ring-2", isActive);
+      button.classList.toggle("ring-accent/25", isActive);
+    });
+
+    formFields.forEach((field) => {
+      field.classList.toggle("hidden", !visibleFields.has(field.dataset.field));
+    });
+
+    formKicker.textContent = activeType.label;
+    formTitle.textContent = activeType.title;
+    formDescription.textContent = activeType.description;
+  }
+
+  typeButtons.forEach((button) => button.addEventListener("click", () => setActiveType(button.dataset.type)));
+
+  const params = new URLSearchParams(window.location.search);
+  setActiveType(params.get("type") || "idee");
+</script>

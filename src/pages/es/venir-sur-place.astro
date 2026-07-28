@@ -1,0 +1,24 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import CallToAction from "../../components/CallToAction.astro";
+const lang = "es";
+---
+<Layout title="Venir a vivir la experiencia — Pachatopia" description="Hay cosas que no se explican. Se viven." lang={lang}>
+  <Header lang={lang} />
+  <main>
+    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
+      <div class="absolute inset-0"><img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-primary/85"></div></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Venir a vivir la experiencia</h1>
+        <p class="text-xl md:text-2xl text-white/90">Hay cosas que no se explican. Se viven.</p>
+      </div>
+    </section>
+    <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
+<p>Ninguna pantalla puede transmitir el perfume de una flor de naranjo. Ningún video puede reproducir el canto de los pájaros al amanecer. Lo vivo se descubre con los ojos, con las manos, con los oídos, con el corazón. Por eso Pachatopia es también un lugar de acogida.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">¿Por qué venir?</h2><p>Venir a Pachatopia no es solo visitar un lugar. Es entrar, por unos días o más, en un laboratorio vivo. Un lugar donde se observa, donde se aprende, donde se comparte. Creemos que ciertos conocimientos no pueden transmitirse solo con textos o imágenes. Exigen presencia, un encuentro, una experiencia vivida.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Entrar en otro ritmo</h2><p>En Pachatopia, los días nunca se parecen del todo. Lo vivo impone sus temporadas, sus necesidades, sus sorpresas y sus enseñanzas. Venir aquí es aceptar ralentizar para observar más. Es redescubrir el tiempo del crecimiento, el tiempo del agua, el tiempo de las cosechas, el tiempo de la escucha.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Una experiencia que moviliza todos los sentidos</h2><p>Caminar bajo los árboles. Sentir la lluvia sobre la tierra caliente. Escuchar un río. Probar un fruto cosechado en su madurez. Compartir una comida preparada con las cosechas del lugar. Observar los pájaros. Descubrir el perfume del jazmín de noche. Contemplar las estrellas en el silencio de las montañas. Lo vivo no se comprende solo con el intelecto. Se encuentra.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Aprender viviendo</h2><p>Según las temporadas y las necesidades del lugar: descubrimiento del laboratorio de lo vivo, inmersión en los sistemas agroforestales, observación de los ecosistemas, encuentros con productores y habitantes, participación en ciertas actividades del día a día, tiempos de transmisión, de intercambio y de contemplación.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Más que una estancia</h2><p>No vemos estas experiencias como un simple alojamiento o un paréntesis turístico. Las vemos como puertas de entrada hacia otra manera de habitar el mundo.</p>
+    </div></section>
+    <CallToAction lang={lang} buttonText="Preparar mi visita" buttonHref="/pachatopia/es/contacts/?type=volontaire" />
+  </main>
+  <Footer lang={lang} />
+</Layout>

@@ -1,0 +1,190 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Hero from "../../components/Hero.astro";
+import CallToAction from "../../components/CallToAction.astro";
+import Footer from "../../components/Footer.astro";
+import LucideIcon from "../../components/LucideIcon.astro";
+
+const lang = "es";
+---
+
+<Layout
+  title="Pachatopia - Retomar nuestro lugar junto a lo vivo"
+  description="El Movimiento Pachatopia. Un movimiento de mujeres y hombres que eligen hacer crecer lo vivo en sí mismos, a su alrededor, y transmitirlo a las generaciones futuras."
+  lang={lang}
+>
+  <Header lang={lang} />
+  <main>
+    <Hero lang={lang} />
+
+    <!-- Notre laboratoire du vivant -->
+    <section class="pt-20 pb-10 md:pt-28 md:pb-12 bg-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-4">Nuestro laboratorio de lo vivo</h2>
+          <div class="flex items-center justify-center gap-2 mb-6">
+            <span class="block w-8 h-[2px] bg-accent rounded-full"></span>
+            <LucideIcon name="Leaf" class="w-5 h-5 text-accent" />
+            <span class="block w-8 h-[2px] bg-accent rounded-full"></span>
+          </div>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">Pachatopia es un lugar de experimentación donde aprendemos directamente de lo vivo, para construir sistemas capaces de producir regenerando al mismo tiempo los ecosistemas. Cada día observamos, experimentamos, compartimos y mejoramos nuestras prácticas.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a href="/pachatopia/es/nos-actions/#regenerer-les-sols" class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1 no-underline">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <LucideIcon name="Sprout" class="w-8 h-8 text-primary" />
+            </div>
+            <h3 class="text-lg font-heading font-bold text-primary mb-3">La agroforestería regenerativa</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">Producir regenerando los suelos, inspirándose en el funcionamiento de los ecosistemas naturales.</p>
+          </a>
+          <a href="/pachatopia/es/nos-actions/#preparer-l-avenir-du-cafe" class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1 no-underline">
+            <div class="w-16 h-16 bg-earth/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <LucideIcon name="Coffee" class="w-8 h-8 text-earth" />
+            </div>
+            <h3 class="text-lg font-heading font-bold text-primary mb-3">El café y el cacao</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">Cultivos en transición agroforestal, cultivados respetando los equilibrios naturales.</p>
+          </a>
+          <a href="/pachatopia/es/nos-actions/#espaces-de-liberte-du-vivant" class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1 no-underline">
+            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <LucideIcon name="Trees" class="w-8 h-8 text-accent" />
+            </div>
+            <h3 class="text-lg font-heading font-bold text-primary mb-3">Los espacios de libertad para lo vivo</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">Zonas dejadas a lo vivo, para que la biodiversidad pueda seguir evolucionando con libertad.</p>
+          </a>
+          <a href="/pachatopia/es/nos-actions/#protection-de-la-biodiversite" class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1 no-underline">
+            <div class="w-16 h-16 bg-golden/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <LucideIcon name="Bird" class="w-8 h-8 text-golden-dark" />
+            </div>
+            <h3 class="text-lg font-heading font-bold text-primary mb-3">La protección de la biodiversidad</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">Preservar las especies animales y vegetales que hacen la riqueza del territorio.</p>
+          </a>
+          <a href="/pachatopia/es/nos-actions/#preservation-de-l-eau" class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1 no-underline">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <LucideIcon name="Droplets" class="w-8 h-8 text-primary" />
+            </div>
+            <h3 class="text-lg font-heading font-bold text-primary mb-3">La preservación del agua</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">Proteger las fuentes, los ríos y los ciclos del agua de los que depende toda forma de vida.</p>
+          </a>
+          <a href="/pachatopia/es/nos-actions/#cooperation-avec-les-communautes" class="group relative bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1 no-underline">
+            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <LucideIcon name="Users" class="w-8 h-8 text-accent" />
+            </div>
+            <h3 class="text-lg font-heading font-bold text-primary mb-3">La cooperación con las comunidades</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">Trabajar con los habitantes del territorio para construir un futuro compartido.</p>
+          </a>
+        </div>
+        <p class="text-center text-lg text-gray-600 mt-10 max-w-3xl mx-auto">Nuestra ambición no es solo producir de otra manera. Deseamos demostrar que es posible reconciliar la naturaleza con las actividades humanas para las generaciones futuras.</p>
+      </div>
+    </section>
+
+    <!-- Une communauté qui grandit -->
+    <section class="relative py-24 md:py-32 bg-gradient-to-br from-primary via-primary to-accent/90 overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <svg class="absolute -top-10 -right-20 w-[500px] h-[500px] opacity-[0.07]" viewBox="0 0 500 500" fill="none"><circle cx="250" cy="250" r="240" fill="white"/></svg>
+        <svg class="absolute -bottom-16 -left-16 w-[350px] h-[350px] opacity-[0.05]" viewBox="0 0 400 400" fill="none"><path d="M200 10C200 10 380 80 370 220C360 360 240 390 160 370C80 350 10 240 30 140C50 40 200 10 200 10Z" fill="white"/></svg>
+      </div>
+      <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm mb-8">
+          <LucideIcon name="Heart" class="w-8 h-8 text-golden" />
+        </div>
+        <div class="max-w-4xl">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-8">Una comunidad que crece</h2>
+          <div class="space-y-4">
+            <p class="text-base md:text-lg text-white/90 leading-relaxed">El Movimiento Pachatopia desea despertar <strong class="text-white font-bold">guardianes de lo vivo</strong>: mujeres y hombres que eligen proteger la Tierra, el agua, los bosques y todas las formas de vida de las que depende nuestro futuro común.</p>
+            <p class="text-base md:text-lg text-white/85 leading-relaxed">No invitamos al mundo a creer en un sueño. Invitamos a cada persona a plantar su <strong class="text-white font-bold">semilla de esperanza</strong>, a su ritmo, al servicio de lo vivo.</p>
+          </div>
+        </div>
+        <div class="mt-12 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-14 items-center">
+          <div class="relative w-full overflow-hidden rounded-2xl shadow-2xl">
+            <img src="/pachatopia/images/farm-hero.jpg" alt="Paisaje de San Carlos" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent pointer-events-none"></div>
+          </div>
+          <div class="space-y-5 text-white/88">
+            <h3 class="text-2xl md:text-3xl font-heading font-bold text-cream">Una tierra que renace, lazos que se tejen de nuevo</h3>
+            <p class="text-base md:text-lg leading-relaxed">San Carlos es un territorio de una belleza excepcional, marcado por la historia del conflicto armado colombiano. Hoy, los habitantes reconstruyen su futuro, la naturaleza rebrota, los ríos siguen corriendo y los bosques recuperan poco a poco su lugar.</p>
+            <p class="text-base md:text-lg leading-relaxed">En Pachatopia creemos que la regeneración de un territorio es a la vez <strong class="text-white font-bold">ecológica, humana y cultural</strong>. Al cuidar de lo vivo, recreamos también los lazos entre las personas.</p>
+            <p class="text-base md:text-lg leading-relaxed">Existen miles de formas de participar. Solo una es indispensable: <strong class="text-white font-bold">dar el primer paso</strong>. El Movimiento no busca héroes, sino mujeres y hombres dispuestos a aprender de lo vivo, a transmitir y a actuar.</p>
+          </div>
+        </div>
+        <div class="max-w-4xl mt-12 space-y-3 text-white/90">
+          <h3 class="text-2xl md:text-3xl font-heading font-bold text-cream">Una misma dirección, mil formas de actuar</h3>
+          <p class="text-base md:text-lg leading-relaxed">Cada persona lleva una historia, talentos y una sensibilidad únicas. El Movimiento existe para permitir que cada quien aporte <strong class="text-white font-bold">lo mejor de sí mismo</strong> al servicio del bien común.</p>
+          <p class="text-lg md:text-xl text-golden font-heading italic">Los bosques más grandes siempre nacen de una primera semilla, y de quienes eligen cuidarla.</p>
+        </div>
+        <div class="flex flex-wrap gap-4 mt-10 text-white/90 text-lg">
+          <span class="bg-white/10 rounded-full px-6 py-2">Un árbol</span>
+          <span class="bg-white/10 rounded-full px-6 py-2">Una idea</span>
+          <span class="bg-white/10 rounded-full px-6 py-2">Tiempo</span>
+          <span class="bg-white/10 rounded-full px-6 py-2">Una habilidad</span>
+          <span class="bg-white/10 rounded-full px-6 py-2">Una sonrisa</span>
+          <span class="bg-white/10 rounded-full px-6 py-2">Un encuentro</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rejoindre le Mouvement (CTA cards) -->
+    <section class="py-20 md:py-28 bg-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-4">Unirse al Movimiento</h2>
+          <div class="w-20 h-1 bg-golden rounded-full mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">Hoy pueden participar de muchas maneras.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <a href="/pachatopia/es/passeport/" class="group surface-card p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 no-underline">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"><LucideIcon name="Ticket" class="w-6 h-6 text-primary" /></div>
+            <h3 class="font-heading font-bold text-primary mb-2">Convertirse en Guardián de lo Vivo</h3>
+            <p class="text-gray-600 text-sm">Gracias al Pasaporte Pachatopia</p>
+          </a>
+          <a href="/pachatopia/es/parrainer-une-culture/" class="group surface-card p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 no-underline">
+            <div class="w-12 h-12 bg-earth/10 rounded-full flex items-center justify-center mx-auto mb-4"><LucideIcon name="Coffee" class="w-6 h-6 text-earth" /></div>
+            <h3 class="font-heading font-bold text-primary mb-2">Apadrinar un cultivo</h3>
+            <p class="text-gray-600 text-sm">En transición agroforestal</p>
+          </a>
+          <a href="/pachatopia/es/espaces-de-liberte/" class="group surface-card p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 no-underline">
+            <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4"><LucideIcon name="Trees" class="w-6 h-6 text-accent" /></div>
+            <h3 class="font-heading font-bold text-primary mb-2">Apadrinar espacios de libertad para lo vivo</h3>
+          </a>
+          <a href="/pachatopia/es/venir-sur-place/" class="group surface-card p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 no-underline">
+            <div class="w-12 h-12 bg-golden/10 rounded-full flex items-center justify-center mx-auto mb-4"><LucideIcon name="TentTree" class="w-6 h-6 text-golden-dark" /></div>
+            <h3 class="font-heading font-bold text-primary mb-2">Venir a vivir la experiencia</h3>
+            <p class="text-gray-600 text-sm">En el terreno</p>
+          </a>
+          <a href="/pachatopia/es/devenir-partenaire/" class="group surface-card p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 no-underline">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"><LucideIcon name="Handshake" class="w-6 h-6 text-primary" /></div>
+            <h3 class="font-heading font-bold text-primary mb-2">Convertirse en socio</h3>
+            <p class="text-gray-600 text-sm">Del Movimiento</p>
+          </a>
+          <a href="/pachatopia/es/devenir-ambassadeur/" class="group surface-card p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 no-underline">
+            <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4"><LucideIcon name="Megaphone" class="w-6 h-6 text-accent" /></div>
+            <h3 class="font-heading font-bold text-primary mb-2">Inspirar a su alrededor</h3>
+            <p class="text-gray-600 text-sm">Convertirse en embajador</p>
+          </a>
+        </div>
+        <div class="text-center text-primary font-heading italic text-lg mt-10 space-y-2">
+          <p>Un bosque nunca crece gracias a una sola semilla. Un movimiento tampoco.</p>
+          <p>Lo vivo nos espera a todos.</p>
+          <p>Ahora les toca a ustedes plantar una semilla de esperanza.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Entre comme tu es -->
+    <section class="pt-4 pb-20 md:pt-6 md:pb-28 bg-cream">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-10">Entra tal como eres.</h2>
+        <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+          <p><span class="text-primary font-heading font-bold text-xl">Observa</span> con humildad.</p>
+          <p><span class="text-primary font-heading font-bold text-xl">Aprende</span> de lo vivo.</p>
+          <p><span class="text-primary font-heading font-bold text-xl">Transmite</span> lo que hayas recibido.</p>
+          <p>Y parte dejando la Tierra un poco más viva de lo que la encontraste.</p>
+        </div>
+        <p class="mt-10 text-xl text-primary font-heading font-bold italic">Aprendemos de lo vivo.</p>
+      </div>
+    </section>
+
+    <CallToAction lang={lang} buttonText="Participar en el Movimiento" buttonHref="/pachatopia/es/comment-participer/" />
+  </main>
+  <Footer lang={lang} />
+</Layout>

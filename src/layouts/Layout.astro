@@ -4,7 +4,7 @@ import "../styles/global.css";
 interface Props {
   title: string;
   description?: string;
-  lang?: "fr" | "en";
+  lang?: "fr" | "en" | "es";
   image?: string;
   type?: string;
   noindex?: boolean;
@@ -18,7 +18,7 @@ const {
   image = "/pachatopia/images/farm-hero.jpg",
   type = "website",
   noindex = false,
-  ogImageAlt = lang === "en" ? "Pachatopia regenerative landscape" : "Paysage regeneratif de Pachatopia",
+  ogImageAlt = lang === "fr" ? "Paysage regeneratif de Pachatopia" : lang === "es" ? "Paisaje regenerativo de Pachatopia" : "Pachatopia regenerative landscape",
 } = Astro.props;
 
 const productionSiteUrl = "https://deltav-cc.github.io/pachatopia/";
@@ -31,11 +31,13 @@ const canonicalUrl = new URL("/pachatopia" + currentPath, siteUrl).href;
 const ogImage = new URL(image, siteUrl).href;
 
 // Build alternate language URL
-const isEnglish = currentPath.startsWith("/en/") || currentPath === "/en";
-const frPath = isEnglish ? currentPath.replace(/^\/en\/?/, "/") : currentPath;
-const enPath = isEnglish ? currentPath : `/en${currentPath}`;
+const activeLangPrefix = currentPath.match(/^\/(en|es)(\/|$)/)?.[1];
+const frPath = activeLangPrefix ? currentPath.replace(/^\/(en|es)\/?/, "/") : currentPath;
+const enPath = activeLangPrefix === "en" ? currentPath : `/en${frPath}`;
+const esPath = activeLangPrefix === "es" ? currentPath : `/es${frPath}`;
 const frUrl = new URL("/pachatopia" + (frPath || "/"), siteUrl).href;
 const enUrl = new URL("/pachatopia" + enPath, siteUrl).href;
+const esUrl = new URL("/pachatopia" + esPath, siteUrl).href;
 
 // JSON-LD structured data
 const organizationSchema = {
@@ -49,13 +51,13 @@ const organizationSchema = {
     : "Association dédiée à l'agriculture durable, la création de réserves naturelles et un mode de vie éco-responsable inspiré de la sagesse amérindienne.",
   foundingDate: "2024",
   areaServed: ["Colombia", "France", "Europe"],
-  knowsLanguage: ["fr", "en"],
+  knowsLanguage: ["fr", "en", "es"],
   sameAs: [],
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+33631663624",
     contactType: "general",
-    availableLanguage: ["French", "English"],
+    availableLanguage: ["French", "English", "Spanish"],
   },
 };
 
@@ -64,7 +66,7 @@ const webSiteSchema = {
   "@type": "WebSite",
   name: "Pachatopia",
   url: siteUrl,
-  inLanguage: [lang === "en" ? "en" : "fr"],
+  inLanguage: [lang],
   potentialAction: {
     "@type": "ReadAction",
     target: siteUrl,
@@ -77,7 +79,7 @@ const webPageSchema = {
   name: title,
   description,
   url: canonicalUrl,
-  inLanguage: lang === "en" ? "en" : "fr",
+  inLanguage: lang,
   isPartOf: {
     "@type": "WebSite",
     name: "Pachatopia",
@@ -119,6 +121,7 @@ const webPageSchema = {
     <!-- Language Alternates -->
     <link rel="alternate" hreflang="fr" href={frUrl} />
     <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="es" href={esUrl} />
     <link rel="alternate" hreflang="x-default" href={frUrl} />
 
     <!-- Open Graph / Facebook -->
@@ -128,8 +131,9 @@ const webPageSchema = {
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:alt" content={ogImageAlt} />
-    <meta property="og:locale" content={lang === "en" ? "en_US" : "fr_FR"} />
-    <meta property="og:locale:alternate" content={lang === "en" ? "fr_FR" : "en_US"} />
+    <meta property="og:locale" content={lang === "fr" ? "fr_FR" : lang === "es" ? "es_ES" : "en_US"} />
+    <meta property="og:locale:alternate" content={lang === "fr" ? "en_US" : "fr_FR"} />
+    <meta property="og:locale:alternate" content={lang === "es" ? "en_US" : "es_ES"} />
     <meta property="og:site_name" content="Pachatopia" />
 
     <!-- Twitter -->
@@ -144,9 +148,11 @@ const webPageSchema = {
     <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
     <meta name="theme-color" content="#0A5B4B" />
     <meta name="author" content="Pachatopia" />
-    <meta name="keywords" content={lang === "en"
-      ? "Pachatopia, sustainable agriculture, natural reserve, eco-responsible, Pachamama, Colombia, volunteering, ecological currency, PachaCoin"
-      : "Pachatopia, agriculture durable, réserve naturelle, éco-responsable, Pachamama, Colombie, bénévolat, monnaie écologique, PachaCoin"
+    <meta name="keywords" content={lang === "fr"
+      ? "Pachatopia, agriculture durable, réserve naturelle, éco-responsable, Pachamama, Colombie, bénévolat, monnaie écologique, PachaCoin"
+      : lang === "es"
+        ? "Pachatopia, agricultura sostenible, reserva natural, eco-responsable, Pachamama, Colombia, voluntariado, moneda ecológica, PachaCoin"
+        : "Pachatopia, sustainable agriculture, natural reserve, eco-responsible, Pachamama, Colombia, volunteering, ecological currency, PachaCoin"
     } />
 
     <!-- Structured Data -->

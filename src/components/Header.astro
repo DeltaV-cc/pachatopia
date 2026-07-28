@@ -2,29 +2,33 @@
 import {
   useTranslations,
   getLocalizedPath,
+  languages,
+  type Lang,
 } from "../i18n/translations";
 
 interface Props {
-  lang?: "fr" | "en";
+  lang?: Lang;
 }
 
 const { lang = "fr" } = Astro.props;
 const t = useTranslations(lang);
-const otherLang = lang === "fr" ? "en" : "fr";
 
 const currentPath = Astro.url.pathname.replace(/^\/pachatopia/, "") || "/";
-const pathWithoutLang = currentPath.replace(/^\/en/, "") || "/";
-const switchLangPath = "/pachatopia" + getLocalizedPath(pathWithoutLang, otherLang);
+const pathWithoutLang = currentPath.replace(/^\/(en|es)/, "") || "/";
 
 const base = "/pachatopia";
+const languageOptions = (Object.keys(languages) as Lang[]).map((code) => ({
+  code,
+  label: code.toUpperCase(),
+  href: base + getLocalizedPath(pathWithoutLang, code),
+}));
 
 // Primary nav items (shown in desktop bar)
 const primaryNav = [
   { key: "nav.home" as const, href: base + getLocalizedPath("/", lang) },
   { key: "nav.vision" as const, href: base + getLocalizedPath("/a-propos-de-nous/", lang) },
-  { key: "nav.history" as const, href: base + getLocalizedPath("/notre-histoire/", lang) },
   { key: "nav.actions" as const, href: base + getLocalizedPath("/nos-actions/", lang) },
-  { key: "nav.coffee" as const, href: base + getLocalizedPath("/le-cafe/", lang) },
+  { key: "nav.history" as const, href: base + getLocalizedPath("/notre-histoire/", lang) },
 ];
 
 // Participer dropdown items
@@ -39,7 +43,7 @@ const participerNav = [
 ];
 
 const homeHref = base + getLocalizedPath("/", lang);
-const participateHref = base + getLocalizedPath("/trouver-sa-place/", lang);
+const participateHref = base + getLocalizedPath("/comment-participer/", lang);
 ---
 
 <header
@@ -115,7 +119,7 @@ const participateHref = base + getLocalizedPath("/trouver-sa-place/", lang);
         <div class="flex items-center gap-3">
           <!-- CTA button (desktop) -->
           <a
-            href={base + getLocalizedPath("/comment-participer/", lang)}
+            href={base + getLocalizedPath("/donation/", lang) + "?type=libre"}
             class="hidden sm:inline-flex items-center gap-1.5 bg-golden hover:bg-golden-dark text-primary font-semibold text-sm px-4 py-2 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-golden/20"
           >
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C12 2 18 7 18 13C18 17 15 20 12 20C9 20 6 17 6 13C6 7 12 2 12 2Z"/></svg>
@@ -123,19 +127,30 @@ const participateHref = base + getLocalizedPath("/trouver-sa-place/", lang);
           </a>
 
           <!-- Language switch -->
-          <a
+          <div
             data-testid="language-switcher"
-            href={switchLangPath}
-            class="flex items-center gap-1 rounded-full border border-white/20 px-2.5 py-1.5 text-xs font-semibold text-white/70 transition-all duration-200 hover:border-white/50 hover:text-white hover:bg-white/5"
-            aria-label={`Switch language to ${otherLang === "en" ? "English" : "Français"}`}
+            class="flex items-center gap-1 rounded-full border border-white/20 px-2.5 py-1.5 text-xs font-semibold text-white/70"
+            aria-label="Language selector"
           >
             <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
             </svg>
-            <span class={lang === "fr" ? "text-white" : ""}>FR</span>
-            <span class="opacity-40">|</span>
-            <span class={lang === "en" ? "text-white" : ""}>EN</span>
-          </a>
+            {languageOptions.map((option, index) => (
+              <>
+                {index > 0 && <span class="opacity-40">|</span>}
+                <a
+                  href={option.href}
+                  class:list={[
+                    "transition-colors hover:text-white",
+                    lang === option.code ? "text-white" : "",
+                  ]}
+                  aria-label={`Switch language to ${languages[option.code]}`}
+                >
+                  {option.label}
+                </a>
+              </>
+            ))}
+          </div>
 
           <!-- Hamburger (mobile) -->
           <button
@@ -237,12 +252,22 @@ const participateHref = base + getLocalizedPath("/trouver-sa-place/", lang);
 
     <!-- Language switcher -->
     <div class="mt-6 pt-5 border-t border-white/[0.08]">
-      <a href={switchLangPath} class="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2.5 text-sm font-medium text-white hover:border-white/50 hover:bg-white/5 transition-all">
-        <svg class="w-4 h-4 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-        </svg>
-        {otherLang === "en" ? "Switch to English" : "Passer en Français"}
-      </a>
+      <div class="flex flex-wrap gap-2">
+        {languageOptions.map((option) => (
+          <a
+            href={option.href}
+            class:list={[
+              "inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2.5 text-sm font-medium text-white hover:border-white/50 hover:bg-white/5 transition-all",
+              lang === option.code ? "bg-white/10" : "",
+            ]}
+          >
+            <svg class="w-4 h-4 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            {languages[option.code]}
+          </a>
+        ))}
+      </div>
     </div>
   </nav>
 </aside>

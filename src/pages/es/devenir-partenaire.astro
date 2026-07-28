@@ -1,0 +1,188 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import CallToAction from "../../components/CallToAction.astro";
+import LucideIcon from "../../components/LucideIcon.astro";
+
+const lang = "es";
+---
+
+<Layout
+  title="Convertirse en aliado — Pachatopia"
+  description="Construyamos juntos algo que nos supere."
+  lang={lang}
+>
+  <Header lang={lang} />
+  <main>
+    <!-- Hero Banner -->
+    <section class="relative text-white py-24 md:py-32 overflow-hidden bg-primary">
+      <div class="absolute inset-0">
+        <img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-primary/85"></div>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Convertirse en aliado</h1>
+        <p class="text-xl md:text-2xl text-white/90">Construyamos juntos algo que nos supere.</p>
+        <div class="mt-8">
+          <a href="/pachatopia/es/contacts/?type=partenaire" class="button-primary-dark inline-flex">Convertirse en aliado</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
+          <p class="text-xl text-primary/80 font-heading italic">Las grandes transformaciones nunca se construyen en solitario.</p>
+          <p>Nacen cuando mujeres y hombres, empresas, asociaciones, escuelas, investigadores, entidades territoriales y ciudadanos eligen avanzar en una misma dirección.</p>
+          <p>En Pachatopia creemos que cada quien posee algo único que aportar. Competencias. Tiempo. Conocimientos. Recursos. Ideas. Experiencias.</p>
+          <p>Nuestra ambición no es hacerlo todo solos. Nuestra ambición es crear un movimiento capaz de revelar lo mejor de cada persona al servicio de lo vivo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pourquoi devenir partenaire -->
+    <section class="relative py-20 md:py-28 bg-primary text-white overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <svg class="absolute -top-16 -right-16 w-96 h-96 opacity-[0.06]" viewBox="0 0 400 400" fill="none"><circle cx="200" cy="200" r="190" fill="white"/></svg>
+        <svg class="absolute -bottom-10 -left-10 w-72 h-72 opacity-[0.04]" viewBox="0 0 300 300" fill="none"><path d="M150 5C150 5 280 60 270 170C260 280 180 290 100 270C20 250 -10 140 20 60C50 -20 150 5 150 5Z" fill="white"/></svg>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-kicker w-fit border-white/10 bg-white/[0.08] text-white shadow-none mb-6">
+          <LucideIcon name="Handshake" class="h-4 w-4 text-golden" />
+          Por qué convertirse en aliado
+        </div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold mb-8">Desafíos que nos superan</h2>
+        <div class="space-y-5 text-lg text-white/90 leading-relaxed">
+          <p>Los desafíos a los que nos enfrentamos superan las capacidades de una sola organización.</p>
+          <p>Preservar los ecosistemas. Acompañar la transición agrícola. Crear empleos sostenibles. Transmitir conocimientos. Reconectar a los seres humanos con lo vivo.</p>
+          <p class="text-xl text-golden font-heading font-bold mt-8">Ninguno de estos desafíos puede afrontarse en solitario.</p>
+          <p>Creemos profundamente que la cooperación es una de las mayores fuerzas de lo vivo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quel partenaire souhaitez-vous être -->
+    <section class="py-20 md:py-28 bg-cream">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary text-center mb-6">¿Qué tipo de aliado desea ser?</h2>
+        <div class="w-20 h-1 bg-golden rounded-full mx-auto mb-4"></div>
+        <p class="text-center text-lg text-gray-600 mb-12">Cada alianza es única.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="Building2" class="w-8 h-8 text-primary mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary">Una empresa</p>
+            <p class="text-sm text-gray-500 mt-2">Apoyar un proyecto de terreno</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="School" class="w-8 h-8 text-accent mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary">Una escuela</p>
+            <p class="text-sm text-gray-500 mt-2">Hacer descubrir lo vivo a los estudiantes</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="GraduationCap" class="w-8 h-8 text-earth mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary">Una universidad</p>
+            <p class="text-sm text-gray-500 mt-2">Llevar a cabo investigaciones</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="Heart" class="w-8 h-8 text-golden-dark mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary">Una fundación</p>
+            <p class="text-sm text-gray-500 mt-2">Acompañar un programa a largo plazo</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="Users" class="w-8 h-8 text-primary mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary">Una asociación</p>
+            <p class="text-sm text-gray-500 mt-2">Compartir su experiencia</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="Wrench" class="w-8 h-8 text-accent mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary">Un artesano</p>
+            <p class="text-sm text-gray-500 mt-2">Transmitir su saber hacer</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="Palette" class="w-8 h-8 text-earth mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary">Un artista</p>
+            <p class="text-sm text-gray-500 mt-2">Despertar las conciencias</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="Globe" class="w-8 h-8 text-golden-dark mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary">Una entidad territorial</p>
+            <p class="text-sm text-gray-500 mt-2">Anclar el movimiento en los territorios</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plus qu'un partenariat -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-8">
+          <LucideIcon name="Sparkles" class="w-8 h-8 text-accent" />
+        </div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-8">Más que una alianza</h2>
+        <div class="space-y-5 text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+          <p>No buscamos únicamente apoyos financieros.</p>
+          <p>Buscamos personas y organizaciones que deseen construir con nosotros.</p>
+          <p class="text-xl text-primary/80 font-heading italic mt-6">Compartir ideas. Experimentar. Imaginar. Crear. Transmitir.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Une œuvre collective -->
+    <section class="py-20 md:py-28 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-8">Una obra colectiva</h2>
+        <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
+          <p>Aún no sabemos todo lo que llegará a ser Pachatopia. Y eso es una buena noticia.</p>
+          <p>Porque cada aliado aportará una parte de esta historia.</p>
+          <p class="text-xl text-primary/80 font-heading font-bold mt-6">El Movimiento nunca será la obra de una sola persona.</p>
+          <p>Será el fruto de todas las personas que hayan elegido contribuir.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Autres formes de partenariat -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary text-center mb-4">Otras formas de convertirse en aliado</h2>
+        <div class="w-20 h-1 bg-golden rounded-full mx-auto mb-12"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Ambassadeur -->
+          <div class="bg-cream rounded-2xl p-8 text-center">
+            <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <LucideIcon name="Megaphone" class="w-7 h-7 text-primary" />
+            </div>
+            <h3 class="text-xl font-heading font-bold text-primary mb-3">Convertirse en embajador</h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">Transmitir el impulso de lo vivo a su alrededor. Compartir un café, organizar un encuentro, hacer circular una visión. Cada embajador se convierte en un puente hacia lo vivo.</p>
+            <a href="/pachatopia/es/devenir-ambassadeur/" class="text-accent font-semibold text-sm hover:underline">Descubrir →</a>
+          </div>
+
+          <!-- Point relais / commercial -->
+          <div class="bg-cream rounded-2xl p-8 text-center">
+            <div class="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <LucideIcon name="Package" class="w-7 h-7 text-accent" />
+            </div>
+            <h3 class="text-xl font-heading font-bold text-primary mb-3">Convertirse en punto de retiro</h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">Ayudar a hacer circular el café, los productos y las ideas del Movimiento. Un punto de retiro es un ancla viva que vincula un territorio con Pachatopia.</p>
+            <a href="/pachatopia/es/livraison-retrait/" class="text-accent font-semibold text-sm hover:underline">Saber más →</a>
+          </div>
+
+          <!-- Centre de recherches -->
+          <div class="bg-cream rounded-2xl p-8 text-center">
+            <div class="w-14 h-14 bg-earth/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <LucideIcon name="FlaskConical" class="w-7 h-7 text-earth" />
+            </div>
+            <h3 class="text-xl font-heading font-bold text-primary mb-3">Centro de investigaciones</h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">Biológica, agronómica y social. El Laboratorio de lo Vivo acoge a investigadores, estudiantes y apasionados que desean aprender de lo vivo.</p>
+            <a href="/pachatopia/es/contacts/" class="text-accent font-semibold text-sm hover:underline">Contáctenos →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CallToAction lang={lang} buttonText="Convertirse en aliado" buttonHref="/pachatopia/es/contacts/?type=partenaire" />
+  </main>
+  <Footer lang={lang} />
+</Layout>

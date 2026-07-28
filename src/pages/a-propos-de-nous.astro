@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Testimonials from "../components/Testimonials.astro";
-import CallToAction from "../components/CallToAction.astro";
 import Footer from "../components/Footer.astro";
 import LucideIcon from "../components/LucideIcon.astro";
 
@@ -25,13 +24,16 @@ const lang = "fr";
       <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Le Mouvement Pachatopia</h1>
         <p class="text-xl md:text-2xl text-white/90">Reprendre notre place avec le vivant.</p>
+        <div class="mt-8">
+          <a href="/pachatopia/donation/?type=passeport" class="button-primary-dark inline-flex">Obtenir le Pachapassport</a>
+        </div>
       </div>
     </section>
 
     <!-- Pourquoi un mouvement -->
     <section class="py-16 bg-white">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="inline-flex items-center gap-3 text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="inline-flex items-center justify-center gap-3 text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
           <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/[0.06]">
             <LucideIcon name="Leaf" class="h-5 w-5 text-accent" />
           </span>
@@ -44,6 +46,37 @@ const lang = "fr";
           <p>Elle nous a conduits à observer la nature, à écouter les savoirs des anciens, à rencontrer des producteurs, des chercheurs, des habitants, des volontaires et toutes celles et ceux qui consacrent leur vie à prendre soin du vivant.</p>
           <p>Nous ne cherchons pas à avoir raison.</p>
           <p>Nous cherchons à apprendre.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notre manière d'agir — 5 verbes -->
+    <section class="py-20 md:py-28 bg-cream">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary text-center mb-6">Notre manière d'agir</h2>
+        <div class="w-20 h-1 bg-golden rounded-full mx-auto mb-4"></div>
+        <p class="text-center text-lg text-gray-600 mb-12">Nous avançons avec humilité. Notre démarche repose sur cinq verbes.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="Eye" class="w-8 h-8 text-primary mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary text-lg">Observer</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="BookOpen" class="w-8 h-8 text-accent mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary text-lg">Apprendre</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="FlaskConical" class="w-8 h-8 text-earth mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary text-lg">Expérimenter</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="Share2" class="w-8 h-8 text-golden-dark mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary text-lg">Transmettre</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="Sparkles" class="w-8 h-8 text-accent mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary text-lg">Inspirer</p>
+          </div>
         </div>
       </div>
     </section>
@@ -87,40 +120,9 @@ const lang = "fr";
       </div>
     </section>
 
-    <!-- Notre manière d'agir — 5 verbes -->
-    <section class="py-20 md:py-28 bg-cream">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary text-center mb-6">Notre manière d'agir</h2>
-        <div class="w-20 h-1 bg-golden rounded-full mx-auto mb-4"></div>
-        <p class="text-center text-lg text-gray-600 mb-12">Nous avançons avec humilité. Notre démarche repose sur cinq verbes.</p>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
-            <LucideIcon name="Eye" class="w-8 h-8 text-primary mx-auto mb-3" />
-            <p class="font-heading font-bold text-primary text-lg">Observer</p>
-          </div>
-          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
-            <LucideIcon name="BookOpen" class="w-8 h-8 text-accent mx-auto mb-3" />
-            <p class="font-heading font-bold text-primary text-lg">Apprendre</p>
-          </div>
-          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
-            <LucideIcon name="FlaskConical" class="w-8 h-8 text-earth mx-auto mb-3" />
-            <p class="font-heading font-bold text-primary text-lg">Expérimenter</p>
-          </div>
-          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
-            <LucideIcon name="Share2" class="w-8 h-8 text-golden-dark mx-auto mb-3" />
-            <p class="font-heading font-bold text-primary text-lg">Transmettre</p>
-          </div>
-          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
-            <LucideIcon name="Sparkles" class="w-8 h-8 text-accent mx-auto mb-3" />
-            <p class="font-heading font-bold text-primary text-lg">Inspirer</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Ce que nous apprenons du vivant -->
     <section class="py-20 md:py-28 bg-white">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-8">Ce que nous apprenons du vivant</h2>
         <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
           <p>Dans la nature, rien n'existe seul. Les arbres coopèrent avec les champignons. Les rivières relient les territoires. Les insectes pollinisent les fleurs. Chaque espèce contribue à l'équilibre de l'ensemble. Aucun être vivant ne s'épanouit seul.</p>
@@ -160,15 +162,9 @@ const lang = "fr";
           <p>Il s'agit de marcher dans une même direction, tout en laissant à chacun la liberté d'apporter ses talents, ses idées et son expérience.</p>
           <p>Comme dans une forêt, la diversité n'est pas un obstacle.</p>
           <p>Elle est une force.</p>
+          <p>Notre ambition n'est pas d'être le plus grand mouvement. Elle est de contribuer à faire émerger des milliers d'initiatives capables de régénérer le vivant partout où elles prendront racine.</p>
+          <p>Si, demain, d'autres projets voient le jour grâce à ce que nous aurons partagé, alors le Mouvement Pachatopia aura pleinement rempli sa mission.</p>
         </div>
-      </div>
-    </section>
-
-    <!-- Notre ambition -->
-    <section class="py-20 md:py-28 bg-cream">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-8">Notre ambition</h2>
-        <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">Notre ambition n'est pas d'être le plus grand mouvement. Notre ambition est de contribuer à faire émerger des milliers d'initiatives capables de régénérer le vivant partout où elles prendront racine. Si, demain, d'autres projets voient le jour grâce à ce que nous aurons partagé, alors le Mouvement Pachatopia aura pleinement rempli sa mission.</p>
       </div>
     </section>
 
@@ -183,12 +179,10 @@ const lang = "fr";
         <p class="text-2xl text-golden font-heading font-bold italic">Nous apprenons du vivant.</p>
         <p class="text-lg text-white/70 mt-6">Le vivant nous appelle tous.<br />À votre tour de planter une graine d'espérance.</p>
         <div class="mt-10">
-          <a href="/pachatopia/contacts/" class="button-primary-dark text-lg">Rejoignez le Mouvement</a>
+          <a href="/pachatopia/donation/?type=passeport" class="button-primary-dark text-lg">Obtenir le Pachapassport</a>
         </div>
       </div>
     </section>
-
-    <CallToAction lang={lang} />
   </main>
   <Footer lang={lang} />
 </Layout>

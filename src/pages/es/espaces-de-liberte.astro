@@ -1,0 +1,75 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import CallToAction from "../../components/CallToAction.astro";
+const lang = "es";
+---
+<Layout title="Espacios de libertad para lo vivo — Pachatopia" description="Dejar un lugar a lo vivo es ya participar en su futuro." lang={lang}>
+  <Header lang={lang} />
+  <main>
+    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
+      <div class="absolute inset-0"><img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-primary/85"></div></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Espacios de libertad para lo vivo</h1>
+        <p class="text-xl md:text-2xl text-white/90">Dejar un lugar a lo vivo es ya participar en su futuro.</p>
+        <div class="mt-8">
+          <a href="/pachatopia/es/donation/?type=espace" class="button-primary-dark inline-flex">Apadrinar un espacio</a>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
+<p>El apadrinamiento de los espacios de libertad para lo vivo no financia una producción agrícola. Acompaña otra decisión. La de dejar que ciertos espacios sigan evolucionando con libertad. Bosques. Zonas de refugio. Bordes vivos. Espacios de observación. Lugares donde lo vivo puede continuar su obra sin reducirse a su solo valor mercantil.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Lo que realmente acompañan</h2>
+<p>Al apoyar un espacio de libertad para lo vivo, no «poseen» una parcela. Eligen participar en la preservación de un equilibrio. Ayudan a mantener lugares donde los bosques, los ríos, las plantas, las aves, los insectos, los hongos y otras formas de vida pueden seguir existiendo, evolucionando y enseñando. Apoyan también la observación, la comprensión y la transmisión de lo que estos espacios hacen posible.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Una lógica distinta del apadrinamiento de un cultivo</h2>
+<p>El apadrinamiento de un cultivo acompaña una producción y da lugar a un producto. El apadrinamiento de un espacio de libertad sigue otra lógica. No da una cosecha. Da tiempo, espacio y continuidad a lo vivo. Permite también crear un apoyo sólido para los sistemas agroforestales vecinos. Porque cuanto más se respetan los espacios dejados a lo vivo, más puede ganar el territorio en su conjunto en estabilidad, fertilidad y biodiversidad.</p>
+<div class="surface-card bg-cream/70 p-6 md:p-8 mt-12">
+<p class="text-sm font-bold uppercase tracking-wider text-accent mb-2">Una unidad trazable de espacio acompañado</p>
+<h2 class="text-3xl font-heading font-bold text-primary mb-4">El PachaForest</h2>
+<div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 items-start">
+<div class="space-y-4">
+<p>Cada metro cuadrado acompañado se convierte en una unidad de seguimiento llamada <strong>PachaForest</strong>. <strong>1 PachaForest corresponde a 1 m²</strong> de espacio de libertad para lo vivo.</p>
+<p>Un PachaForest no representa un título de propiedad. No da ningún derecho sobre la tierra. No constituye ni una moneda ni una colocación financiera.</p>
+<p>Permite guardar la traza de un apoyo dedicado a espacios que elegimos no convertir en cultivos intensivos, pastizales o zonas edificadas.</p>
+</div>
+<div class="rounded-lg bg-white p-5 shadow-soft">
+<h3 class="text-lg font-heading font-bold text-primary mb-4">Una memoria que se acumula</h3>
+<p class="text-base text-gray-700">El Pasaporte Pachatopia conserva y acumula estas unidades en el tiempo. Metro cuadrado tras metro cuadrado, su compromiso se vuelve legible, seguido y vinculado al territorio.</p>
+</div>
+</div>
+</div>
+
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">¿Cómo contar los PachaForest?</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+<div class="surface-card p-5">
+<h3 class="text-xl font-heading font-bold text-primary mb-4">Francia y Suiza</h3>
+<div class="space-y-4 text-base">
+<div><strong class="text-primary">1 m² acompañado</strong><br/><span class="text-accent font-bold">1 PachaForest</span><br/>Contribución de 1 € / CHF</div>
+<div><strong class="text-primary">100 m² acompañados</strong><br/><span class="text-accent font-bold">100 PachaForest</span><br/>Contribución de 75 € / CHF</div>
+<div><strong class="text-primary">1 000 m² acompañados</strong><br/><span class="text-accent font-bold">1 000 PachaForest</span><br/>Contribución de 500 € / CHF</div>
+</div>
+</div>
+<div class="surface-card p-5">
+<h3 class="text-xl font-heading font-bold text-primary mb-4">Colombia</h3>
+<div class="space-y-4 text-base">
+<div><strong class="text-primary">1 m² acompañado</strong><br/><span class="text-accent font-bold">1 PachaForest</span><br/>Contribución de 5 000 COP</div>
+<div><strong class="text-primary">10 m² acompañados</strong><br/><span class="text-accent font-bold">10 PachaForest</span><br/>Contribución de 50 000 COP</div>
+<div><strong class="text-primary">25 m² acompañados</strong><br/><span class="text-accent font-bold">25 PachaForest</span><br/>Contribución de 125 000 COP</div>
+<div><strong class="text-primary">100 m² acompañados</strong><br/><span class="text-accent font-bold">100 PachaForest</span><br/>Contribución de 500 000 COP</div>
+<div><strong class="text-primary">1 000 m² acompañados</strong><br/><span class="text-accent font-bold">1 000 PachaForest</span><br/>Contribución de 5 000 000 COP</div>
+</div>
+</div>
+</div>
+<p class="text-base text-gray-600 mt-4">Los tramos permiten apoyar una superficie mayor. El número de PachaForest corresponde siempre a la superficie acompañada, con independencia del posible monto decreciente propuesto.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Un apoyo acumulable en el tiempo</h2>
+<p>El apadrinamiento de los espacios de libertad no está pensado como un gesto aislado. Puede construirse a lo largo del tiempo. Metro cuadrado tras metro cuadrado, su compromiso puede crecer, acumularse y seguirse a través del Pasaporte. Esta lógica permite hacer visible lo que eligen preservar, y guardar la memoria del camino recorrido.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Lo que permite este apadrinamiento</h2>
+<ul class="list-disc pl-6 space-y-2"><li>Mantener espacios dejados a lo vivo</li><li>Preservar equilibrios ecológicos valiosos</li><li>Apoyar la observación y el estudio de estos medios</li><li>Reforzar la coherencia de conjunto del territorio</li><li>Crear las condiciones para que una economía regenerativa pueda desarrollarse al lado</li><li>Alimentar un fondo de transición ecológica al servicio del territorio</li></ul>
+<p>No buscamos salvar lo vivo. Buscamos dejarle un lugar.</p>
+<p class="text-primary font-heading italic text-xl">Lo más hermoso que podemos transmitir no es solo lo que habremos construido. Sino lo que habremos elegido no destruir.</p>
+    </div></section>
+    <CallToAction lang={lang} buttonText="Apadrinar un espacio de lo vivo" buttonHref="/pachatopia/es/donation/?type=espace" />
+  </main>
+  <Footer lang={lang} />
+</Layout>

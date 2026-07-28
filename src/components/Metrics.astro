@@ -1,9 +1,10 @@
 ---
 import { useTranslations } from '../i18n/translations';
+import type { Lang } from '../i18n/translations';
 import LucideIcon from './LucideIcon.astro';
 
 interface Props {
-  lang?: "fr" | "en";
+  lang?: Lang;
 }
 
 const { lang = "fr" } = Astro.props;

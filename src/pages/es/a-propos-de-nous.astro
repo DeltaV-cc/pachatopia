@@ -1,0 +1,188 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Testimonials from "../../components/Testimonials.astro";
+import Footer from "../../components/Footer.astro";
+import LucideIcon from "../../components/LucideIcon.astro";
+
+const lang = "es";
+---
+
+<Layout
+  title="El Movimiento Pachatopia"
+  description="¿Por qué un movimiento? Porque creemos que aún es posible construir un futuro en el que lo vivo recupere todo su lugar."
+  lang={lang}
+>
+  <Header lang={lang} />
+  <main>
+    <!-- Hero Banner -->
+    <section class="relative text-white py-24 md:py-32 overflow-hidden bg-primary">
+      <div class="absolute inset-0">
+        <img src="/pachatopia/images/hero-bg.jpg" alt="" class="w-full h-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-primary/80"></div>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">El Movimiento Pachatopia</h1>
+        <p class="text-xl md:text-2xl text-white/90">Retomar nuestro lugar junto a lo vivo.</p>
+        <div class="mt-8">
+          <a href="/pachatopia/es/donation/?type=passeport" class="button-primary-dark inline-flex">Obtener el Pachapassport</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pourquoi un mouvement -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="inline-flex items-center justify-center gap-3 text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/[0.06]">
+            <LucideIcon name="Leaf" class="h-5 w-5 text-accent" />
+          </span>
+          ¿Por qué un movimiento?
+        </h2>
+        <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
+          <p><strong>Porque creemos que aún es posible construir un futuro en el que lo vivo recupere todo su lugar.</strong> Existen proyectos que construyen edificios. Otros que plantan árboles. Otros aún que desarrollan nuevas formas de producir.</p>
+          <p>¿Cómo responder a las necesidades de los seres humanos respetando al mismo tiempo lo vivo del que dependemos?</p>
+          <p>Esta pregunta nos acompaña desde hace muchos años.</p>
+          <p>Nos ha llevado a observar la naturaleza, a escuchar los saberes de los ancianos, a encontrar productores, investigadores, habitantes, voluntarios y a todas aquellas y aquellos que dedican su vida a cuidar de lo vivo.</p>
+          <p>No buscamos tener razón.</p>
+          <p>Buscamos aprender.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notre manière d'agir — 5 verbes -->
+    <section class="py-20 md:py-28 bg-cream">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary text-center mb-6">Nuestra manera de actuar</h2>
+        <div class="w-20 h-1 bg-golden rounded-full mx-auto mb-4"></div>
+        <p class="text-center text-lg text-gray-600 mb-12">Avanzamos con humildad. Nuestro enfoque se apoya en cinco verbos.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="Eye" class="w-8 h-8 text-primary mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary text-lg">Observar</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="BookOpen" class="w-8 h-8 text-accent mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary text-lg">Aprender</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="FlaskConical" class="w-8 h-8 text-earth mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary text-lg">Experimentar</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="Share2" class="w-8 h-8 text-golden-dark mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary text-lg">Transmitir</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <LucideIcon name="Sparkles" class="w-8 h-8 text-accent mx-auto mb-3" />
+            <p class="font-heading font-bold text-primary text-lg">Inspirar</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notre raison d'être -->
+    <section class="relative py-20 md:py-28 bg-primary text-white overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <svg class="absolute -top-16 -right-16 w-96 h-96 opacity-[0.06]" viewBox="0 0 400 400" fill="none"><circle cx="200" cy="200" r="190" fill="white"/></svg>
+        <svg class="absolute -bottom-10 -left-10 w-72 h-72 opacity-[0.04]" viewBox="0 0 300 300" fill="none"><path d="M150 5C150 5 280 60 270 170C260 280 180 290 100 270C20 250 -10 140 20 60C50 -20 150 5 150 5Z" fill="white"/></svg>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-5xl font-heading font-bold mb-8">Nuestra razón de ser</h2>
+        <p class="text-xl md:text-2xl text-white/90 leading-relaxed mb-6">Creemos que el ser humano puede volver a ser una fuerza de regeneración. No buscando controlar la naturaleza. Sino aprendiendo a vivir con ella.</p>
+        <p class="text-2xl md:text-3xl text-golden font-heading font-bold italic mt-10">Lo vivo es nuestro mayor profesor.</p>
+        <p class="text-lg text-white/70 mt-6">Cada bosque. Cada río. Cada insecto. Cada hongo. Cada animal. Cada ser humano. Posee una parte de conocimiento. Nuestro papel es observar, aprender y transmitir.</p>
+      </div>
+    </section>
+
+    <!-- Notre vision -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary text-center mb-6">Nuestra visión</h2>
+        <div class="w-20 h-1 bg-golden rounded-full mx-auto mb-10"></div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="surface-card p-8 text-center">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6"><LucideIcon name="Globe" class="w-8 h-8 text-primary" /></div>
+            <h3 class="text-lg font-heading font-bold text-primary mb-3">Armonía con lo vivo</h3>
+            <p class="text-gray-600 text-sm">Soñamos con un mundo en el que los seres humanos vivan en armonía con lo vivo. Donde la economía sostenga la vida. Donde la agricultura alimente los suelos tanto como a las personas.</p>
+          </div>
+          <div class="surface-card p-8 text-center">
+            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6"><LucideIcon name="Trees" class="w-8 h-8 text-accent" /></div>
+            <h3 class="text-lg font-heading font-bold text-primary mb-3">Bosques recuperados</h3>
+            <p class="text-gray-600 text-sm">Donde los bosques recuperen su lugar. Donde las comunidades crezcan con su territorio en lugar de a sus expensas.</p>
+          </div>
+          <div class="surface-card p-8 text-center">
+            <div class="w-16 h-16 bg-golden/10 rounded-full flex items-center justify-center mx-auto mb-6"><LucideIcon name="HeartHandshake" class="w-8 h-8 text-golden-dark" /></div>
+            <h3 class="text-lg font-heading font-bold text-primary mb-3">Cuidado de las relaciones</h3>
+            <p class="text-gray-600 text-sm">Creemos que proteger lo vivo es también cuidar las relaciones humanas. Un territorio se regenera tanto por los árboles como por la confianza recuperada.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ce que nous apprenons du vivant -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-8">Lo que aprendemos de lo vivo</h2>
+        <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
+          <p>En la naturaleza, nada existe solo. Los árboles cooperan con los hongos. Los ríos unen territorios. Los insectos polinizan las flores. Cada especie contribuye al equilibrio del conjunto. Ningún ser vivo florece solo.</p>
+          <p>Esta inteligencia de lo vivo nos inspira. Creemos que las sociedades humanas pueden, ellas también, aprender a cooperar más, a compartir sus conocimientos y a construir modelos más resilientes. No buscamos copiar la naturaleza. Buscamos inspirarnos en ella.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Une communauté ouverte -->
+    <section class="py-20 md:py-28 bg-cream">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Una comunidad abierta</h2>
+        <div class="w-20 h-1 bg-golden rounded-full mx-auto mb-8"></div>
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-8">El Movimiento Pachatopia no pertenece a quienes lo imaginaron. Pertenece a todas aquellas y aquellos que eligen cuidarlo.</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <span class="bg-white rounded-full px-5 py-2 text-sm text-primary shadow-sm">Agricultores</span>
+          <span class="bg-white rounded-full px-5 py-2 text-sm text-primary shadow-sm">Investigadores</span>
+          <span class="bg-white rounded-full px-5 py-2 text-sm text-primary shadow-sm">Artesanos</span>
+          <span class="bg-white rounded-full px-5 py-2 text-sm text-primary shadow-sm">Emprendedores</span>
+          <span class="bg-white rounded-full px-5 py-2 text-sm text-primary shadow-sm">Niños</span>
+          <span class="bg-white rounded-full px-5 py-2 text-sm text-primary shadow-sm">Docentes</span>
+          <span class="bg-white rounded-full px-5 py-2 text-sm text-primary shadow-sm">Voluntarios</span>
+          <span class="bg-white rounded-full px-5 py-2 text-sm text-primary shadow-sm">Artistas</span>
+          <span class="bg-white rounded-full px-5 py-2 text-sm text-primary shadow-sm">Familias</span>
+        </div>
+        <p class="text-lg text-gray-600 mt-8">Cada persona posee algo que nadie más puede aportar. Es esa diversidad la que hace la riqueza de un ecosistema. También la de un movimiento.</p>
+      </div>
+    </section>
+
+    <!-- Grandir ensemble -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-5xl font-heading font-bold text-primary mb-8">Crecer juntos</h2>
+        <div class="space-y-5 text-lg md:text-xl text-gray-700 leading-relaxed">
+          <p>Creemos que un movimiento crece cuando permite que cada quien revele lo mejor de sí mismo.</p>
+          <p>No se trata de seguir a una persona.</p>
+          <p>Se trata de caminar en una misma dirección, dejando a cada uno la libertad de aportar sus talentos, sus ideas y su experiencia.</p>
+          <p>Como en un bosque, la diversidad no es un obstáculo.</p>
+          <p>Es una fuerza.</p>
+          <p>Nuestra ambición no es ser el movimiento más grande. Es contribuir a hacer emerger miles de iniciativas capaces de regenerar lo vivo allá donde echen raíces.</p>
+          <p>Si mañana otros proyectos nacen gracias a lo que habremos compartido, entonces el Movimiento Pachatopia habrá cumplido plenamente su misión.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Une invitation -->
+    <section class="relative py-24 md:py-32 bg-primary text-white overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <svg class="absolute top-8 right-8 w-64 h-64 opacity-[0.05]" viewBox="0 0 300 300" fill="none"><circle cx="150" cy="150" r="140" fill="white"/></svg>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-5xl font-heading font-bold mb-6">Una invitación</h2>
+        <p class="text-xl text-white/90 leading-relaxed mb-6">El Movimiento Pachatopia es una invitación. Una invitación a retomar nuestro lugar en lo vivo. A aprender con humildad. A transmitir con generosidad. Y a dejar, allá donde pasemos, un poco más de vida que cuando llegamos.</p>
+        <p class="text-2xl text-golden font-heading font-bold italic">Aprendemos de lo vivo.</p>
+        <p class="text-lg text-white/70 mt-6">Lo vivo nos llama a todos.<br />Ahora les toca a ustedes plantar una semilla de esperanza.</p>
+        <div class="mt-10">
+          <a href="/pachatopia/es/donation/?type=passeport" class="button-primary-dark text-lg">Obtener el Pachapassport</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer lang={lang} />
+</Layout>

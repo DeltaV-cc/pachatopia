@@ -1,0 +1,229 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import LucideIcon from "../../components/LucideIcon.astro";
+
+const lang = "es";
+
+const participationOptions = [
+  {
+    icon: "Ticket",
+    title: "Convertirse en Guardián de lo Vivo",
+    text: "El Pasaporte Pachatopia es una invitación a unirse de forma duradera al Movimiento. Simboliza su compromiso con lo vivo y lo vincula a una comunidad de mujeres y hombres que eligen actuar juntos.",
+    href: "/pachatopia/es/passeport/",
+    link: "Descubrir el Pasaporte",
+  },
+  {
+    icon: "Coffee",
+    title: "Apadrinar un cultivo",
+    text: "Detrás de cada cosecha hay una tierra, un productor, una historia y tiempo. Apadrinar un cultivo es acompañar una transición agroforestal y crear un vínculo duradero.",
+    href: "/pachatopia/es/parrainer-une-culture/",
+    link: "Descubrir el apadrinamiento",
+  },
+  {
+    icon: "Trees",
+    title: "Apadrinar un espacio de libertad",
+    text: "Un bosque no es solo un paisaje. Es un refugio, una fuente de agua y un equilibrio frágil. Su apoyo ayuda a que los bosques, los ríos y los animales sigan evolucionando en libertad.",
+    href: "/pachatopia/es/espaces-de-liberte/",
+    link: "Apadrinar un espacio",
+  },
+  {
+    icon: "Handshake",
+    title: "Convertirse en aliado",
+    text: "Empresas, fundaciones, entidades territoriales, asociaciones, escuelas, investigadores o emprendedores pueden poner sus competencias al servicio de lo vivo y dar al proyecto una base duradera.",
+    href: "/pachatopia/es/devenir-partenaire/",
+    link: "Construyamos una alianza",
+  },
+  {
+    icon: "TentTree",
+    title: "Convertirse en voluntario",
+    text: "Hay cosas que no se explican. Se viven. Venir a Pachatopia es descubrir un laboratorio de lo vivo en movimiento y regresar con otra mirada.",
+    href: "/pachatopia/es/participer-volontariat/",
+    link: "Descubrir el voluntariado",
+  },
+  {
+    icon: "Megaphone",
+    title: "Convertirse en embajador",
+    text: "Una idea cobra toda su fuerza cuando empieza a viajar. Compartir un café, organizar un encuentro o presentar el Movimiento puede hacer nacer nuevos pasajes hacia lo vivo.",
+    href: "/pachatopia/es/devenir-ambassadeur/",
+    link: "Convertirse en embajador",
+  },
+];
+
+const principles = [
+  ["Regenerar la Tierra.", "Restaurar los suelos, los bosques, los ecosistemas y los vínculos que hacen posible la vida."],
+  ["Cultivar la cooperación.", "Construir con quienes viven, aprenden, producen y transmiten en el territorio."],
+  ["Trabajar por la paz.", "Cuidar la Tierra y trabajar juntos para nutrir sociedades más pacíficas."],
+  ["Respetar lo vivo.", "Proteger la Tierra, el agua, el aire y todas las formas de vida de las que depende nuestro futuro común."],
+  ["Transmitir a las generaciones futuras.", "Preservar la belleza y los recursos del mundo para quienes vendrán después de nosotros."],
+];
+---
+
+<Layout
+  title="Encontrar su lugar en el Movimiento — Pachatopia"
+  description="Existen mil formas de contribuir a lo vivo. Encuentre la forma de compromiso que más le resuene con el Movimiento Pachatopia."
+  lang={lang}
+>
+  <Header lang={lang} />
+  <main>
+    <section class="relative isolate overflow-hidden py-24 text-white md:py-36">
+      <div class="absolute inset-0">
+        <img src="/pachatopia/images/aquaculture.webp" alt="" class="h-full w-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(14,39,35,0.92),rgba(10,91,75,0.78))]"></div>
+      </div>
+      <div class="absolute inset-0 -z-0 overflow-hidden" aria-hidden="true">
+        <div class="absolute left-[10%] top-12 h-44 w-44 rounded-full bg-white/8 blur-3xl"></div>
+        <div class="absolute bottom-0 right-[12%] h-72 w-72 rounded-full bg-golden/15 blur-3xl"></div>
+      </div>
+      <div class="site-container relative z-10">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
+          <div class="max-w-3xl">
+            <div class="section-kicker mb-6 w-fit border-white/15 bg-white/10 text-white shadow-none">
+              <LucideIcon name="HeartHandshake" class="h-4 w-4 text-golden" />
+              Participar en el Movimiento
+            </div>
+            <h1 class="text-4xl font-heading font-bold leading-tight md:text-5xl lg:text-6xl">Encontrar su lugar junto a lo vivo</h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-white/85 md:text-xl">Existen mil formas de contribuir a lo vivo. Solo una es indispensable: encontrar la suya.</p>
+          </div>
+
+          <div class="lg:justify-self-end">
+            <div class="border-t border-white/15 pt-6 text-sm leading-6 text-white/75">
+              <p class="font-semibold uppercase tracking-[0.18em] text-white/50">Su apoyo hace posible</p>
+              <p class="mt-3 max-w-md">Árboles plantados, suelos regenerados, espacios protegidos, encuentros, aprendizajes y una comunidad que crece.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="white"></path>
+      </svg>
+    </section>
+
+    <section class="bg-white py-20 md:py-28">
+      <div class="site-container">
+        <div class="grid grid-cols-1 gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <div>
+            <div class="section-kicker w-fit border-primary/10 bg-primary/[0.03] shadow-none">
+              <LucideIcon name="Compass" class="h-4 w-4 text-accent" />
+              ¿Por qué participar?
+            </div>
+            <h2 class="mt-6 text-3xl font-heading font-bold tracking-tight text-primary md:text-4xl">Poner lo mejor de sí al servicio del bien común</h2>
+            <div class="mt-6 max-w-md space-y-5 text-lg leading-8 text-gray-700">
+              <p>Lo vivo nos ofrece cada día el aire que respiramos, el agua que bebemos y los suelos que nos alimentan.</p>
+              <p>A nuestro turno, podemos elegir actuar de manera que favorezca su florecimiento. No existe una sola manera de contribuir.</p>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="absolute bottom-0 left-[1.05rem] top-0 w-px bg-primary/10"></div>
+            <div class="space-y-10">
+              <article class="relative pl-12">
+                <div class="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-xs font-semibold text-white">1</div>
+                <h3 class="text-2xl font-heading font-bold text-primary">Una comunidad que actúa</h3>
+                <p class="mt-3 text-lg leading-8 text-gray-700">Pachatopia reúne a mujeres y hombres que desean retomar su justo lugar en lo vivo.</p>
+              </article>
+              <article class="relative pl-12">
+                <div class="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-earth text-xs font-semibold text-white">2</div>
+                <h3 class="text-2xl font-heading font-bold text-primary">Una diversidad de caminos</h3>
+                <p class="mt-3 text-lg leading-8 text-gray-700">Cada árbol plantado, cada idea compartida, cada encuentro y cada gesto pueden convertirse en una semilla de esperanza.</p>
+              </article>
+              <article class="relative pl-12">
+                <div class="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-accent text-xs font-semibold text-white">3</div>
+                <h3 class="text-2xl font-heading font-bold text-primary">Una misma dirección</h3>
+                <p class="mt-3 text-lg leading-8 text-gray-700">No buscamos salvar lo vivo desde fuera. Buscamos recuperar nuestro justo lugar en su seno.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative isolate overflow-hidden bg-cream py-20 md:py-28">
+      <div class="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+        <svg class="absolute right-[max(50%,26rem)] top-0 h-[54rem] w-[58rem] translate-x-1/3 text-primary/8 [mask-image:radial-gradient(28rem_28rem_at_top,white,transparent)]" viewBox="0 0 1024 1024" fill="none">
+          <defs>
+            <pattern id="participation-grid-es" width="140" height="140" patternUnits="userSpaceOnUse">
+              <path d="M140 0H0V140" stroke="currentColor" stroke-width="1" />
+            </pattern>
+          </defs>
+          <rect width="1024" height="1024" fill="url(#participation-grid-es)" />
+        </svg>
+      </div>
+      <div class="site-container">
+        <div class="max-w-3xl">
+          <div class="section-kicker w-fit">
+            <LucideIcon name="Sprout" class="h-4 w-4 text-accent" />
+            ¿Cómo desea participar?
+          </div>
+          <h2 class="mt-6 text-3xl font-heading font-bold tracking-tight text-primary md:text-4xl">Varias puertas de entrada, una misma dinámica de regeneración</h2>
+          <p class="mt-6 text-lg leading-8 text-gray-700">Lo importante no es solo la forma del apoyo, sino participar en un proyecto que vuelve a tejer los vínculos entre naturaleza, economía, cultura y comunidad.</p>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {participationOptions.map((option) => (
+            <a href={option.href} class="group surface-card flex h-full min-h-[17rem] flex-col p-6 no-underline transition-all duration-300 hover:-translate-y-1.5 hover:border-accent/40 hover:shadow-2xl hover:shadow-primary/10">
+              <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-accent/15">
+                <LucideIcon name={option.icon} class="h-6 w-6 text-primary" />
+              </div>
+              <h3 class="text-xl font-heading font-bold text-primary">{option.title}</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-gray-700">{option.text}</p>
+              <span class="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-primary/5 px-4 py-2 text-sm font-semibold text-accent transition-all duration-300 group-hover:bg-golden group-hover:text-primary">
+                {option.link}
+                <LucideIcon name="ArrowRight" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-primary py-20 text-white md:py-28">
+      <div class="site-container">
+        <div class="grid grid-cols-1 gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+          <div>
+            <div class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur">
+              <LucideIcon name="ScrollText" class="h-4 w-4 text-golden" />
+              La carta Pachatopia
+            </div>
+            <h2 class="mt-6 max-w-3xl text-3xl font-heading font-bold tracking-tight text-white md:text-4xl lg:text-5xl">Principios que dan una dirección clara a nuestra acción</h2>
+          </div>
+
+          <div class="space-y-5 text-base leading-7 text-white/78">
+            {principles.map(([title, text]) => (
+              <p><strong class="text-white">{title}</strong> {text}</p>
+            ))}
+          </div>
+        </div>
+
+        <div class="mt-12 border-t border-white/12 pt-8">
+          <p class="max-w-3xl text-lg leading-8 text-white/82">Pachatopia es una aventura humana y ecológica abierta a todos. Un bosque nunca crece gracias a una sola semilla. Un movimiento tampoco.</p>
+          <p class="mt-4 text-lg font-medium italic text-white">Ahora le toca a usted plantar una semilla de esperanza.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative isolate overflow-hidden bg-white py-20 md:py-28">
+      <div class="site-container">
+        <div class="mx-auto max-w-3xl text-center">
+          <div class="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-golden/15">
+            <LucideIcon name="Heart" class="h-7 w-7 text-golden-dark" />
+          </div>
+          <h2 class="text-3xl font-heading font-bold text-primary md:text-4xl">Únase al Movimiento</h2>
+          <p class="mt-6 text-lg leading-8 text-gray-700">Si esta idea resuena en usted, entonces quizá su lugar ya lo esté esperando.</p>
+          <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a href="/pachatopia/es/contacts/" class="button-primary group">
+              Contáctenos
+              <LucideIcon name="ArrowRight" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            </a>
+            <a href="/pachatopia/es/passeport/" class="link-arrow">
+              Descubrir el Pasaporte
+              <LucideIcon name="ArrowRight" class="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer lang={lang} />
+</Layout>

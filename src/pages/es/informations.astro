@@ -1,0 +1,190 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Testimonials from "../../components/Testimonials.astro";
+import CallToAction from "../../components/CallToAction.astro";
+import Footer from "../../components/Footer.astro";
+import { useTranslations } from "../../i18n/translations";
+
+const lang = "es";
+const t = useTranslations(lang);
+
+const principles = [
+  t("infoPage.principles.1"),
+  t("infoPage.principles.2"),
+  t("infoPage.principles.3"),
+  t("infoPage.principles.4"),
+  t("infoPage.principles.5"),
+];
+
+const documents = [
+  { label: t("infoPage.documents.1"), url: "https://docs.google.com/document/d/1-9lj__rJehWqZJD6ypjebX935xuSw9bT/edit" },
+  { label: t("infoPage.documents.2"), url: "https://docs.google.com/document/d/1-7m-q0OVg8bdD2mis7MqwhoCh5jzqXqy/edit" },
+  { label: t("infoPage.documents.3"), url: "https://docs.google.com/spreadsheets/d/1s4C2O_c6x2OzclYx3bVyNAn-sD23Iq4NnX-lilvFTc8/edit" },
+];
+---
+
+<Layout
+  title={`${t("infoPage.title")} - Pachatopia`}
+  description="Información oficial de la asociación Pachatopia: fundadores, zona geográfica, principios fundamentales y documentos clave de la organización."
+  lang={lang}
+>
+  <Header lang={lang} />
+  <main>
+    <!-- Hero Banner -->
+    <section class="relative text-white py-24 md:py-32 overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="/pachatopia/images/about-market.webp" alt="" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-primary/80"></div>
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight mb-4">
+          {t("infoPage.title")}
+        </h1>
+        <p class="text-lg md:text-xl text-white/85 leading-relaxed max-w-2xl mx-auto">
+          {t("infoPage.subtitle")}
+        </p>
+      </div>
+      <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="white"/>
+      </svg>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="py-20 md:py-28 bg-white relative overflow-hidden">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
+          <div class="md:col-span-5">
+            <div class="overflow-hidden rounded-2xl shadow-lg">
+              <img src="/pachatopia/images/about-market.webp" alt="Victor, Jenny y su familia" class="w-full h-auto object-cover" loading="lazy" />
+            </div>
+          </div>
+          <div class="md:col-span-7">
+            <h2 class="text-2xl md:text-3xl font-heading font-bold text-primary mb-4">
+              {t("infoPage.founder.title")}
+            </h2>
+            <div class="w-16 h-1 bg-golden rounded-full mb-6"></div>
+            <div class="space-y-4 text-gray-600 leading-relaxed text-base md:text-lg">
+              <p>{t("infoPage.founder.text1")}</p>
+              <p>{t("infoPage.founder.text2")}</p>
+              <p class="font-medium italic text-primary">{t("infoPage.founder.text3")}</p>
+              <p>{t("infoPage.founder.text4")}</p>
+              <p>{t("infoPage.founder.text5")}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Geographic Focus Section -->
+    <section class="py-20 md:py-28 bg-cream relative overflow-hidden">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+          <div class="md:col-span-7">
+            <h2 class="text-2xl md:text-3xl font-heading font-bold text-primary mb-4">
+              {t("infoPage.geography.title")}
+            </h2>
+            <div class="w-16 h-1 bg-golden rounded-full mb-6"></div>
+            <div class="space-y-4 text-gray-600 leading-relaxed text-base md:text-lg">
+              <p>{t("infoPage.geography.text1")}</p>
+              <p>{t("infoPage.geography.text2")}</p>
+            </div>
+          </div>
+          <div class="md:col-span-5">
+            <div class="overflow-hidden rounded-2xl shadow-lg">
+              <img src="/pachatopia/images/reserve-naturelle.webp" alt="Reserva natural en Colombia" class="w-full h-auto object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aspiration & Inspiration -->
+    <section class="py-20 md:py-28 bg-white relative overflow-hidden">
+      <div class="absolute top-10 right-10 w-48 h-48 bg-accent/[0.03] rounded-full blur-2xl"></div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-6 text-gray-600 leading-relaxed text-base md:text-lg">
+          <p>{t("infoPage.aspiration")}</p>
+          <p class="font-medium text-primary">{t("infoPage.inspiration")}</p>
+          <p class="italic">{t("infoPage.principles.intro")}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Principles Section -->
+    <section class="py-20 md:py-28 bg-white relative overflow-hidden">
+      <div class="absolute top-10 left-10 w-48 h-48 bg-accent/[0.03] rounded-full blur-2xl"></div>
+      <div class="absolute bottom-10 right-10 w-64 h-64 bg-primary/[0.03] rounded-full blur-2xl"></div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-2xl md:text-3xl font-heading font-bold text-primary mb-4">
+            {t("infoPage.principles.title")}
+          </h2>
+          <div class="mx-auto w-16 h-1 bg-golden rounded-full"></div>
+        </div>
+
+        <div class="space-y-4">
+          {principles.map((principle) => (
+            <div class="flex items-start gap-4 bg-cream/60 rounded-xl px-6 py-5" style="box-shadow: 0 2px 8px rgba(11,91,75,0.04);">
+              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center mt-0.5">
+                <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-4-4-8-7.5-8-12a8 8 0 0116 0c0 4.5-4 8-8 12z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21V9" />
+                </svg>
+              </span>
+              <p class="text-gray-700 leading-relaxed text-base md:text-lg">
+                {principle}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing Engagement -->
+    <section class="py-16 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-4 text-gray-600 leading-relaxed text-base md:text-lg">
+          <p>{t("infoPage.closing")}</p>
+          <p class="italic">{t("infoPage.preamble")}</p>
+          <p class="font-semibold text-primary mt-6">{t("infoPage.signature")}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Documents Section -->
+    <section class="py-20 md:py-28 bg-white relative overflow-hidden">
+      <div class="absolute bottom-10 left-10 w-64 h-64 bg-primary/[0.03] rounded-full blur-2xl"></div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-2xl md:text-3xl font-heading font-bold text-primary mb-4">
+            {t("infoPage.documents.title")}
+          </h2>
+          <div class="mx-auto w-16 h-1 bg-golden rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {documents.map((doc) => (
+            <a href={doc.url} target="_blank" rel="noopener noreferrer" class="bg-cream/60 rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-1 block" style="box-shadow: 0 2px 8px rgba(11,91,75,0.06);">
+              <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                </svg>
+              </div>
+              <p class="text-primary font-semibold text-base hover:text-accent transition-colors">
+                {doc.label}
+              </p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <Testimonials lang={lang} />
+    <CallToAction lang={lang} />
+  </main>
+  <Footer lang={lang} />
+</Layout>

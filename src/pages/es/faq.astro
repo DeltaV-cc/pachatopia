@@ -1,0 +1,134 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import CallToAction from "../../components/CallToAction.astro";
+import Footer from "../../components/Footer.astro";
+import LucideIcon from "../../components/LucideIcon.astro";
+
+const lang = "es";
+
+const faqItems = [
+  {
+    q: "¿Qué es Pachatopia?",
+    a: "Pachatopia es un movimiento que busca recuperar una relación más armoniosa entre los seres humanos y lo vivo. Es a la vez un laboratorio de lo vivo, un lugar de experimentación, una aventura colectiva y una invitación a aprender de la naturaleza para construir sistemas más justos, más fértiles y más sostenibles."
+  },
+  {
+    q: "¿Dónde se encuentra Pachatopia?",
+    a: "El primer laboratorio de Pachatopia se sitúa en San Carlos, en el departamento de Antioquia, en Colombia. Es en este territorio donde desarrollamos nuestras primeras experimentaciones: agroforestería, café, cacao, espacios de libertad para lo vivo, transmisión, acogida y cooperación."
+  },
+  {
+    q: "¿Qué significa \"retomar nuestro lugar en lo vivo\"?",
+    a: "Significa reconocer que formamos parte de la naturaleza y que nuestro futuro depende de la calidad de nuestra relación con ella. No buscamos salvar lo vivo como si dependiera de nosotros para existir. Buscamos vivir de manera que favorezca su florecimiento, respondiendo al mismo tiempo a las necesidades humanas con más justeza, sobriedad y cooperación."
+  },
+  {
+    q: "¿Cómo unirse al Movimiento?",
+    a: "La forma más sencilla de unirse de manera duradera al Movimiento es obtener el Pasaporte Pachatopia. El Pasaporte marca su entrada en la tribu, permite seguir sus apoyos a lo largo del tiempo y abre el acceso a las distintas formas de compromiso que propone Pachatopia."
+  },
+  {
+    q: "¿Qué es el Pasaporte Pachatopia?",
+    a: "El Pasaporte Pachatopia es una adhesión al Movimiento. Lo vincula a la comunidad, guarda la memoria de sus apoyos y permite seguir sus apadrinamientos de cultivos y de espacios de libertad para lo vivo. El Pasaporte se propone a partir de 5 € al mes o 50 € al año. No representa un privilegio. Simboliza un compromiso."
+  },
+  {
+    q: "¿El Pasaporte incluye un apadrinamiento?",
+    a: "Sí. El Pasaporte incluye automáticamente un primer apadrinamiento de cultivo. Fue pensado como una puerta de entrada al Movimiento, pero también como una herramienta de seguimiento de su compromiso a lo largo del tiempo."
+  },
+  {
+    q: "¿Qué cultivos se pueden apadrinar hoy?",
+    a: "Hoy, los primeros cultivos propuestos al apadrinamiento son el café y el cacao. El café ya está en producción. El cacao aún está en crecimiento y forma parte de una transformación más gradual, en particular hacia la producción de chocolate."
+  },
+  {
+    q: "¿Qué se recibe con el apadrinamiento de un cultivo?",
+    a: "El apadrinamiento de un cultivo da siempre lugar a una producción proveniente de ese cultivo. Por el momento: 1 apadrinamiento de café da derecho a 1 paquete de 500 g de café; 1 apadrinamiento de cacao tiene como objetivo dar derecho a 4 tabletas de chocolate, cuando esa cadena esté lista. Los gastos de envío no están incluidos. Podrá proponerse retiro en puntos de relevo según las posibilidades logísticas."
+  },
+  {
+    q: "¿Se puede apadrinar más de una sola planta?",
+    a: "Sí. Es posible apadrinar una planta, una línea de plantas o un campo. Así cada persona puede elegir una escala de apoyo adaptada a sus posibilidades y a su deseo de compromiso."
+  },
+  {
+    q: "¿Qué son los \"espacios de libertad para lo vivo\"?",
+    a: "Son espacios dejados voluntariamente a lo vivo: bosques, zonas de refugio, espacios de observación, equilibrios ecológicos esenciales para el territorio. Su papel no es producir una cosecha. Su papel es permitir que lo vivo siga evolucionando con libertad, alimentar los equilibrios del territorio y enseñar lo que aún nos queda por aprender."
+  },
+  {
+    q: "¿Se pueden apadrinar estos espacios de libertad?",
+    a: "Sí. Es posible apoyar estos espacios sobre una base de superficie acompañada: 1 m² = 1 € o 1 m² = 1 CHF. Este apoyo es acumulable en el tiempo y puede seguirse a través del Pasaporte Pachatopia."
+  },
+  {
+    q: "¿Cuál es la diferencia entre apadrinar un cultivo y apadrinar un espacio de libertad?",
+    a: "El apadrinamiento de un cultivo acompaña una producción viva en transición agroforestal y da lugar a una producción proveniente de ese cultivo. El apadrinamiento de un espacio de libertad para lo vivo acompaña un lugar dejado a lo vivo y no da lugar a una cosecha. Ambas formas de apoyo son complementarias. Una sostiene la producción regenerativa. La otra preserva los equilibrios indispensables para el territorio."
+  },
+  {
+    q: "¿Se puede suscribir al café?",
+    a: "Sí, pero la suscripción al café está reservada a los titulares del Pasaporte Pachatopia. Elegimos esta lógica para que la suscripción no sea un simple acto de compra, sino una prolongación natural del vínculo con el Movimiento."
+  },
+  {
+    q: "¿Por qué la suscripción al café funciona sobre una base trimestral?",
+    a: "Priorizamos pedidos trimestrales pagados por adelantado para mantener la coherencia con el tiempo de lo vivo, la realidad logística del terreno, las capacidades del equipo y la calidad que queremos ofrecer. Esta fórmula aporta más serenidad al Movimiento, más visibilidad al terreno y más estabilidad a la relación."
+  },
+  {
+    q: "¿El café Pachatopia es \"orgánico\" / \"bio\"?",
+    a: "Avanzamos en una transición agroforestal y regenerativa. Nuestro objetivo es producir con mayor respeto por los suelos, la biodiversidad, los ciclos naturales y la salud humana. Preferimos hablar con honestidad de nuestro camino en lugar de usar promesas simplificadas. Nuestro compromiso es real, vivo y en evolución."
+  },
+  {
+    q: "¿Se puede venir al lugar? ¿Se puede venir como voluntario?",
+    a: "Sí. Pachatopia también es un lugar de acogida. Es posible venir a vivir una experiencia en el terreno o como voluntario. El voluntariado existe en Pachatopia, pero no se trata de una estancia turística disfrazada. Buscamos personas dispuestas a contribuir con sinceridad, humildad y compromiso, respetando el lugar, el equipo y lo vivo."
+  },
+  {
+    q: "¿Se puede convertirse en socio o proponer una idea?",
+    a: "Sí. Empresas, fundaciones, escuelas, investigadores, colectividades, asociaciones, artesanos o emprendedores pueden convertirse en socios del Movimiento. El Movimiento Pachatopia permanece también abierto a las ideas, las intuiciones, las investigaciones, las experiencias y las competencias de quienes deseen hacerlo crecer. No pretendemos tener todas las respuestas. Buscamos aprender de lo vivo… y también los unos de los otros."
+  },
+  {
+    q: "¿Cuál es la pregunta más importante que hacerse antes de unirse a Pachatopia?",
+    a: "No: \"¿Qué voy a recibir?\" Sino más bien: \"¿Qué forma de compromiso se parece a mí hoy?\" Porque el Movimiento Pachatopia no existe para pedirle a cada persona que haga lo mismo. Existe para permitir que cada quien aporte lo mejor de sí mismo al servicio de lo vivo."
+  }
+];
+---
+
+<Layout
+  title="Preguntas frecuentes — Pachatopia"
+  description="Todo lo que nos preguntan con más frecuencia. Las respuestas esenciales sobre el Movimiento Pachatopia."
+  lang={lang}
+>
+  <Header lang={lang} />
+  <main>
+    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-primary/85"></div>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <div class="section-kicker mx-auto mb-6 w-fit border-white/15 bg-white/10 text-white shadow-none">
+          <LucideIcon name="HelpCircle" class="h-4 w-4 text-golden" />
+          FAQ
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Preguntas frecuentes</h1>
+        <p class="text-xl md:text-2xl text-white/90">Todo lo que nos preguntan con más frecuencia</p>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-lg text-gray-700 mb-10">Ya sea que deseen comprender el proyecto, apoyar las acciones, venir al lugar o comprar el café, esta página reúne las respuestas esenciales para orientarse rápidamente.</p>
+        
+        <div class="space-y-4">
+          {faqItems.map((item, index) => (
+            <details class="group surface-card overflow-hidden">
+              <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-bold text-primary text-lg hover:text-accent transition-colors">
+                <span class="flex items-center gap-3">
+                  <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">{index + 1}</span>
+                  {item.q}
+                </span>
+                <LucideIcon name="ChevronDown" class="h-5 w-5 shrink-0 transition-transform duration-200 group-open:rotate-180 text-primary/60" />
+              </summary>
+              <div class="px-6 pb-6 text-gray-700 leading-relaxed">
+                <p>{item.a}</p>
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CallToAction lang={lang} />
+  </main>
+  <Footer lang={lang} />
+</Layout>

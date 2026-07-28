@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
-import Testimonials from "../components/Testimonials.astro";
 import CallToAction from "../components/CallToAction.astro";
 import Footer from "../components/Footer.astro";
 
@@ -24,6 +23,9 @@ const lang = "fr";
       <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Le Laboratoire du Vivant</h1>
         <p class="text-xl md:text-2xl text-white/90">Les grandes recherches du Mouvement Pachatopia</p>
+        <div class="mt-8">
+          <a href="/pachatopia/contacts/?type=partenaire" class="button-primary-dark inline-flex">Construire un partenariat</a>
+        </div>
       </div>
       <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="white"/>
@@ -35,12 +37,14 @@ const lang = "fr";
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Introduction</h2>
         <p class="text-lg md:text-xl text-gray-700 leading-relaxed">Nous n'avons pas toutes les réponses. C'est précisément pour cela que le Laboratoire du Vivant existe. Chaque jour, nous observons, nous expérimentons, nous faisons parfois des erreurs, nous apprenons… puis nous recommençons. Le vivant est notre plus grand professeur.</p>
-        <div class="space-y-3 mt-6 text-lg md:text-xl text-gray-700 leading-relaxed">
+        <div class="mt-8 text-lg md:text-xl text-gray-700 leading-relaxed">
           <p>Peut-être possédez-vous une idée.</p>
-          <p>Une expérience.</p>
-          <p>Une compétence.</p>
-          <p>Une intuition.</p>
-          <p>Une question.</p>
+          <div class="idea-pulse my-6" aria-label="Expérience, compétence, intuition, question">
+            <span>Une expérience</span>
+            <span>Une compétence</span>
+            <span>Une intuition</span>
+            <span>Une question</span>
+          </div>
           <p>Ou simplement l'envie de chercher avec nous.</p>
           <p>Le Laboratoire du Vivant est ouvert à toutes celles et ceux qui souhaitent observer, expérimenter et faire grandir des solutions au service du vivant.</p>
           <p>Les grandes découvertes commencent souvent par une simple question.</p>
@@ -49,7 +53,7 @@ const lang = "fr";
     </section>
 
     <!-- Section 2 : Régénérer les sols -->
-    <section class="py-16 bg-cream">
+    <section id="regenerer-les-sols" class="scroll-mt-24 py-16 bg-cream">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Régénérer les sols</h2>
         <p class="text-lg md:text-xl text-gray-700 leading-relaxed">Un sol vivant nourrit des plantes plus résilientes, retient mieux l'eau et soutient davantage de biodiversité. Nous explorons différentes pratiques : composts, bokashis, micro-organismes, couverts végétaux, biomasse, arbres producteurs d'humus et fertilisants biologiques produits localement.</p>
@@ -58,7 +62,7 @@ const lang = "fr";
     </section>
 
     <!-- Section 3 : Préparer l'avenir du café -->
-    <section class="py-16 bg-white">
+    <section id="preparer-l-avenir-du-cafe" class="scroll-mt-24 py-16 bg-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Préparer l'avenir du café</h2>
         <p class="text-lg md:text-xl text-gray-700 leading-relaxed">Le café fait vivre des millions de familles, mais le changement climatique fragilise déjà sa culture. Nous expérimentons des associations d'arbres d'ombrage, de biomasse, de diversité végétale et de couverture du sol afin de construire des systèmes plus résilients.</p>
@@ -67,7 +71,7 @@ const lang = "fr";
     </section>
 
     <!-- Section 4 : Relier l'eau, la terre et la production -->
-    <section class="py-16 bg-cream">
+    <section id="preservation-de-l-eau" class="scroll-mt-24 py-16 bg-cream">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Relier l'eau, la terre et la production</h2>
         <p class="text-lg md:text-xl text-gray-700 leading-relaxed">San Carlos possède une richesse exceptionnelle : l'eau. Nous explorons des systèmes capables de mieux relier l'eau, les sols et les productions agricoles : protection des sources, valorisation des cycles naturels, recherches autour de productions adaptées comme la spiruline.</p>
@@ -84,7 +88,7 @@ const lang = "fr";
     </section>
 
     <!-- Section 6 : Explorer le monde invisible -->
-    <section class="py-16 bg-cream">
+    <section id="protection-de-la-biodiversite" class="scroll-mt-24 py-16 bg-cream">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Explorer le monde invisible</h2>
         <p class="text-lg md:text-xl text-gray-700 leading-relaxed">Sous nos pieds existe un univers encore largement méconnu. Champignons, mycorhizes, micro-organismes : ce monde invisible joue un rôle fondamental dans la fertilité et la santé des écosystèmes.</p>
@@ -102,7 +106,7 @@ const lang = "fr";
     </section>
 
     <!-- Section 8 : Utiliser l'énergie du soleil -->
-    <section class="py-16 bg-cream">
+    <section id="espaces-de-liberte-du-vivant" class="scroll-mt-24 py-16 bg-cream">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Utiliser l'énergie du soleil</h2>
         <p class="text-lg md:text-xl text-gray-700 leading-relaxed">Le soleil est déjà la principale source d'énergie du vivant. Nous cherchons à mieux utiliser cette ressource pour sécher les récoltes, conserver les aliments, limiter les pertes après récolte.</p>
@@ -110,7 +114,7 @@ const lang = "fr";
     </section>
 
     <!-- Section 9 : Créer plus de valeur sans prélever davantage -->
-    <section class="py-16 bg-white">
+    <section id="cooperation-avec-les-communautes" class="scroll-mt-24 py-16 bg-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Créer plus de valeur sans prélever davantage</h2>
         <p class="text-lg md:text-xl text-gray-700 leading-relaxed">Une même plante peut parfois nourrir bien plus qu'un seul usage. Nous explorons la transformation en huiles essentielles, huiles végétales, cosmétiques naturels, produits d'entretien, compléments alimentaires.</p>
@@ -147,8 +151,58 @@ const lang = "fr";
       </div>
     </section>
 
-    <Testimonials lang={lang} />
-    <CallToAction lang={lang} />
+    <CallToAction lang={lang} buttonText="Construire un partenariat" buttonHref="/pachatopia/contacts/?type=partenaire" />
   </main>
   <Footer lang={lang} />
 </Layout>
+
+<style>
+  .idea-pulse {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .idea-pulse span {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    border: 1px solid rgba(10, 91, 75, 0.14);
+    background: rgba(10, 91, 75, 0.055);
+    color: var(--color-primary, #0a5b4b);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1;
+    padding: 0.75rem 1rem;
+    animation: idea-rise 4.8s ease-in-out infinite;
+  }
+
+  .idea-pulse span:nth-child(2) {
+    animation-delay: 0.18s;
+  }
+
+  .idea-pulse span:nth-child(3) {
+    animation-delay: 0.36s;
+  }
+
+  .idea-pulse span:nth-child(4) {
+    animation-delay: 0.54s;
+  }
+
+  @keyframes idea-rise {
+    0%, 100% {
+      transform: translateY(0);
+      box-shadow: 0 0 0 rgba(10, 91, 75, 0);
+    }
+    35% {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(10, 91, 75, 0.11);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .idea-pulse span {
+      animation: none;
+    }
+  }
+</style>

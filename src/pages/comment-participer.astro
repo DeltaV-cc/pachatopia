@@ -1,16 +1,68 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
-import CallToAction from "../components/CallToAction.astro";
 import Footer from "../components/Footer.astro";
 import LucideIcon from "../components/LucideIcon.astro";
 
 const lang = "fr";
+
+const participationOptions = [
+  {
+    icon: "Ticket",
+    title: "Devenir Gardien du Vivant",
+    text: "Le Passeport Pachatopia est une invitation à rejoindre durablement le Mouvement. Il symbolise votre engagement auprès du vivant et vous relie à une communauté de femmes et d'hommes qui choisissent d'agir ensemble.",
+    href: "/pachatopia/passeport/",
+    link: "Découvrir le Passeport",
+  },
+  {
+    icon: "Coffee",
+    title: "Parrainer une culture",
+    text: "Derrière chaque récolte, il y a une terre, un producteur, une histoire et du temps. Parrainer une culture, c'est accompagner une transition agroforestière et créer un lien durable.",
+    href: "/pachatopia/parrainer-une-culture/",
+    link: "Découvrir le parrainage",
+  },
+  {
+    icon: "Trees",
+    title: "Parrainer un espace de liberté",
+    text: "Une forêt n'est pas seulement un paysage. C'est un refuge, une source d'eau et un équilibre fragile. Votre soutien aide les forêts, les rivières et les animaux à continuer d'évoluer librement.",
+    href: "/pachatopia/espaces-de-liberte/",
+    link: "Parrainer un espace",
+  },
+  {
+    icon: "Handshake",
+    title: "Devenir partenaire",
+    text: "Entreprises, fondations, collectivités, associations, écoles, chercheurs ou entrepreneurs peuvent mettre leurs compétences au service du vivant et donner au projet une assise durable.",
+    href: "/pachatopia/devenir-partenaire/",
+    link: "Construisons un partenariat",
+  },
+  {
+    icon: "TentTree",
+    title: "Devenir Volontaire",
+    text: "Certaines choses ne s'expliquent pas. Elles se vivent. Venir à Pachatopia, c'est découvrir un laboratoire du vivant en mouvement et repartir avec un autre regard.",
+    href: "/pachatopia/participer-volontariat/",
+    link: "Découvrir le volontariat",
+  },
+  {
+    icon: "Megaphone",
+    title: "Devenir ambassadeur",
+    text: "Une idée prend toute sa force lorsqu'elle commence à voyager. Partager un café, organiser une rencontre ou présenter le Mouvement peut faire naître de nouveaux passages vers le vivant.",
+    href: "/pachatopia/devenir-ambassadeur/",
+    link: "Devenir ambassadeur",
+  },
+];
+
+const principles = [
+  ["Régénérer la Terre.", "Restaurer les sols, les forêts, les écosystèmes et les liens qui rendent la vie possible."],
+  ["Cultiver la coopération.", "Construire avec celles et ceux qui vivent, apprennent, produisent et transmettent sur le territoire."],
+  ["Œuvrer pour la paix.", "Prendre soin de la Terre et travailler ensemble pour nourrir des sociétés plus pacifiques."],
+  ["Respecter le vivant.", "Protéger la Terre, l'eau, l'air et toutes les formes de vie dont dépend notre avenir commun."],
+  ["Transmettre aux générations futures.", "Préserver la beauté et les ressources du monde pour celles et ceux qui viendront après nous."],
+];
 ---
 
 <Layout
-  title="Soutenir Pachatopia"
-  description="Soutenez Pachatopia : plantez des arbres, parrainez un caféier, soutenez la réserve naturelle ou devenez partenaire du projet de régénération écologique."
+  title="Trouver sa place dans le Mouvement — Pachatopia"
+  description="Il existe mille façons de contribuer au vivant. Trouvez la forme d'engagement qui vous ressemble avec le Mouvement Pachatopia."
   lang={lang}
 >
   <Header lang={lang} />
@@ -29,16 +81,16 @@ const lang = "fr";
           <div class="max-w-3xl">
             <div class="section-kicker mb-6 w-fit border-white/15 bg-white/10 text-white shadow-none">
               <LucideIcon name="HeartHandshake" class="h-4 w-4 text-golden" />
-              Soutenir Pachatopia
+              Participer au Mouvement
             </div>
-            <h1 class="text-4xl font-heading font-bold leading-tight md:text-5xl lg:text-6xl">Ensemble, faisons repousser la vie</h1>
-            <p class="mt-6 max-w-2xl text-lg leading-8 text-white/85 md:text-xl">Pachatopia est un projet de régénération écologique et humaine. Chaque contribution, petite ou grande, aide à faire grandir cette vision.</p>
+            <h1 class="text-4xl font-heading font-bold leading-tight md:text-5xl lg:text-6xl">Trouver sa place avec le vivant</h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-white/85 md:text-xl">Il existe mille façons de contribuer au vivant. Une seule est indispensable : trouver la vôtre.</p>
           </div>
 
           <div class="lg:justify-self-end">
             <div class="border-t border-white/15 pt-6 text-sm leading-6 text-white/75">
-              <p class="font-semibold uppercase tracking-[0.18em] text-white/50">Ce que votre soutien rend possible</p>
-              <p class="mt-3 max-w-md">Restauration des sols, plantation d'arbres, réserve naturelle, agriculture respectueuse du vivant et soutien au développement du territoire.</p>
+              <p class="font-semibold uppercase tracking-[0.18em] text-white/50">Votre soutien rend possible</p>
+              <p class="mt-3 max-w-md">Des arbres plantés, des sols régénérés, des espaces protégés, des rencontres, des apprentissages et une communauté qui grandit.</p>
             </div>
           </div>
         </div>
@@ -54,10 +106,13 @@ const lang = "fr";
           <div>
             <div class="section-kicker w-fit border-primary/10 bg-primary/[0.03] shadow-none">
               <LucideIcon name="Compass" class="h-4 w-4 text-accent" />
-              Comment vous pouvez aider
+              Pourquoi participer ?
             </div>
-            <h2 class="mt-6 text-3xl font-heading font-bold tracking-tight text-primary md:text-4xl">Plusieurs portes d'entrée, une même dynamique de régénération</h2>
-            <p class="mt-6 max-w-md text-lg leading-8 text-gray-700">Vous pouvez soutenir Pachatopia de différentes manières. L'important n'est pas seulement la forme du soutien, mais le fait de participer à un projet qui cherche à retisser les liens entre nature, économie et communauté.</p>
+            <h2 class="mt-6 text-3xl font-heading font-bold tracking-tight text-primary md:text-4xl">Mettre le meilleur de soi au service du bien commun</h2>
+            <div class="mt-6 max-w-md space-y-5 text-lg leading-8 text-gray-700">
+              <p>Le vivant nous offre chaque jour l'air que nous respirons, l'eau que nous buvons et les sols qui nous nourrissent.</p>
+              <p>À notre tour, nous pouvons choisir d'agir de manière à favoriser son épanouissement. Il n'existe pas une seule manière de contribuer.</p>
+            </div>
           </div>
 
           <div class="relative">
@@ -65,33 +120,21 @@ const lang = "fr";
             <div class="space-y-10">
               <article class="relative pl-12">
                 <div class="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-xs font-semibold text-white">1</div>
-                <h3 class="text-2xl font-heading font-bold text-primary">Planter des arbres</h3>
-                <p class="mt-3 text-lg leading-8 text-gray-700">Les arbres sont au cœur de notre projet. Ils régénèrent les sols, favorisent la biodiversité et participent à la restauration des écosystèmes. En soutenant leur plantation, vous contribuez directement à la régénération de la forêt.</p>
+                <h3 class="text-2xl font-heading font-bold text-primary">Une communauté qui agit</h3>
+                <p class="mt-3 text-lg leading-8 text-gray-700">Pachatopia réunit des femmes et des hommes qui souhaitent reprendre leur juste place dans le vivant.</p>
               </article>
               <article class="relative pl-12">
                 <div class="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-earth text-xs font-semibold text-white">2</div>
-                <h3 class="text-2xl font-heading font-bold text-primary">Parrainer un caféier</h3>
-                <p class="mt-3 text-lg leading-8 text-gray-700">Notre café est cultivé dans un système agroforestier qui protège la biodiversité et améliore la fertilité des sols. Parrainer un caféier permet de soutenir les agriculteurs locaux, de restaurer les sols et de développer une agriculture durable.</p>
+                <h3 class="text-2xl font-heading font-bold text-primary">Une diversité de chemins</h3>
+                <p class="mt-3 text-lg leading-8 text-gray-700">Chaque arbre planté, chaque idée partagée, chaque rencontre et chaque geste peuvent devenir une graine d'espérance.</p>
               </article>
               <article class="relative pl-12">
                 <div class="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-accent text-xs font-semibold text-white">3</div>
-                <h3 class="text-2xl font-heading font-bold text-primary">Soutenir la réserve naturelle</h3>
-                <p class="mt-3 text-lg leading-8 text-gray-700">Une partie des terres est dédiée à la protection de la nature et à la régénération des écosystèmes. Votre soutien permet de préserver ces espaces pour les générations futures.</p>
-              </article>
-              <article class="relative pl-12">
-                <div class="absolute left-0 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-golden-dark text-xs font-semibold text-primary">4</div>
-                <h3 class="text-2xl font-heading font-bold text-primary">Devenir partenaire</h3>
-                <p class="mt-3 text-lg leading-8 text-gray-700">Entreprises, organisations ou particuliers peuvent soutenir Pachatopia en devenant partenaires du projet et en aidant a lui donner une assise durable.</p>
+                <h3 class="text-2xl font-heading font-bold text-primary">Une même direction</h3>
+                <p class="mt-3 text-lg leading-8 text-gray-700">Nous ne cherchons pas à sauver le vivant de l'extérieur. Nous cherchons à retrouver notre juste place en son sein.</p>
               </article>
             </div>
           </div>
-        </div>
-
-        <div class="mt-14 flex justify-center">
-          <a href="/pachatopia/contacts/" class="button-primary group">
-            Nous contacter
-            <LucideIcon name="ArrowRight" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-          </a>
         </div>
       </div>
     </section>
@@ -100,42 +143,37 @@ const lang = "fr";
       <div class="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
         <svg class="absolute right-[max(50%,26rem)] top-0 h-[54rem] w-[58rem] translate-x-1/3 text-primary/8 [mask-image:radial-gradient(28rem_28rem_at_top,white,transparent)]" viewBox="0 0 1024 1024" fill="none">
           <defs>
-            <pattern id="support-coffee-grid-fr" width="140" height="140" patternUnits="userSpaceOnUse">
+            <pattern id="participation-grid-fr" width="140" height="140" patternUnits="userSpaceOnUse">
               <path d="M140 0H0V140" stroke="currentColor" stroke-width="1" />
             </pattern>
           </defs>
-          <rect width="1024" height="1024" fill="url(#support-coffee-grid-fr)" />
+          <rect width="1024" height="1024" fill="url(#participation-grid-fr)" />
         </svg>
       </div>
       <div class="site-container">
-        <div class="grid grid-cols-1 gap-14 lg:grid-cols-[1fr_1fr] lg:gap-16">
-          <div class="space-y-6">
-            <div class="section-kicker w-fit">
-              <LucideIcon name="Coffee" class="h-4 w-4 text-accent" />
-              Un café qui régénère la Terre
-            </div>
-            <h2 class="text-3xl font-heading font-bold tracking-tight text-primary md:text-4xl">Choisir le café Pachatopia, c'est soutenir bien plus qu'un produit</h2>
-            <p class="text-lg leading-8 text-gray-700">Le café de Pachatopia est cultivé au cœur d'un écosystème vivant. Plutôt que de produire dans des monocultures intensives, nous cultivons notre café au sein d'un système agroforestier régénératif, entouré d'arbres, de plantes et de biodiversité.</p>
-            <p class="text-lg leading-8 text-gray-700">Lorsque vous choisissez le café Pachatopia, vous participez à la restauration d'écosystèmes vivants, à la reconstruction d'un territoire marqué par l'histoire et à la promotion d'une agriculture respectueuse de la nature.</p>
-            <p class="text-lg font-semibold italic text-primary">Chaque tasse de café est une graine plantée pour l'avenir.</p>
+        <div class="max-w-3xl">
+          <div class="section-kicker w-fit">
+            <LucideIcon name="Sprout" class="h-4 w-4 text-accent" />
+            Comment souhaitez-vous participer ?
           </div>
+          <h2 class="mt-6 text-3xl font-heading font-bold tracking-tight text-primary md:text-4xl">Plusieurs portes d'entrée, une même dynamique de régénération</h2>
+          <p class="mt-6 text-lg leading-8 text-gray-700">L'important n'est pas seulement la forme du soutien, mais le fait de participer à un projet qui retisse les liens entre nature, économie, culture et communauté.</p>
+        </div>
 
-          <div class="space-y-6">
-            <div class="border-t border-primary/10 pt-6">
-              <h3 class="text-2xl font-heading font-bold text-primary">Ce que ce café soutient</h3>
-            </div>
-            <p class="flex items-start gap-4 text-lg leading-8 text-gray-700"><span class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-primary/10"><LucideIcon name="Sprout" class="h-4 w-4 text-primary" /></span><span>Régénérer les sols</span></p>
-            <p class="flex items-start gap-4 text-lg leading-8 text-gray-700"><span class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-primary/10"><LucideIcon name="Leaf" class="h-4 w-4 text-primary" /></span><span>Favoriser la biodiversité</span></p>
-            <p class="flex items-start gap-4 text-lg leading-8 text-gray-700"><span class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-accent/10"><LucideIcon name="Droplets" class="h-4 w-4 text-accent" /></span><span>Protéger l'eau</span></p>
-            <p class="flex items-start gap-4 text-lg leading-8 text-gray-700"><span class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-accent/10"><LucideIcon name="Users" class="h-4 w-4 text-accent" /></span><span>Soutenir les communautés locales</span></p>
-
-            <div class="pt-4">
-              <a href="/pachatopia/le-cafe/" class="link-arrow">
-                Découvrir le café
-                <LucideIcon name="ArrowRight" class="h-4 w-4" />
-              </a>
-            </div>
-          </div>
+        <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {participationOptions.map((option) => (
+            <a href={option.href} class="group surface-card flex h-full min-h-[17rem] flex-col p-6 no-underline transition-all duration-300 hover:-translate-y-1.5 hover:border-accent/40 hover:shadow-2xl hover:shadow-primary/10">
+              <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-accent/15">
+                <LucideIcon name={option.icon} class="h-6 w-6 text-primary" />
+              </div>
+              <h3 class="text-xl font-heading font-bold text-primary">{option.title}</h3>
+              <p class="mt-3 flex-1 text-sm leading-6 text-gray-700">{option.text}</p>
+              <span class="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-primary/5 px-4 py-2 text-sm font-semibold text-accent transition-all duration-300 group-hover:bg-golden group-hover:text-primary">
+                {option.link}
+                <LucideIcon name="ArrowRight" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </span>
+            </a>
+          ))}
         </div>
       </div>
     </section>
@@ -148,26 +186,44 @@ const lang = "fr";
               <LucideIcon name="ScrollText" class="h-4 w-4 text-golden" />
               La charte Pachatopia
             </div>
-            <h2 class="mt-6 max-w-3xl text-3xl font-heading font-bold tracking-tight text-white md:text-4xl lg:text-5xl">Des principes qui donnent une direction claire a notre action</h2>
+            <h2 class="mt-6 max-w-3xl text-3xl font-heading font-bold tracking-tight text-white md:text-4xl lg:text-5xl">Des principes qui donnent une direction claire à notre action</h2>
           </div>
 
           <div class="space-y-5 text-base leading-7 text-white/78">
-            <p><strong class="text-white">Regenerer la Terre.</strong> Nous travaillons a restaurer les sols, les forets et les ecosystemes.</p>
-            <p><strong class="text-white">Cultiver la cooperation.</strong> Nous croyons que les projets durables se construisent collectivement.</p>
-            <p><strong class="text-white">Oeuvrer pour la paix.</strong> Prendre soin de la Terre et travailler ensemble contribue a construire des societes plus pacifiques.</p>
-            <p><strong class="text-white">Respecter le vivant.</strong> La Terre, l'eau, l'air et toutes les formes de vie meritent notre respect et notre protection.</p>
-            <p><strong class="text-white">Transmettre aux generations futures.</strong> Nos actions d'aujourd'hui doivent preserver les ressources et la beaute du monde pour demain.</p>
+            {principles.map(([title, text]) => (
+              <p><strong class="text-white">{title}</strong> {text}</p>
+            ))}
           </div>
         </div>
 
         <div class="mt-12 border-t border-white/12 pt-8">
-          <p class="max-w-3xl text-lg leading-8 text-white/82">Pachatopia est une aventure humaine et ecologique ouverte a tous. Chaque arbre plante, chaque geste de soutien et chaque personne impliquee contribuent a faire grandir cette vision.</p>
-          <p class="mt-4 text-lg font-medium italic text-white">Ensemble, faisons repousser la vie.</p>
+          <p class="max-w-3xl text-lg leading-8 text-white/82">Pachatopia est une aventure humaine et écologique ouverte à tous. Une forêt ne grandit jamais grâce à une seule graine. Un mouvement non plus.</p>
+          <p class="mt-4 text-lg font-medium italic text-white">À votre tour de planter une graine d'espérance.</p>
         </div>
       </div>
     </section>
 
-    <CallToAction lang={lang} />
+    <section class="relative isolate overflow-hidden bg-white py-20 md:py-28">
+      <div class="site-container">
+        <div class="mx-auto max-w-3xl text-center">
+          <div class="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-golden/15">
+            <LucideIcon name="Heart" class="h-7 w-7 text-golden-dark" />
+          </div>
+          <h2 class="text-3xl font-heading font-bold text-primary md:text-4xl">Rejoignez le Mouvement</h2>
+          <p class="mt-6 text-lg leading-8 text-gray-700">Si cette idée résonne en vous, alors peut-être que votre place est déjà en train de vous attendre.</p>
+          <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a href="/pachatopia/contacts/" class="button-primary group">
+              Nous contacter
+              <LucideIcon name="ArrowRight" class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            </a>
+            <a href="/pachatopia/passeport/" class="link-arrow">
+              Découvrir le Passeport
+              <LucideIcon name="ArrowRight" class="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <Footer lang={lang} />
 </Layout>

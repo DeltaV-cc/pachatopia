@@ -1,0 +1,39 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import CallToAction from "../../components/CallToAction.astro";
+const lang = "es";
+---
+<Layout title="El Pasaporte Pachatopia — Pachatopia" description="Convertirse en Guardián de lo Vivo" lang={lang}>
+  <Header lang={lang} />
+  <main>
+    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
+      <div class="absolute inset-0"><img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-primary/85"></div></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">El Pasaporte Pachatopia</h1>
+        <p class="text-xl md:text-2xl text-white/90">Convertirse en Guardián de lo Vivo</p>
+        <div class="mt-8 mx-auto max-w-xl rounded-2xl border border-white/20 bg-white/10 p-5 shadow-2xl backdrop-blur text-center">
+          <p class="font-heading text-2xl font-bold text-white">El Pasaporte Pachatopia</p>
+          <p class="mt-2 text-lg text-white/85">a partir de <strong class="text-golden">5 € al mes</strong> o <strong class="text-golden">50 € al año</strong></p>
+          <a href="/pachatopia/es/donation/?type=passeport" class="button-primary-dark mt-5 inline-flex">Obtener el Pasaporte</a>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
+<p>Todo gran movimiento comienza con un primer paso. El Pasaporte Pachatopia es una invitación a unirse a una comunidad de personas que eligen avanzar en una misma dirección: la de lo vivo. No representa un privilegio. Simboliza un compromiso. El de formar parte de una aventura colectiva que busca recuperar una relación más armoniosa entre los seres humanos y lo vivo.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">¿Qué significa ser Guardián de lo Vivo?</h2>
+<p>Ser Guardián de lo Vivo no significa creer que la naturaleza nos necesita para existir. Desde hace millones de años, lo vivo sabe regenerarse, adaptarse y evolucionar. En cambio, nuestras elecciones pueden favorecer su florecimiento… o impedir que ciertas formas de vida se expresen plenamente. Convertirse en Guardián de lo Vivo es elegir cuidar nuestra relación con lo vivo. Es aprender a vivir con él en lugar de contra él. Es crear las condiciones para que los seres humanos y el resto de lo vivo puedan crecer juntos, en armonía.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">¿Por qué convertirse en Guardián de lo Vivo?</h2>
+<p>Cada día, lo vivo nos ofrece lo esencial. El aire que respiramos. El agua que bebemos. Los suelos que nos alimentan. Los bosques que regulan los grandes equilibrios de nuestro planeta. Creemos que cuidar nuestra relación con lo vivo es también cuidar de nosotros mismos y de las generaciones que nos seguirán. El Pasaporte Pachatopia es una manera sencilla de expresar esa elección.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Un compromiso que se convierte en acción</h2>
+<p>Cada Pasaporte contribuye a hacer crecer el Movimiento. Acompaña el desarrollo del Laboratorio de lo Vivo. Apoya las experimentaciones agroforestales. Participa en preservar espacios de libertad para lo vivo. Permite transmitir los conocimientos adquiridos para que puedan inspirar otras iniciativas. Cada contribución se convierte en una semilla más en una aventura colectiva que nos supera a cada uno de nosotros.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Una comunidad que aprende junta</h2>
+<p>El Pasaporte no lo convierte en un simple apoyo. Lo vincula a una comunidad. Una comunidad que observa. Que aprende. Que experimenta. Que transmite. Porque creemos que ninguna persona tiene, por sí sola, todas las respuestas. Pero que cada quien puede contribuir a hacer crecer la inteligencia colectiva.</p>
+<p>Más que una adhesión, el Pasaporte marca el inicio de un camino. El de una comunidad que elige hacer crecer lo vivo.</p>
+<p class="text-primary font-heading italic text-xl">Cada bosque comienza con una semilla. Cada viaje comienza con un primer paso. Cada movimiento comienza con una persona que elige actuar. Tal vez ese primer paso sea el suyo.</p>
+    </div></section>
+    <CallToAction lang={lang} buttonText="Obtener el Pasaporte Pachatopia" buttonHref="/pachatopia/es/donation/?type=passeport" />
+  </main>
+  <Footer lang={lang} />
+</Layout>

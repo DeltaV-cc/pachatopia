@@ -13,6 +13,9 @@ const lang = "fr";
       <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Livraison, retrait et points relais</h1>
         <p class="text-xl md:text-2xl text-white/90">Faire circuler le Mouvement avec simplicité</p>
+        <div class="mt-8">
+          <a href="/pachatopia/contacts/?type=depot" class="button-primary-dark inline-flex">Devenir point relais</a>
+        </div>
       </div>
     </section>
     <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
@@ -31,9 +34,8 @@ const lang = "fr";
 <p>Le système de livraison, de retrait et de points relais est encore en construction. Il évoluera avec le développement du projet, la montée en production, l'organisation des équipes, les pays concernés et les réseaux locaux qui rejoindront le Mouvement. Nous préférons annoncer ce qui est réellement possible, plutôt que promettre un système parfait avant qu'il soit prêt.</p>
 <h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Une précision importante</h2>
 <p>Les modalités pratiques peuvent varier selon les territoires. La vision du Mouvement reste la même. Mais les moyens de paiement, les coûts, les relais, les délais et les formes de distribution peuvent différer entre la France, la Suisse, la Colombie et, demain, d'autres pays. C'est pourquoi nous construisons une base universelle, accompagnée de solutions locales adaptées à chaque territoire.</p>
-<div class="bg-primary text-white rounded-2xl p-10 my-12 text-center"><h3 class="text-2xl font-heading font-bold mb-4">Nous contacter</h3><p class="mb-6">Si vous souhaitez devenir point relais, aider à organiser des distributions locales ou proposer une solution logistique cohérente avec l'esprit du Mouvement, nous serons heureux d'en parler avec vous.</p><a href="/pachatopia/contacts/" class="button-primary-dark">Nous écrire</a></div>
     </div></section>
-    <CallToAction lang={lang} />
+    <CallToAction lang={lang} buttonText="Devenir point relais" buttonHref="/pachatopia/contacts/?type=depot" />
   </main>
   <Footer lang={lang} />
 </Layout>

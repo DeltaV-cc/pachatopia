@@ -1,8 +1,9 @@
 ---
 import { useTranslations, getLocalizedPath } from '../i18n/translations';
+import type { Lang } from '../i18n/translations';
 
 interface Props {
-  lang?: "fr" | "en";
+  lang?: Lang;
 }
 
 const { lang = "fr" } = Astro.props;
@@ -33,7 +34,7 @@ const footerLinks = [
     <p class="text-white/60 text-sm mb-8">
       {t("footer.location")}
     </p>
-    <nav aria-label={lang === "fr" ? "Liens du pied de page" : "Footer navigation"}>
+    <nav aria-label={lang === "fr" ? "Liens du pied de page" : lang === "es" ? "Navegación del pie de página" : "Footer navigation"}>
       <ul class="flex flex-wrap justify-center gap-6">
         {footerLinks.map((link) => (
           <li>
@@ -50,7 +51,7 @@ const footerLinks = [
   <div class="relative border-t border-white/10">
     <div class="site-container-compact py-4">
       <p class="text-center text-white/50 text-xs">
-        &copy; 2026 Pachatopia - {t("footer.rights")} | {lang === "fr" ? "Réalisé par" : "Built by"} <a href="https://tiscacatalin.com" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-golden transition-colors duration-200">Cătălin Tișcă</a>
+        &copy; 2026 Pachatopia - {t("footer.rights")} | {lang === "fr" ? "Réalisé par" : lang === "es" ? "Realizado por" : "Built by"} <a href="https://tiscacatalin.com" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-golden transition-colors duration-200">Cătălin Tișcă</a>
       </p>
     </div>
   </div>

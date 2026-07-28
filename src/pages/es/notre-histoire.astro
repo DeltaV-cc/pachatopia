@@ -1,0 +1,113 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import CallToAction from "../../components/CallToAction.astro";
+import Footer from "../../components/Footer.astro";
+import LucideIcon from "../../components/LucideIcon.astro";
+
+const lang = "es";
+---
+
+<Layout
+  title="Nuestra historia — Pachatopia"
+  description="Todas las historias empiezan en algún lugar. La nuestra empezó con una pregunta."
+  lang={lang}
+>
+  <Header lang={lang} />
+  <main>
+    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="/pachatopia/images/hero-bg.jpg" alt="" class="w-full h-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-primary/80"></div>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Nuestra historia</h1>
+        <p class="text-xl md:text-2xl text-white/90">Todas las historias empiezan en algún lugar. La nuestra empezó con una pregunta.</p>
+      </div>
+    </section>
+
+    <!-- Une question qui ne nous a jamais quittés -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="section-kicker w-fit mb-6">
+          <LucideIcon name="HelpCircle" class="h-4 w-4 text-accent" />
+          Nuestros orígenes
+        </div>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Una pregunta que nunca nos abandonó</h2>
+        <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
+          <p><strong>¿Cómo responder a las necesidades de los seres humanos respetando lo vivo de lo que dependemos?</strong> Esta pregunta nació mucho antes de Pachatopia. No buscaba solo una respuesta ecológica. Buscaba una manera más justa de habitar el mundo.</p>
+          <p>Durante años, esta pregunta nos llevó a observar, a viajar, a encontrarnos con mujeres y hombres apasionados, a aprender de la naturaleza y de los seres humanos. Aún no sabíamos a dónde nos llevaría este camino. Pero sabíamos que había que empezar en algún lugar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Une terre qui nous a choisis -->
+    <section class="py-20 md:py-28 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Una tierra que nos eligió</h2>
+        <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
+          <p>Ese camino nos llevó hasta las montañas de San Carlos, en Colombia. Y, poco a poco, sentimos que esta tierra nos acogía tanto como nosotros aprendíamos a habitarla.</p>
+          <p>Un territorio de una belleza excepcional. Un territorio marcado por las heridas del conflicto armado. Allí donde algunos veían tierras heridas… nosotros vimos una formidable capacidad de resiliencia. Los habitantes reconstruían su futuro. El bosque volvía a crecer. Los ríos seguían corriendo. Lo vivo proseguía en silencio su obra.</p>
+          <p>Comprendimos que esta tierra tenía tanto que enseñarnos como lo que nosotros podíamos esperar aportarle.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Les premières graines -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Las primeras semillas</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
+            <p>Pachatopia no nació de un gran plan perfectamente definido. Nació de miles de pequeños pasos. Un encuentro. Una parcela. Algunos árboles. Productores. Voluntarios. Amistades. Dudas. Errores. Aprendizajes.</p>
+            <p>Cada dificultad se convirtió en una ocasión para comprender mejor lo vivo. Cada encuentro enriqueció el proyecto. Poco a poco, una visión echaba raíces.</p>
+          </div>
+          <div class="surface-card p-8 flex flex-col justify-center">
+            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-primary/45 mb-4">El comienzo</p>
+            <p class="text-lg text-gray-700 italic">"No éramos expertos. Éramos personas que se hacían una pregunta. Y esa pregunta nos llevó más lejos que todas las respuestas que hubiéramos podido imaginar."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Une aventure collective -->
+    <section class="py-20 md:py-28 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Una aventura colectiva</h2>
+        <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
+          <p>Muy pronto comprendimos que un proyecto como este no podía pertenecer a una sola persona. Familias. Agricultores. Vecinos. Voluntarios venidos de todo el mundo. Apoyos. Aliados. Cada quien aportó una piedra al edificio.</p>
+          <p>El Movimiento Pachatopia crecía. No solo por los árboles plantados. Sino también por los vínculos que se creaban.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plus qu'une ferme -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Más que una finca</h2>
+        <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
+          <p>Con los años, una evidencia se impuso. No solo estábamos desarrollando una finca agroforestal. Estábamos aprendiendo. A observar. A cooperar. A transmitir. Pachatopia se convertía en un laboratorio de lo vivo. Un lugar donde aprendemos tanto a cultivar la tierra como a habitar el mundo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Et demain ? -->
+    <section class="relative py-24 md:py-32 bg-primary text-white overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <svg class="absolute -top-10 -right-10 w-80 h-80 opacity-[0.05]" viewBox="0 0 300 300" fill="none"><circle cx="150" cy="150" r="140" fill="white"/></svg>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl font-heading font-bold mb-8">¿Y mañana?</h2>
+        <div class="space-y-5 text-lg text-white/90 leading-relaxed">
+          <p>Hoy, Pachatopia sigue evolucionando. Los árboles crecen. Los proyectos se desarrollan. Los encuentros se multiplican. Y el Movimiento sigue creciendo con quienes eligen unirse.</p>
+          <p>No sabemos exactamente cómo será Pachatopia dentro de veinte años. Pero sabemos en qué dirección queremos avanzar. La de lo vivo.</p>
+          <p>La historia de Pachatopia nunca se escribirá solo con quienes la comenzaron. Se escribirá con todas las personas que un día elijan aportar una idea, un árbol, un saber, una sonrisa, un encuentro o un poco de su tiempo.</p>
+        </div>
+        <p class="text-xl text-golden font-heading italic mt-10">Quizá la próxima página de esta historia solo espera su encuentro.</p>
+      </div>
+    </section>
+
+    <CallToAction lang={lang} buttonText="Compartir una idea" buttonHref="/pachatopia/es/contacts/?type=idee" />
+  </main>
+  <Footer lang={lang} />
+</Layout>

@@ -1,0 +1,334 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import LucideIcon from "../components/LucideIcon.astro";
+
+const lang = "fr";
+
+const donationTypes = [
+  {
+    id: "passeport",
+    icon: "Ticket",
+    title: "Pachapassport",
+    eyebrow: "Rejoindre le Mouvement",
+    description: "Devenir Gardien du Vivant et relier votre soutien à une communauté qui apprend, transmet et agit avec le vivant.",
+    reference: "PACHATOPIA - PASSEPORT",
+    amounts: [
+      { label: "5 € / mois", value: "5", detail: "Adhésion mensuelle" },
+      { label: "50 € / an", value: "50", detail: "Adhésion annuelle" },
+      { label: "100 €", value: "100", detail: "Passeport + soutien" },
+    ],
+  },
+  {
+    id: "cafe",
+    icon: "Coffee",
+    title: "Parrainer une culture",
+    eyebrow: "Café Pachatopia",
+    description: "Accompagner une plante, un producteur et une transition agroforestière dans le temps long du vivant.",
+    reference: "PACHATOPIA - CAFE",
+    amounts: [
+      { label: "1 pied", value: "25", detail: "25 € → 500 g de café" },
+      { label: "1 ligne", value: "200", detail: "10 pieds → 5 kg de café" },
+      { label: "1 champ", value: "1750", detail: "100 pieds → 50 kg de café" },
+    ],
+  },
+  {
+    id: "espace",
+    icon: "Trees",
+    title: "Parrainer un espace du vivant",
+    eyebrow: "Espaces de liberté",
+    description: "Laisser une place au vivant, préserver des m² de forêt, de refuge et d'observation, sans logique de récolte.",
+    reference: "PACHATOPIA - ESPACE",
+    amounts: [
+      { label: "1 m²", value: "1", detail: "1 PachaForest → 1 €" },
+      { label: "100 m²", value: "75", detail: "100 PachaForest → 75 €" },
+      { label: "1 000 m²", value: "500", detail: "1 000 PachaForest → 500 €" },
+    ],
+  },
+  {
+    id: "libre",
+    icon: "Heart",
+    title: "Don libre",
+    eyebrow: "Soutenir Pachatopia",
+    description: "Faire grandir le Mouvement, soutenir le terrain, les apprentissages, les plantations et les espaces protégés.",
+    reference: "PACHATOPIA - DON LIBRE",
+    amounts: [
+      { label: "25 €", value: "25", detail: "Une première graine" },
+      { label: "50 €", value: "50", detail: "Un soutien concret" },
+      { label: "100 €", value: "100", detail: "Un élan durable" },
+      { label: "250 €", value: "250", detail: "Un appui fort" },
+    ],
+  },
+];
+
+const bankRows = [
+  ["Bénéficiaire", "Pachatopia Association - A-J Gonzalez"],
+  ["Adresse", "17 route du Moulin, Le petit Chable, 74160 Présilly"],
+  ["Banque", "Crédit Coopératif"],
+  ["IBAN", "FR76 4255 9100 0004 1463 4310 501"],
+  ["BIC", "CCOPFRPPXXX"],
+  ["Code banque", "42559"],
+  ["Code guichet", "10000"],
+  ["N° du compte", "04146343105"],
+  ["Clé RIB", "01"],
+];
+---
+
+<Layout
+  title="Donation — Pachatopia"
+  description="Choisissez votre manière de soutenir Pachatopia : Pachapassport, parrainage café, espace du vivant ou don libre."
+  lang={lang}
+>
+  <Header lang={lang} />
+  <main>
+    <section class="relative overflow-hidden bg-primary py-24 text-white md:py-32">
+      <div class="absolute inset-0">
+        <img src="/pachatopia/images/production-cafe.webp" alt="" class="h-full w-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-[linear-gradient(135deg,rgba(14,39,35,0.94),rgba(10,91,75,0.82))]"></div>
+      </div>
+      <div class="relative z-10 mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+        <div class="section-kicker mx-auto mb-6 w-fit border-white/15 bg-white/10 text-white shadow-none">
+          <LucideIcon name="HeartHandshake" class="h-4 w-4 text-golden" />
+          Donation
+        </div>
+        <h1 class="font-heading text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">Choisir comment faire grandir le vivant</h1>
+        <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/85 md:text-xl">
+          Sélectionnez votre soutien, préparez votre référence de virement, puis effectuez le don depuis votre banque.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-cream py-16 md:py-24">
+      <div class="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.78fr] lg:px-8">
+        <div class="space-y-8">
+          <div class="surface-card p-6 md:p-8">
+            <div class="mb-6 flex items-center gap-3">
+              <span class="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">1</span>
+              <h2 class="font-heading text-2xl font-bold text-primary">Votre soutien</h2>
+            </div>
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+              {donationTypes.map((type) => (
+                <button
+                  type="button"
+                  class="donation-type rounded-xl border border-primary/10 bg-white p-5 text-left transition hover:-translate-y-0.5 hover:border-accent hover:shadow-lg"
+                  data-type={type.id}
+                  data-title={type.title}
+                  data-eyebrow={type.eyebrow}
+                  data-description={type.description}
+                  data-reference={type.reference}
+                >
+                  <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                    <LucideIcon name={type.icon} class="h-6 w-6 text-primary" />
+                  </div>
+                  <p class="text-sm font-semibold text-accent">{type.eyebrow}</p>
+                  <h3 class="mt-1 font-heading text-xl font-bold text-primary">{type.title}</h3>
+                  <p class="mt-3 text-sm leading-6 text-gray-600">{type.description}</p>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div class="surface-card p-6 md:p-8">
+            <div class="mb-6 flex items-center gap-3">
+              <span class="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">2</span>
+              <h2 class="font-heading text-2xl font-bold text-primary">Montant</h2>
+            </div>
+            <div id="amount-options" class="grid grid-cols-1 gap-3 sm:grid-cols-3"></div>
+            <label class="mt-5 block">
+              <span class="text-sm font-semibold text-primary">Ou montant libre</span>
+              <div class="mt-2 flex overflow-hidden rounded-xl border border-primary/10 bg-white focus-within:border-accent">
+                <input id="custom-amount" type="number" min="1" inputmode="decimal" placeholder="Votre montant" class="w-full border-0 bg-transparent px-4 py-3 text-gray-800 outline-none" />
+                <span class="flex items-center bg-primary/5 px-4 font-semibold text-primary">€</span>
+              </div>
+            </label>
+          </div>
+
+          <div class="surface-card p-6 md:p-8">
+            <div class="mb-6 flex items-center gap-3">
+              <span class="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">3</span>
+              <h2 class="font-heading text-2xl font-bold text-primary">Vos informations</h2>
+            </div>
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+              <label class="block">
+                <span class="text-sm font-semibold text-primary">Nom et prénom</span>
+                <input id="donor-name" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="Votre nom" />
+              </label>
+              <label class="block">
+                <span class="text-sm font-semibold text-primary">Email</span>
+                <input id="donor-email" type="email" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="vous@email.com" />
+              </label>
+            </div>
+            <label class="mt-4 block">
+              <span class="text-sm font-semibold text-primary">Message ou précision</span>
+              <textarea id="donor-message" rows="4" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="Optionnel : dites-nous ce que vous souhaitez soutenir."></textarea>
+            </label>
+          </div>
+        </div>
+
+        <aside class="lg:sticky lg:top-24 lg:self-start">
+          <div class="surface-card overflow-hidden">
+            <div class="bg-primary p-6 text-white">
+              <p id="summary-eyebrow" class="text-sm font-semibold text-golden">Rejoindre le Mouvement</p>
+              <h2 id="summary-title" class="mt-1 font-heading text-3xl font-bold">Pachapassport</h2>
+              <p id="summary-description" class="mt-3 text-sm leading-6 text-white/80"></p>
+              <div class="mt-6 rounded-xl bg-white/10 p-4">
+                <p class="text-sm text-white/60">Montant sélectionné</p>
+                <p class="mt-1 font-heading text-4xl font-bold"><span id="summary-amount">50</span> €</p>
+              </div>
+            </div>
+
+            <div class="space-y-5 p-6">
+              <div class="rounded-xl border border-primary/10 bg-cream p-4">
+                <div class="flex items-center justify-between gap-3">
+                  <div>
+                    <p class="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Référence de virement</p>
+                    <p id="summary-reference" class="mt-1 font-semibold text-primary">PACHATOPIA - PASSEPORT</p>
+                  </div>
+                  <button type="button" class="copy-btn rounded-full bg-white px-3 py-2 text-sm font-semibold text-accent shadow-sm" data-copy-target="summary-reference">Copier</button>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="font-heading text-xl font-bold text-primary">Virement bancaire</h3>
+                <div class="mt-4 divide-y divide-primary/10 rounded-xl border border-primary/10 bg-white">
+                  {bankRows.map(([label, value]) => (
+                    <div class="grid grid-cols-[0.42fr_1fr] gap-3 px-4 py-3 text-sm">
+                      <span class="font-semibold text-gray-500">{label}</span>
+                      <span class="break-words text-gray-800">{value}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                <button type="button" class="copy-btn button-primary justify-center" data-copy-value="FR76 4255 9100 0004 1463 4310 501">Copier l'IBAN</button>
+                <a id="donation-mail" href="mailto:contact@pachatopia.org?subject=Donation%20Pachatopia" class="button-primary-dark justify-center">Prévenir Pachatopia</a>
+              </div>
+              <p id="copy-feedback" class="min-h-5 text-center text-sm font-semibold text-accent" aria-live="polite"></p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <Footer lang={lang} />
+</Layout>
+
+<script define:vars={{ donationTypes }}>
+  const typeButtons = [...document.querySelectorAll(".donation-type")];
+  const amountOptions = document.getElementById("amount-options");
+  const customAmount = document.getElementById("custom-amount");
+  const donorName = document.getElementById("donor-name");
+  const donorEmail = document.getElementById("donor-email");
+  const donorMessage = document.getElementById("donor-message");
+  const summaryEyebrow = document.getElementById("summary-eyebrow");
+  const summaryTitle = document.getElementById("summary-title");
+  const summaryDescription = document.getElementById("summary-description");
+  const summaryAmount = document.getElementById("summary-amount");
+  const summaryReference = document.getElementById("summary-reference");
+  const donationMail = document.getElementById("donation-mail");
+  const copyFeedback = document.getElementById("copy-feedback");
+
+  let selectedType = donationTypes[0];
+  let selectedAmount = selectedType.amounts[1];
+
+  function cleanType(type) {
+    return donationTypes.find((item) => item.id === type) ?? donationTypes[0];
+  }
+
+  function referenceWithName() {
+    const name = donorName?.value.trim();
+    return name ? `${selectedType.reference} - ${name.toUpperCase()}` : selectedType.reference;
+  }
+
+  function updateSummary() {
+    const custom = customAmount?.value.trim();
+    const amount = custom || selectedAmount.value;
+    summaryEyebrow.textContent = selectedType.eyebrow;
+    summaryTitle.textContent = selectedType.title;
+    summaryDescription.textContent = selectedType.description;
+    summaryAmount.textContent = amount;
+    summaryReference.textContent = referenceWithName();
+
+    const body = [
+      `Bonjour Pachatopia,`,
+      ``,
+      `Je souhaite préparer une donation.`,
+      `Type : ${selectedType.title}`,
+      `Montant : ${amount} €`,
+      `Référence de virement : ${referenceWithName()}`,
+      donorEmail?.value.trim() ? `Email : ${donorEmail.value.trim()}` : "",
+      donorMessage?.value.trim() ? `Message : ${donorMessage.value.trim()}` : "",
+    ].filter(Boolean).join("\n");
+
+    donationMail.href = `mailto:contact@pachatopia.org?subject=${encodeURIComponent(`Donation Pachatopia - ${selectedType.title}`)}&body=${encodeURIComponent(body)}`;
+  }
+
+  function renderAmounts() {
+    amountOptions.innerHTML = "";
+    selectedType.amounts.forEach((amount, index) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "amount-btn rounded-xl border border-primary/10 bg-white px-4 py-4 text-left transition hover:border-accent hover:shadow-md";
+      button.dataset.value = amount.value;
+      button.innerHTML = `<span class="block font-heading text-xl font-bold text-primary">${amount.label}</span><span class="mt-1 block text-sm text-gray-500">${amount.detail}</span>`;
+      button.addEventListener("click", () => {
+        selectedAmount = amount;
+        customAmount.value = "";
+        setActiveAmount(button);
+        updateSummary();
+      });
+      amountOptions.appendChild(button);
+      if (index === 0) setActiveAmount(button);
+    });
+  }
+
+  function setActiveType(typeId) {
+    selectedType = cleanType(typeId);
+    selectedAmount = selectedType.amounts[0];
+    typeButtons.forEach((button) => {
+      const active = button.dataset.type === selectedType.id;
+      button.classList.toggle("border-accent", active);
+      button.classList.toggle("ring-2", active);
+      button.classList.toggle("ring-accent/30", active);
+    });
+    renderAmounts();
+    updateSummary();
+  }
+
+  function setActiveAmount(activeButton) {
+    document.querySelectorAll(".amount-btn").forEach((button) => {
+      const active = button === activeButton;
+      button.classList.toggle("border-accent", active);
+      button.classList.toggle("ring-2", active);
+      button.classList.toggle("ring-accent/25", active);
+    });
+  }
+
+  typeButtons.forEach((button) => {
+    button.addEventListener("click", () => setActiveType(button.dataset.type));
+  });
+
+  [customAmount, donorName, donorEmail, donorMessage].forEach((input) => input?.addEventListener("input", updateSummary));
+  customAmount?.addEventListener("input", () => {
+    document.querySelectorAll(".amount-btn").forEach((button) => button.classList.remove("border-accent", "ring-2", "ring-accent/25"));
+  });
+
+  document.querySelectorAll(".copy-btn").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const targetId = button.dataset.copyTarget;
+      const value = button.dataset.copyValue || document.getElementById(targetId)?.textContent || "";
+      try {
+        await navigator.clipboard.writeText(value.trim());
+        copyFeedback.textContent = "Copié.";
+        window.setTimeout(() => (copyFeedback.textContent = ""), 1800);
+      } catch {
+        copyFeedback.textContent = "Copie impossible depuis ce navigateur.";
+      }
+    });
+  });
+
+  const params = new URLSearchParams(window.location.search);
+  setActiveType(params.get("type") || "passeport");
+</script>

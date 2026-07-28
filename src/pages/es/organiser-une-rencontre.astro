@@ -1,0 +1,33 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import CallToAction from "../../components/CallToAction.astro";
+const lang = "es";
+---
+<Layout title="Organizar un encuentro — Pachatopia" description="Hacer circular el Movimiento a través del encuentro" lang={lang}>
+  <Header lang={lang} />
+  <main>
+    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
+      <div class="absolute inset-0"><img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-primary/85"></div></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Organizar un encuentro</h1>
+        <p class="text-xl md:text-2xl text-white/90">Hacer circular el Movimiento a través del encuentro</p>
+      </div>
+    </section>
+    <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
+<p>Algunas ideas se leen. Otras se viven. Y otras más adquieren toda su fuerza cuando se comparten de viva voz, en un lugar, con personas reunidas en torno a una misma pregunta. El Movimiento Pachatopia está llamado a circular. No solo a través del café. Sino también a través de encuentros, conferencias, presentaciones e intercambios.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">¿Por qué organizar un encuentro?</h2>
+<p>Porque un encuentro a veces puede abrir lo que ningún documento basta para transmitir. Permite contar una historia, dar un rostro a un proyecto, explicar una visión, crear confianza, abrir un diálogo. Creemos que los grandes movimientos crecen así: no solo por las acciones que llevan a cabo, sino también por las conversaciones que hacen posibles.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">¿Qué forma puede tomar un encuentro?</h2>
+<ul class="list-disc pl-6 space-y-2"><li>Una presentación del Movimiento</li><li>Una conferencia sobre la relación entre los seres humanos y lo vivo</li><li>Un intercambio en torno al café, la agroforestería y los cultivos en transición</li><li>Un encuentro en torno al proyecto en Colombia</li><li>Un momento de sensibilización en una escuela, una asociación, un lugar cultural</li><li>Una conversación más íntima en un círculo, un café, una finca, un tercer lugar</li></ul>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Una palabra que busca el acierto</h2>
+<p>No buscamos impresionar. No buscamos imponer una verdad. Buscamos compartir una experiencia, una visión y una dirección. Con honestidad, humildad, profundidad cuando es necesario, simplicidad cuando es posible.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Algunas pistas para organizar un encuentro</h2>
+<ul class="list-disc pl-6 space-y-2"><li>Identificar un lugar que tenga sentido</li><li>Definir un formato adaptado al público</li><li>Preparar con cuidado los elementos de presentación</li><li>Dejar un amplio espacio a los intercambios y a las preguntas</li></ul>
+<p class="text-primary font-heading italic text-xl mt-8">Un encuentro exitoso no es aquel en el que todos se van con las mismas respuestas. Es aquel en el que algo ha empezado a moverse. En el que ha nacido una pregunta nueva. En el que una persona ha sentido que otro camino era posible. No buscamos llenar salas. Buscamos abrir caminos.</p>
+    </div></section>
+    <CallToAction lang={lang} buttonText="Organizar un encuentro" buttonHref="/pachatopia/es/contacts/?type=ambassadeur" />
+  </main>
+  <Footer lang={lang} />
+</Layout>

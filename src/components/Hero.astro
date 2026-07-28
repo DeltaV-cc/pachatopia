@@ -1,12 +1,21 @@
 ---
 import { useTranslations } from '../i18n/translations';
+import type { Lang } from '../i18n/translations';
 
 interface Props {
-  lang?: "fr" | "en";
+  lang?: Lang;
 }
 
 const { lang = "fr" } = Astro.props;
 const t = useTranslations(lang);
+
+const heroDescriptionHtml =
+  lang === "fr"
+    ? `Un mouvement de femmes et d'hommes qui choisissent de faire grandir <strong>le vivant</strong> en eux, autour d'eux, et de le transmettre aux <strong>générations futures</strong>.<br /><br />
+Né d'une conviction simple : l'être humain peut redevenir une <strong>force de régénération</strong> pour la Terre.<br /><br />
+À San Carlos, au cœur des montagnes colombiennes, nous expérimentons une manière de vivre qui réconcilie <strong>l'être humain et le vivant</strong> : restaurer les sols, développer l'agroforesterie, protéger la biodiversité et créer des liens durables.<br /><br />
+Pachatopia est plus qu'un lieu. <strong>C'est une invitation</strong> à observer, apprendre, transmettre et agir pour que le vivant retrouve toute sa place.`
+    : t("hero.description");
 ---
 
 <section
@@ -191,15 +200,14 @@ const t = useTranslations(lang);
 
     <!-- Description -->
     <p
-      class="hero-description whitespace-pre-line text-sm sm:text-base md:text-lg text-cream/85 max-w-3xl mx-auto leading-relaxed mb-10"
-    >
-      {t("hero.description")}
-    </p>
+      class="hero-description text-sm sm:text-base md:text-lg text-cream/88 max-w-3xl mx-auto leading-relaxed mb-10 [&_strong]:font-bold [&_strong]:text-cream"
+      set:html={heroDescriptionHtml}
+    />
 
     <!-- CTA buttons -->
     <div class="hero-buttons flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
       <a
-        href={lang === "en" ? "/pachatopia/en/nos-actions/" : "/pachatopia/nos-actions/"}
+        href={lang === "en" ? "/pachatopia/en/a-propos-de-nous/" : "/pachatopia/a-propos-de-nous/"}
         class="hero-btn-primary group relative inline-flex items-center justify-center px-8 py-4 text-base sm:text-lg font-semibold text-primary bg-golden rounded-full overflow-hidden transition-all duration-300 hover:bg-golden-dark hover:shadow-[0_8px_30px_rgba(255,197,90,0.35)] hover:scale-[1.03] active:scale-[0.98]"
       >
         <span class="relative z-10">{t("hero.cta.discover")}</span>

@@ -31,6 +31,9 @@ const lang = "fr";
         <p class="text-xl md:text-2xl text-white/90">
           Transmettre l'élan du vivant
         </p>
+        <div class="mt-8">
+          <a href="/pachatopia/contacts/?type=ambassadeur" class="button-primary-dark inline-flex">Devenir ambassadeur</a>
+        </div>
       </div>
     </section>
 
@@ -174,31 +177,7 @@ const lang = "fr";
       </div>
     </section>
 
-    <!-- CTA intégré -->
-    <section class="py-16 md:py-20 bg-primary">
-      <div class="max-w-3xl mx-auto px-4 text-center text-white">
-        <h2 class="text-3xl md:text-4xl font-heading font-bold mb-6">
-          Devenir ambassadeur
-        </h2>
-        <p class="text-lg md:text-xl text-white/90 mb-4">
-          Partager une idée.
-        </p>
-        <p class="text-lg md:text-xl text-white/90 mb-4">
-          Créer une rencontre.
-        </p>
-        <p class="text-lg md:text-xl text-white/90 mb-8">
-          Faire circuler l'espérance.
-        </p>
-        <a
-          href="/pachatopia/contacts/"
-          class="inline-block bg-white text-primary font-semibold px-8 py-4 rounded-full text-lg hover:bg-white/90 transition-colors shadow-lg"
-        >
-          Devenir ambassadeur
-        </a>
-      </div>
-    </section>
-
-    <CallToAction lang={lang} />
+    <CallToAction lang={lang} buttonText="Devenir ambassadeur" buttonHref="/pachatopia/contacts/?type=ambassadeur" />
   </main>
   <Footer lang={lang} />
 </Layout>

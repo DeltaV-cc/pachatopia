@@ -1,0 +1,208 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import CallToAction from "../../components/CallToAction.astro";
+import Footer from "../../components/Footer.astro";
+
+const lang = "es";
+---
+
+<Layout
+  title="El Laboratorio de lo Vivo - Pachatopia"
+  description="Las grandes investigaciones del Movimiento Pachatopia: regenerar los suelos, preparar el futuro del café, unir el agua y la tierra, y explorar el mundo invisible."
+  lang={lang}
+>
+  <Header lang={lang} />
+  <main>
+    <!-- Hero Banner -->
+    <section class="relative text-white py-24 md:py-32 overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="/pachatopia/images/farm-hero.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-primary/80"></div>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">El Laboratorio de lo Vivo</h1>
+        <p class="text-xl md:text-2xl text-white/90">Las grandes investigaciones del Movimiento Pachatopia</p>
+        <div class="mt-8">
+          <a href="/pachatopia/es/contacts/?type=partenaire" class="button-primary-dark inline-flex">Construir una alianza</a>
+        </div>
+      </div>
+      <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="white"/>
+      </svg>
+    </section>
+
+    <!-- Section 1 : Introduction -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Introducción</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">No tenemos todas las respuestas. Precisamente por eso existe el Laboratorio de lo Vivo. Cada día observamos, experimentamos, a veces nos equivocamos, aprendemos… y volvemos a empezar. Lo vivo es nuestro gran maestro.</p>
+        <div class="mt-8 text-lg md:text-xl text-gray-700 leading-relaxed">
+          <p>Quizá usted tenga una idea.</p>
+          <div class="idea-pulse my-6" aria-label="Experiencia, competencia, intuición, pregunta">
+            <span>Una experiencia</span>
+            <span>Una competencia</span>
+            <span>Una intuición</span>
+            <span>Una pregunta</span>
+          </div>
+          <p>O simplemente el deseo de buscar con nosotros.</p>
+          <p>El Laboratorio de lo Vivo está abierto a todas las personas que deseen observar, experimentar y hacer crecer soluciones al servicio de lo vivo.</p>
+          <p>Los grandes descubrimientos a menudo empiezan con una simple pregunta.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2 : Régénérer les sols -->
+    <section id="regenerer-les-sols" class="scroll-mt-24 py-16 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Regenerar los suelos</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">Un suelo vivo nutre plantas más resilientes, retiene mejor el agua y sostiene más biodiversidad. Exploramos distintas prácticas: compost, bokashis, microorganismos, coberturas vegetales, biomasa, árboles productores de humus y fertilizantes biológicos producidos localmente.</p>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mt-5">Nuestro objetivo no es solo cultivar. Nuestro objetivo es dejar un suelo más vivo que el que recibimos.</p>
+      </div>
+    </section>
+
+    <!-- Section 3 : Préparer l'avenir du café -->
+    <section id="preparer-l-avenir-du-cafe" class="scroll-mt-24 py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Preparar el futuro del café</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">El café hace vivir a millones de familias, pero el cambio climático ya debilita su cultivo. Experimentamos asociaciones de árboles de sombra, biomasa, diversidad vegetal y cobertura del suelo para construir sistemas más resilientes.</p>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mt-5">Aquí el café se convierte en un terreno de aprendizaje para imaginar una agricultura capaz de adaptarse a los desafíos del mañana.</p>
+      </div>
+    </section>
+
+    <!-- Section 4 : Relier l'eau, la terre et la production -->
+    <section id="preservation-de-l-eau" class="scroll-mt-24 py-16 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Unir el agua, la tierra y la producción</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">San Carlos posee una riqueza excepcional: el agua. Exploramos sistemas capaces de unir mejor el agua, los suelos y las producciones agrícolas: protección de las fuentes, valorización de los ciclos naturales, investigaciones en torno a producciones adaptadas como la espirulina.</p>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mt-5">Nuestro objetivo es simple: producir sin agotar lo que hace posible la vida.</p>
+      </div>
+    </section>
+
+    <!-- Section 5 : Faire dialoguer pisciculture et agroforesterie -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Hacer dialogar la piscicultura y la agroforestería</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">La piscicultura puede alimentar a las familias, pero también puede fragilizar los cursos de agua. Buscamos comprender cómo crear un diálogo entre piscicultura y agroforestería: alimentar a los peces con recursos locales, valorizar los efluentes para los suelos.</p>
+      </div>
+    </section>
+
+    <!-- Section 6 : Explorer le monde invisible -->
+    <section id="protection-de-la-biodiversite" class="scroll-mt-24 py-16 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Explorar el mundo invisible</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">Bajo nuestros pies existe un universo aún en gran parte desconocido. Hongos, micorrizas, microorganismos: ese mundo invisible desempeña un papel fundamental en la fertilidad y la salud de los ecosistemas.</p>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mt-5">Porque algunas de las mayores fuerzas de lo vivo son invisibles a simple vista.</p>
+      </div>
+    </section>
+
+    <!-- Section 7 : Transformer les déchets en ressources -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Transformar los residuos en recursos</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">En la naturaleza, nada se convierte en basura. Todo alimenta otra cosa. Pulpa de café, residuos vegetales, estiércoles, madera de poda, biomasa: buscamos transformar estas materias en compost, fertilizantes líquidos, bokashis.</p>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mt-5">Cada residuo evitado puede convertirse en una riqueza recuperada.</p>
+      </div>
+    </section>
+
+    <!-- Section 8 : Utiliser l'énergie du soleil -->
+    <section id="espaces-de-liberte-du-vivant" class="scroll-mt-24 py-16 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Usar la energía del sol</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">El sol ya es la principal fuente de energía de lo vivo. Buscamos aprovechar mejor este recurso para secar las cosechas, conservar los alimentos y limitar las pérdidas poscosecha.</p>
+      </div>
+    </section>
+
+    <!-- Section 9 : Créer plus de valeur sans prélever davantage -->
+    <section id="cooperation-avec-les-communautes" class="scroll-mt-24 py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Crear más valor sin extraer más</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">Una misma planta a veces puede dar mucho más que un solo uso. Exploramos la transformación en aceites esenciales, aceites vegetales, cosméticos naturales, productos de aseo y complementos alimenticios.</p>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mt-5">Nuestra ambición: crear más valor, más empleo y más autonomía sin extraer más recursos.</p>
+      </div>
+    </section>
+
+    <!-- Section 10 : Conclusion -->
+    <section class="py-16 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Nuestros objetivos</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">Nuestro objetivo no es solo producir más. Buscamos crear más vida. Más fertilidad. Más biodiversidad. Más empleo. Más conocimiento. Más cooperación.</p>
+      </div>
+    </section>
+
+    <!-- Section 11 : Une recherche qui reste ouverte -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">Una investigación que permanece abierta</h2>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">El Laboratorio de lo Vivo nunca terminará de aprender. Cada temporada aporta nuevas observaciones. Cada encuentro abre nuevas pistas. Cada error se convierte en una enseñanza.</p>
+        <div class="space-y-3 mt-5 text-lg md:text-xl text-gray-700 leading-relaxed">
+          <p>No construimos un modelo rígido.</p>
+          <p>Construimos un lugar donde la curiosidad permanece viva.</p>
+          <p>Porque lo vivo sigue evolucionando.</p>
+          <p>Y nosotros deseamos evolucionar con él.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tagline -->
+    <section class="py-20 bg-primary text-white text-center">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-3xl md:text-4xl font-heading font-bold tracking-wide">APRENDEMOS DE LO VIVO.</p>
+      </div>
+    </section>
+
+    <CallToAction lang={lang} buttonText="Construir una alianza" buttonHref="/pachatopia/es/contacts/?type=partenaire" />
+  </main>
+  <Footer lang={lang} />
+</Layout>
+
+<style>
+  .idea-pulse {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .idea-pulse span {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    border: 1px solid rgba(10, 91, 75, 0.14);
+    background: rgba(10, 91, 75, 0.055);
+    color: var(--color-primary, #0a5b4b);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1;
+    padding: 0.75rem 1rem;
+    animation: idea-rise 4.8s ease-in-out infinite;
+  }
+
+  .idea-pulse span:nth-child(2) {
+    animation-delay: 0.18s;
+  }
+
+  .idea-pulse span:nth-child(3) {
+    animation-delay: 0.36s;
+  }
+
+  .idea-pulse span:nth-child(4) {
+    animation-delay: 0.54s;
+  }
+
+  @keyframes idea-rise {
+    0%, 100% {
+      transform: translateY(0);
+      box-shadow: 0 0 0 rgba(10, 91, 75, 0);
+    }
+    35% {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(10, 91, 75, 0.11);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .idea-pulse span {
+      animation: none;
+    }
+  }
+</style>

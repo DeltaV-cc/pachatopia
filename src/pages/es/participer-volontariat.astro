@@ -1,0 +1,29 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import CallToAction from "../../components/CallToAction.astro";
+import Testimonials from "../../components/Testimonials.astro";
+const lang = "es";
+---
+<Layout title="El voluntariado — Pachatopia" description="Venir a ayudar, aprender y hacer crecer lo vivo" lang={lang}>
+  <Header lang={lang} />
+  <main>
+    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
+      <div class="absolute inset-0"><img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-primary/85"></div></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">El voluntariado</h1>
+        <p class="text-xl md:text-2xl text-white/90">Venir a ayudar, aprender y hacer crecer lo vivo</p>
+        <div class="mt-8">
+          <a href="/pachatopia/es/contacts/?type=volontaire" class="button-primary-dark inline-flex">Presentar una solicitud de voluntariado</a>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
+<p>El voluntariado en Pachatopia no es un paréntesis turístico. Es una manera de tomar parte, de forma concreta, en un lugar vivo en construcción. Aquí, los voluntarios no vienen simplemente a « pasar tiempo en la finca ». Se unen a un territorio, a un equipo, a ritmos, a responsabilidades y a una búsqueda colectiva.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">¿Por qué acoger voluntarios?</h2><p>Porque un lugar como Pachatopia también crece gracias a las personas que eligen dedicarle parte de su energía. El voluntariado permite crear vínculos entre mundos que rara vez se encuentran: habitantes del territorio, agricultores, viajeros, estudiantes, artesanos, investigadores, personas en busca de sentido.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Lo que el voluntariado no es</h2><p>El voluntariado en Pachatopia no es una estancia « todo incluido ». Tampoco es una simple experiencia de vacaciones en el campo. El lugar pide implicación, escucha, flexibilidad y un verdadero deseo de contribuir. Buscamos personas dispuestas a venir con sinceridad, humildad y compromiso.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Lo que el voluntariado puede ofrecerle</h2><p>Según las temporadas y las necesidades del lugar: agroforestería, cultivos de café y de cacao, mantenimiento de parcelas, vivero, plantación, cuidado de los suelos, transformación de ciertas producciones, organización del lugar, vida cotidiana en un territorio rural.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">El tipo de personas que buscamos</h2><p>No buscamos personas perfectas. Buscamos personas alineadas. Capaces de implicarse con seriedad, respetar el lugar y los ritmos de lo vivo, aceptar no dominarlo todo, ayudar sin esperar que todo esté organizado a su alrededor, observar antes de juzgar, hacer preguntas con humildad, participar con energía, compartir la vida del lugar con sencillez.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Una experiencia de reciprocidad</h2><p>En Pachatopia, no vemos el voluntariado como una ayuda en un solo sentido. El lugar recibe tiempo, energía y miradas nuevas. El voluntario recibe una experiencia vivida, aprendizajes, encuentros y a veces un desplazamiento interior que no había previsto. Cuando esa reciprocidad es justa, todos crecen.</p>
+    </div></section>
+    <Testimonials lang={lang} />
+    <CallToAction lang={lang} buttonText="Presentar una solicitud de voluntariado" buttonHref="/pachatopia/es/contacts/?type=volontaire" />
+  </main>
+  <Footer lang={lang} />
+</Layout>

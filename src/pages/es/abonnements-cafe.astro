@@ -1,0 +1,24 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import CallToAction from "../../components/CallToAction.astro";
+const lang = "es";
+---
+<Layout title="Las fórmulas de suscripción de café — Pachatopia" description="Recibir con regularidad. Apoyar de forma duradera." lang={lang}>
+  <Header lang={lang} />
+  <main>
+    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
+      <div class="absolute inset-0"><img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-primary/85"></div></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Las fórmulas de suscripción de café</h1>
+        <p class="text-xl md:text-2xl text-white/90">Recibir con regularidad. Apoyar de forma duradera.</p>
+      </div>
+    </section>
+    <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
+<p>La suscripción de café se pensó para quienes desean inscribir su apoyo en el tiempo. Permite recibir con regularidad el café Pachatopia, al tiempo que da al Movimiento una base más estable para avanzar con coherencia.</p><h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">¿Por qué una fórmula trimestral?</h2><p>Lo vivo no funciona con urgencia. Y nosotros tampoco. Para seguir siendo coherentes con la realidad del terreno, privilegiamos pedidos trimestrales pagados por adelantado.</p><div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8"><div class="surface-card p-6"><h4 class="font-bold text-primary text-lg">Descubrimiento</h4><p class="text-sm">500 g al mes (1,5 kg / trimestre)</p><p class="text-xl font-bold text-primary mt-2">20 EUR / mes</p><p class="text-xs text-gray-500">60 EUR / trimestre</p></div><div class="surface-card p-6"><h4 class="font-bold text-primary text-lg">Ritual</h4><p class="text-sm">1 kg al mes (3 kg / trimestre)</p><p class="text-xl font-bold text-primary mt-2">39 EUR / mes</p><p class="text-xs text-gray-500">117 EUR / trimestre</p></div><div class="surface-card p-6"><h4 class="font-bold text-primary text-lg">Hogar</h4><p class="text-sm">2 kg al mes (6 kg / trimestre)</p><p class="text-xl font-bold text-primary mt-2">75 EUR / mes</p><p class="text-xs text-gray-500">225 EUR / trimestre</p></div><div class="surface-card p-6"><h4 class="font-bold text-primary text-lg">Círculo</h4><p class="text-sm">5 kg al mes (15 kg / trimestre)</p><p class="text-xl font-bold text-primary mt-2">180 EUR / mes</p><p class="text-xs text-gray-500">540 EUR / trimestre</p></div></div><h3 class="text-xl font-heading font-bold text-primary mt-10">Formatos de relevo y profesionales</h3><div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4"><div class="surface-card p-6"><h4 class="font-bold text-primary text-lg">Punto de relevo</h4><p class="text-sm">10 kg al mes (30 kg / trimestre)</p><p class="text-xl font-bold text-primary mt-2">340 EUR / mes</p></div><div class="surface-card p-6"><h4 class="font-bold text-primary text-lg">Reserva</h4><p class="text-sm">25 kg al mes (75 kg / trimestre)</p><p class="text-xl font-bold text-primary mt-2">750 EUR / mes</p></div></div><div class="bg-primary text-white rounded-2xl p-10 my-12 text-center"><h3 class="text-2xl font-heading font-bold mb-4">Elegir su fórmula</h3><p class="mb-6">Recibir con regularidad. Apoyar con constancia. Hacer crecer lo vivo en el tiempo.</p><a href="/pachatopia/es/contacts/" class="button-primary-dark">Descubrir las fórmulas de suscripción</a></div>
+    </div></section>
+    <CallToAction lang={lang} />
+  </main>
+  <Footer lang={lang} />
+</Layout>

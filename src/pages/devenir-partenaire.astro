@@ -24,6 +24,9 @@ const lang = "fr";
       <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Devenir partenaire</h1>
         <p class="text-xl md:text-2xl text-white/90">Construisons ensemble quelque chose qui nous dépasse.</p>
+        <div class="mt-8">
+          <a href="/pachatopia/contacts/?type=partenaire" class="button-primary-dark inline-flex">Devenir partenaire</a>
+        </div>
       </div>
     </section>
 
@@ -46,7 +49,7 @@ const lang = "fr";
         <svg class="absolute -bottom-10 -left-10 w-72 h-72 opacity-[0.04]" viewBox="0 0 300 300" fill="none"><path d="M150 5C150 5 280 60 270 170C260 280 180 290 100 270C20 250 -10 140 20 60C50 -20 150 5 150 5Z" fill="white"/></svg>
       </div>
       <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="section-kicker w-fit border-white/10 bg-white/[0.05] shadow-none mb-6">
+        <div class="section-kicker w-fit border-white/10 bg-white/[0.08] text-white shadow-none mb-6">
           <LucideIcon name="Handshake" class="h-4 w-4 text-golden" />
           Pourquoi devenir partenaire
         </div>
@@ -179,25 +182,7 @@ const lang = "fr";
       </div>
     </section>
 
-    <!-- Une invitation -->
-    <section class="relative py-24 md:py-32 bg-primary text-white overflow-hidden">
-      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <svg class="absolute top-8 right-8 w-64 h-64 opacity-[0.05]" viewBox="0 0 300 300" fill="none"><circle cx="150" cy="150" r="140" fill="white"/></svg>
-      </div>
-      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-5xl font-heading font-bold mb-6">Et si nous imaginions ensemble</h2>
-        <p class="text-2xl text-golden font-heading font-bold italic mb-6">ce qui n'existe pas encore ?</p>
-        <p class="text-lg text-white/80 leading-relaxed max-w-2xl mx-auto">Les plus beaux projets sont souvent ceux que personne ne pouvait construire seul.</p>
-        <div class="mt-10">
-          <a href="/pachatopia/contacts/" class="button-primary-dark text-lg">
-            Devenir partenaire
-            <LucideIcon name="ArrowRight" class="w-5 h-5 inline-block ml-2" />
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <CallToAction lang={lang} />
+    <CallToAction lang={lang} buttonText="Devenir partenaire" buttonHref="/pachatopia/contacts/?type=partenaire" />
   </main>
   <Footer lang={lang} />
 </Layout>

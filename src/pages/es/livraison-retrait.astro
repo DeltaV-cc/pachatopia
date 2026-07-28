@@ -1,0 +1,41 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import CallToAction from "../../components/CallToAction.astro";
+const lang = "es";
+---
+<Layout title="Entrega, retiro y puntos de relevo — Pachatopia" description="Hacer circular el Movimiento con simplicidad" lang={lang}>
+  <Header lang={lang} />
+  <main>
+    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
+      <div class="absolute inset-0"><img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-primary/85"></div></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Entrega, retiro y puntos de relevo</h1>
+        <p class="text-xl md:text-2xl text-white/90">Hacer circular el Movimiento con simplicidad</p>
+        <div class="mt-8">
+          <a href="/pachatopia/es/contacts/?type=depot" class="button-primary-dark inline-flex">Convertirse en punto de relevo</a>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
+<p>El Movimiento Pachatopia busca crear vínculos vivos entre los cultivos, los territorios y las personas que los sostienen. Pero para que un vínculo siga vivo, también debe poder circular con claridad. Esta página reúne la información práctica sobre entregas, retiros y puntos de relevo.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Una logística pensada con realismo</h2>
+<p>Preferimos una logística simple, honesta y progresiva a un sistema que prometiera más de lo que realmente puede cumplir. El proyecto aún crece. Las producciones evolucionan. Las capacidades de preparación, envío y relevo se construyen paso a paso. Por eso hemos elegido avanzar con claridad, flexibilidad y coherencia con la realidad del terreno.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Gastos de envío</h2>
+<p>Los gastos de envío no están incluidos en los importes de los Pasaportes, apadrinamientos o suscripciones. Dependen del país de destino, del peso del paquete, del modo de entrega elegido y de los relevos logísticos disponibles en el momento del envío. Cuando las condiciones lo permiten, buscamos siempre proponer la solución más simple, más coherente y más justa.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Entrega</h2>
+<p>Las entregas pueden proponerse según las zonas y las posibilidades del momento. Buscamos organizar los envíos con la mayor regularidad posible, respetando al mismo tiempo el tiempo de lo vivo, la disponibilidad real de las producciones, las capacidades del equipo y la calidad de las preparaciones. Nuestra prioridad no es ir demasiado deprisa. Nuestra prioridad es seguir siendo fiables, coherentes y sinceros.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Retiro en punto de relevo</h2>
+<p>Cuando es posible, deseamos desarrollar retiros a través de puntos de relevo. Esta solución permite simplificar ciertos envíos, reducir los costes logísticos, crear lugares de encuentro en torno al Movimiento y hacer circular el café, los cultivos y los apoyos de manera más fluida. Los puntos de relevo podrán desarrollarse progresivamente según los países, los socios y los apoyos locales.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Retiro local</h2>
+<p>En algunos casos, podrá proponerse un retiro local, en particular en Colombia o a través de ciertos relevos del Movimiento. Esta opción dependerá de las posibilidades concretas del territorio, de las personas implicadas y de la naturaleza de los productos o de los apoyos concernidos.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Una organización que evoluciona con el Movimiento</h2>
+<p>El sistema de entrega, retiro y puntos de relevo aún está en construcción. Evolucionará con el desarrollo del proyecto, el aumento de la producción, la organización de los equipos, los países concernidos y las redes locales que se unan al Movimiento. Preferimos anunciar lo que es realmente posible, en lugar de prometer un sistema perfecto antes de que esté listo.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Una precisión importante</h2>
+<p>Las modalidades prácticas pueden variar según los territorios. La visión del Movimiento permanece la misma. Pero los medios de pago, los costes, los relevos, los plazos y las formas de distribución pueden diferir entre Francia, Suiza, Colombia y, mañana, otros países. Por eso construimos una base universal, acompañada de soluciones locales adaptadas a cada territorio.</p>
+    </div></section>
+    <CallToAction lang={lang} buttonText="Convertirse en punto de relevo" buttonHref="/pachatopia/es/contacts/?type=depot" />
+  </main>
+  <Footer lang={lang} />
+</Layout>

@@ -1,0 +1,257 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import LucideIcon from "../../components/LucideIcon.astro";
+
+const lang = "es";
+
+const contactTypes = [
+  {
+    id: "depot",
+    icon: "Package",
+    label: "Depósito-venta / punto de retiro",
+    title: "Crear un punto de retiro vivo",
+    description: "Ayudar a hacer circular el café, los productos y las ideas del Movimiento en su territorio.",
+    fields: ["name", "email", "phone", "city", "organization", "relay", "availability", "message"],
+  },
+  {
+    id: "partenaire",
+    icon: "Handshake",
+    label: "Convertirse en aliado",
+    title: "Construir una alianza",
+    description: "Empresas, asociaciones, escuelas, investigadores, entidades territoriales o fundaciones: díganos qué podemos imaginar juntos.",
+    fields: ["name", "email", "phone", "city", "organization", "availability", "message"],
+  },
+  {
+    id: "ambassadeur",
+    icon: "Megaphone",
+    label: "Convertirse en embajador",
+    title: "Hacer circular el Movimiento",
+    description: "Organizar un encuentro, presentar Pachatopia, compartir un café o hacer viajar una idea a su alrededor.",
+    fields: ["name", "email", "phone", "city", "availability", "message"],
+  },
+  {
+    id: "volontaire",
+    icon: "TentTree",
+    label: "Venir como voluntario",
+    title: "Preparar una estancia en el lugar",
+    description: "Presente su periodo, su energía, sus experiencias y lo que desea aprender u ofrecer al lugar.",
+    fields: ["name", "email", "phone", "city", "dates", "duration", "skills", "languages", "needs", "commitment", "message"],
+  },
+  {
+    id: "idee",
+    icon: "Lightbulb",
+    label: "Compartir una idea",
+    title: "Una idea, una intuición, una pregunta",
+    description: "Comparta lo que lleva dentro, aunque aún no esté perfectamente formulado.",
+    fields: ["name", "email", "city", "message"],
+  },
+];
+
+const shareItems = [
+  "Una intuición",
+  "Una experiencia",
+  "Una investigación",
+  "Un contacto",
+  "Una técnica",
+  "Una idea de cultivo",
+  "Una solución local",
+  "Una pregunta",
+];
+---
+
+<Layout
+  title="Contáctenos — Pachatopia"
+  description="Compartir una idea, proponer una alianza, convertirse en embajador, punto de retiro o voluntario con Pachatopia."
+  lang={lang}
+>
+  <Header lang={lang} />
+  <main>
+    <section class="relative overflow-hidden bg-primary py-24 text-white md:py-32">
+      <div class="absolute inset-0">
+        <img src="/pachatopia/images/farm-hero.jpg" alt="" class="h-full w-full object-cover" aria-hidden="true" />
+        <div class="absolute inset-0 bg-primary/85"></div>
+      </div>
+      <div class="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+        <h1 class="mb-6 font-heading text-4xl font-bold md:text-5xl lg:text-6xl">Contáctenos</h1>
+        <p class="text-xl text-white/90 md:text-2xl">Cada encuentro puede convertirse en una semilla de esperanza.</p>
+      </div>
+    </section>
+
+    <section class="bg-white py-16">
+      <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+        <span class="section-kicker mb-6">
+          <LucideIcon name="Lightbulb" class="h-4 w-4 text-accent" />
+          Entrar en relación
+        </span>
+        <h2 class="mb-6 font-heading text-3xl font-bold text-primary md:text-4xl">Una inteligencia colectiva al servicio de lo vivo</h2>
+        <div class="space-y-5 text-lg leading-relaxed text-gray-700">
+          <p>Ningún ser vivo construye solo un ecosistema. Los árboles, los hongos, los insectos, los ríos, las aves y los microorganismos desempeñan cada uno un papel.</p>
+          <p>El Movimiento Pachatopia avanza con una visión y una experiencia de terreno, pero también crece gracias a las personas que aportan saberes, preguntas, lugares, redes o un deseo sincero de contribuir.</p>
+        </div>
+        <div class="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {shareItems.map((item) => (
+            <span class="rounded-full border border-primary/10 bg-primary/[0.04] px-4 py-3 text-sm font-semibold text-primary">{item}</span>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cream py-16 md:py-24">
+      <div class="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 sm:px-6 lg:grid-cols-[0.82fr_1.18fr] lg:px-8">
+        <aside class="surface-card p-6 md:p-8 lg:sticky lg:top-24 lg:self-start">
+          <h2 class="font-heading text-2xl font-bold text-primary">Su solicitud</h2>
+          <p class="mt-3 text-sm leading-6 text-gray-600">Elija el camino que mejor corresponda a su intención. El formulario se adapta automáticamente.</p>
+          <div class="mt-6 space-y-3">
+            {contactTypes.map((type) => (
+              <button
+                type="button"
+                class="contact-type flex w-full items-center gap-3 rounded-xl border border-primary/10 bg-white p-4 text-left transition hover:border-accent hover:shadow-md"
+                data-type={type.id}
+                data-title={type.title}
+                data-description={type.description}
+                data-fields={type.fields.join(",")}
+              >
+                <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10">
+                  <LucideIcon name={type.icon} class="h-5 w-5 text-primary" />
+                </span>
+                <span>
+                  <span class="block font-heading text-lg font-bold text-primary">{type.label}</span>
+                  <span class="mt-1 block text-sm text-gray-500">{type.description}</span>
+                </span>
+              </button>
+            ))}
+          </div>
+        </aside>
+
+        <div class="surface-card p-6 md:p-8">
+          <div class="mb-8">
+            <p id="form-kicker" class="text-sm font-semibold text-accent">Compartir una idea</p>
+            <h2 id="form-title" class="mt-2 font-heading text-3xl font-bold text-primary">Una idea, una intuición, una pregunta</h2>
+            <p id="form-description" class="mt-3 text-gray-600">Comparta lo que lleva dentro, aunque aún no esté perfectamente formulado.</p>
+          </div>
+
+          <form id="contact-form" class="space-y-5" action="mailto:contact@pachatopia.org" method="post" enctype="text/plain">
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+              <label class="form-field block" data-field="name">
+                <span class="text-sm font-semibold text-primary">Nombre y apellidos</span>
+                <input id="field-name" name="Nombre y apellidos" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="Su nombre" />
+              </label>
+              <label class="form-field block" data-field="email">
+                <span class="text-sm font-semibold text-primary">Correo electrónico</span>
+                <input id="field-email" name="Correo electrónico" type="email" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="usted@email.com" />
+              </label>
+              <label class="form-field block" data-field="phone">
+                <span class="text-sm font-semibold text-primary">Teléfono / WhatsApp</span>
+                <input id="field-phone" name="Teléfono WhatsApp" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="+34..." />
+              </label>
+              <label class="form-field block" data-field="city">
+                <span class="text-sm font-semibold text-primary">Ciudad / país</span>
+                <input id="field-city" name="Ciudad país" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="Su territorio" />
+              </label>
+              <label class="form-field block" data-field="organization">
+                <span class="text-sm font-semibold text-primary">Organización</span>
+                <input id="field-organization" name="Organización" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="Empresa, escuela, asociación..." />
+              </label>
+              <label class="form-field block" data-field="relay">
+                <span class="text-sm font-semibold text-primary">Tipo de punto</span>
+                <select id="field-relay" name="Tipo de punto" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent">
+                  <option>Punto de retiro</option>
+                  <option>Depósito-venta</option>
+                  <option>Distribución local</option>
+                  <option>Otra propuesta</option>
+                </select>
+              </label>
+              <label class="form-field block" data-field="dates">
+                <span class="text-sm font-semibold text-primary">Periodo deseado</span>
+                <input id="field-dates" name="Periodo deseado" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="Mes, fechas o temporada" />
+              </label>
+              <label class="form-field block" data-field="duration">
+                <span class="text-sm font-semibold text-primary">Duración deseada</span>
+                <input id="field-duration" name="Duración deseada" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="1 semana, 1 mes..." />
+              </label>
+              <label class="form-field block" data-field="skills">
+                <span class="text-sm font-semibold text-primary">Experiencias útiles</span>
+                <input id="field-skills" name="Experiencias útiles" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="Agroforestería, cocina, construcción..." />
+              </label>
+              <label class="form-field block" data-field="languages">
+                <span class="text-sm font-semibold text-primary">Idiomas hablados</span>
+                <input id="field-languages" name="Idiomas hablados" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="Español, francés, inglés..." />
+              </label>
+              <label class="form-field block md:col-span-2" data-field="needs">
+                <span class="text-sm font-semibold text-primary">Necesidades particulares</span>
+                <input id="field-needs" name="Necesidades particulares" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="Salud, alimentación, movilidad..." />
+              </label>
+              <label class="form-field flex items-start gap-3 rounded-xl border border-primary/10 bg-white p-4 md:col-span-2" data-field="commitment">
+                <input id="field-commitment" name="Compromiso comprendido" type="checkbox" class="mt-1 h-5 w-5 rounded border-primary/20 text-accent" />
+                <span class="text-sm leading-6 text-gray-700">Comprendo que Pachatopia no es una estancia turística clásica, sino un lugar vivo que pide escucha, humildad y compromiso.</span>
+              </label>
+            </div>
+
+            <label class="form-field block" data-field="availability">
+              <span class="text-sm font-semibold text-primary">Disponibilidad para ser recontactado</span>
+              <input id="field-availability" name="Disponibilidad" type="text" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="Días, horarios, canal preferido..." />
+            </label>
+
+            <label class="form-field block" data-field="message">
+              <span class="text-sm font-semibold text-primary">Mensaje</span>
+              <textarea id="field-message" name="Mensaje" rows="6" class="mt-2 w-full rounded-xl border border-primary/10 px-4 py-3 outline-none focus:border-accent" placeholder="Cuéntenos su intención."></textarea>
+            </label>
+
+            <div class="flex justify-end">
+              <button type="submit" class="button-primary-dark justify-center">Enviar mi solicitud</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16">
+      <div class="mx-auto max-w-4xl px-4 text-center">
+        <h2 class="mb-4 font-heading text-3xl font-bold text-primary md:text-4xl">Preguntas frecuentes</h2>
+        <div class="mx-auto mb-10 h-1 w-20 rounded-full bg-golden"></div>
+        <div class="space-y-3 text-left">
+          <details class="group overflow-hidden rounded-xl bg-cream"><summary class="flex cursor-pointer items-center justify-between p-5 font-heading font-bold text-primary transition-colors hover:text-accent">¿Cómo unirse al Movimiento?<span class="text-primary/40 transition-transform group-open:rotate-180">▼</span></summary><div class="px-5 pb-5 text-gray-700">La manera más simple es obtener el Pasaporte Pachatopia o elegir una forma de participación que más le resuene.</div></details>
+          <details class="group overflow-hidden rounded-xl bg-cream"><summary class="flex cursor-pointer items-center justify-between p-5 font-heading font-bold text-primary transition-colors hover:text-accent">¿Se puede venir al lugar?<span class="text-primary/40 transition-transform group-open:rotate-180">▼</span></summary><div class="px-5 pb-5 text-gray-700">Sí. Los voluntarios pueden venir con sinceridad, compromiso y ganas de aprender de lo vivo.</div></details>
+          <details class="group overflow-hidden rounded-xl bg-cream"><summary class="flex cursor-pointer items-center justify-between p-5 font-heading font-bold text-primary transition-colors hover:text-accent">¿Se puede convertirse en aliado?<span class="text-primary/40 transition-transform group-open:rotate-180">▼</span></summary><div class="px-5 pb-5 text-gray-700">Sí. Empresas, fundaciones, escuelas, investigadores, asociaciones, artesanos o emprendedores pueden proponer una alianza.</div></details>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer lang={lang} />
+</Layout>
+
+<script define:vars={{ contactTypes }}>
+  const typeButtons = [...document.querySelectorAll(".contact-type")];
+  const formFields = [...document.querySelectorAll(".form-field")];
+  const formKicker = document.getElementById("form-kicker");
+  const formTitle = document.getElementById("form-title");
+  const formDescription = document.getElementById("form-description");
+  let activeType = contactTypes[0];
+
+  function setActiveType(typeId) {
+    activeType = contactTypes.find((type) => type.id === typeId) || contactTypes[0];
+    const visibleFields = new Set(activeType.fields);
+
+    typeButtons.forEach((button) => {
+      const isActive = button.dataset.type === activeType.id;
+      button.classList.toggle("border-accent", isActive);
+      button.classList.toggle("ring-2", isActive);
+      button.classList.toggle("ring-accent/25", isActive);
+    });
+
+    formFields.forEach((field) => {
+      field.classList.toggle("hidden", !visibleFields.has(field.dataset.field));
+    });
+
+    formKicker.textContent = activeType.label;
+    formTitle.textContent = activeType.title;
+    formDescription.textContent = activeType.description;
+  }
+
+  typeButtons.forEach((button) => button.addEventListener("click", () => setActiveType(button.dataset.type)));
+
+  const params = new URLSearchParams(window.location.search);
+  setActiveType(params.get("type") || "idee");
+</script>

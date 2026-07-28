@@ -1,13 +1,18 @@
 ---
 import { useTranslations } from '../i18n/translations';
+import type { Lang } from '../i18n/translations';
 import LucideIcon from './LucideIcon.astro';
 
 interface Props {
-  lang?: "fr" | "en";
+  lang?: Lang;
+  buttonText?: string;
+  buttonHref?: string;
 }
 
-const { lang = "fr" } = Astro.props;
+const { lang = "fr", buttonText, buttonHref } = Astro.props;
 const t = useTranslations(lang);
+const ctaHref = buttonHref ?? (lang === "fr" ? "/pachatopia/contacts/" : `/pachatopia/${lang}/contacts/`);
+const ctaLabel = buttonText ?? t("cta.button");
 ---
 
 <section data-testid="cta-section" data-motion="skip" class="relative py-24 md:py-32 overflow-hidden">
@@ -86,10 +91,10 @@ const t = useTranslations(lang);
 
     <!-- CTA Button -->
     <a
-      href={lang === "en" ? "/pachatopia/en/contacts/" : "/pachatopia/contacts/"}
+      href={ctaHref}
       class="button-primary-dark group text-lg"
     >
-      <span>{t("cta.button")}</span>
+      <span>{ctaLabel}</span>
       <LucideIcon name="ArrowRight" class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
     </a>
 

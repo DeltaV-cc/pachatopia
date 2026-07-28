@@ -1,0 +1,39 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import CallToAction from "../../components/CallToAction.astro";
+const lang = "es";
+---
+<Layout title="El Café — Pachatopia" description="La primera puerta de entrada del Movimiento" lang={lang}>
+  <Header lang={lang} />
+  <main>
+    <section class="relative text-white py-24 md:py-32 bg-primary overflow-hidden">
+      <div class="absolute inset-0"><img src="/pachatopia/images/farm-hero.jpg" alt="" class="w-full h-full object-cover" /><div class="absolute inset-0 bg-primary/85"></div></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">El Café</h1>
+        <p class="text-xl md:text-2xl text-white/90">La primera puerta de entrada del Movimiento</p>
+      </div>
+    </section>
+    <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
+<p>Cada mañana, millones de personas empiezan su día con una taza de café. Se comparte entre amigos. Se bebe en familia. Se acoge a un desconocido alrededor de un café. Se celebra un encuentro. Se toma el tiempo de intercambiar. Desde hace generaciones, el café acerca a los seres humanos.</p>
+<p>El café forma parte de las bebidas más compartidas del mundo. Por esa razón el Movimiento Pachatopia eligió empezar por él. No porque el café sea nuestro objetivo. Sino porque es un formidable creador de vínculos. Una simple taza puede abrir una conversación. Una conversación puede hacer nacer una idea. Una idea puede cambiar una vida. Y miles de vidas pueden transformar un territorio. El café es nuestra primera puerta de entrada. Lo vivo es nuestro destino.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">¿Por qué empezar por el café?</h2>
+<p>Podríamos haber empezado por otro cultivo. Elegimos el café porque ya está presente en el día a día de millones de personas. El café está profundamente ligado a la historia de Colombia. Millones de familias viven de su cultivo. Para muchas de ellas, representa mucho más que una cosecha. Es una historia familiar. Un saber hacer. Una identidad. Al elegir empezar por el café, quisimos partir de un cultivo ya presente, profundamente arraigado en el territorio, para acompañar progresivamente una transición hacia sistemas más respetuosos de lo vivo. No buscamos reemplazar lo que existe. Buscamos hacerlo evolucionar.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Una taza que cuenta una historia</h2>
+<p>Detrás de cada taza de café se esconde una historia. Una tierra. Un clima. Un árbol. Un productor. Una familia. Un territorio. Durante mucho tiempo, esas historias permanecieron invisibles. El café se convertía en un simple producto. Deseamos devolverle un rostro. Cuando comparten un café Pachatopia, descubren también a las mujeres y los hombres que lo cultivan, los paisajes de los que proviene y el enfoque que lo acompaña. Porque creemos que una relación vale más que una simple transacción. En Pachatopia no cultivamos solo café. Cultivamos relaciones.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Una agricultura que aprende de lo vivo</h2>
+<p>En Pachatopia consideramos el café como una especie entre las demás. No está destinado a crecer solo. Buscamos progresivamente integrarlo en sistemas agroforestales donde árboles, frutos, plantas medicinales, cultivos alimentarios y biodiversidad cooperan de forma natural. Aprendemos a producir con lo vivo en lugar de contra él. Cada temporada se convierte en una nueva ocasión de observar, experimentar y progresar. El café nos permite explorar otra manera de cultivar.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">¿Por qué elegimos el apadrinamiento?</h2>
+<p>En Pachatopia no queríamos que el café fuera un simple producto que se compra y luego se olvida. Queríamos que creara una relación. Una relación entre una persona que cultiva. Una tierra que alimenta. Y una persona que elige acompañar esta aventura. Por eso elegimos el apadrinamiento. Cuando apadrinan un cultivo, no solo participan en una cosecha. Acompañan una transición agroforestal, apoyan el trabajo de un productor y contribuyen al desarrollo del Laboratorio de lo Vivo. El café se convierte entonces en mucho más que una bebida. Se convierte en el vínculo entre quienes cuidan la tierra y quienes eligen acompañarlos. Porque creemos que las más bellas cosechas nacen siempre de una relación de confianza.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Mucho más que una bebida</h2>
+<p>El café reúne a las personas. El Movimiento Pachatopia busca reunir a quienes desean recuperar una relación más armoniosa con lo vivo. Cada taza se convierte en una invitación. A descubrir una historia. A conocer un territorio. A apoyar una transición. A abrir una conversación. A hacer nacer una nueva semilla de esperanza.</p>
+<h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Una primera semilla</h2>
+<p>El café es la primera semilla del Movimiento. Mañana, otros cultivos, otros saberes, otros proyectos vendrán a enriquecer esta aventura. Pero cada bosque comienza con una primera semilla. Para nosotros, esa primera semilla simplemente eligió la forma de una taza de café.</p>
+<p class="text-primary font-heading italic text-xl">Aprendemos de lo vivo.</p>
+<div class="bg-primary text-white rounded-2xl p-10 my-12 text-center"><h3 class="text-2xl font-heading font-bold mb-4">Compartir una taza</h3><p class="mb-6">Crear una relación. Hacer crecer lo vivo.</p><a href="/pachatopia/es/parrainer-une-culture/" class="button-primary-dark">Descubrir nuestro café</a></div>
+    </div></section>
+    <CallToAction lang={lang} />
+  </main>
+  <Footer lang={lang} />
+</Layout>

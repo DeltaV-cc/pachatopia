@@ -13,6 +13,11 @@ const lang = "fr";
       <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Le Passeport Pachatopia</h1>
         <p class="text-xl md:text-2xl text-white/90">Devenir Gardien du Vivant</p>
+        <div class="mt-8 mx-auto max-w-xl rounded-2xl border border-white/20 bg-white/10 p-5 shadow-2xl backdrop-blur text-center">
+          <p class="font-heading text-2xl font-bold text-white">Le Passeport Pachatopia</p>
+          <p class="mt-2 text-lg text-white/85">à partir de <strong class="text-golden">5 € par mois</strong> ou <strong class="text-golden">50 € par an</strong></p>
+          <a href="/pachatopia/donation/?type=passeport" class="button-primary-dark mt-5 inline-flex">Obtenir le Passeport</a>
+        </div>
       </div>
     </section>
     <section class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 space-y-4 text-lg text-gray-700 leading-relaxed">
@@ -25,12 +30,10 @@ const lang = "fr";
 <p>Chaque Passeport contribue à faire grandir le Mouvement. Il accompagne le développement du Laboratoire du Vivant. Il soutient les expérimentations agroforestières. Il participe à préserver des espaces de liberté pour le vivant. Il permet de transmettre les connaissances acquises afin qu'elles puissent inspirer d'autres initiatives. Chaque contribution devient une graine de plus dans une aventure collective qui dépasse chacun d'entre nous.</p>
 <h2 class="text-3xl font-heading font-bold text-primary mt-10 mb-4">Une communauté qui apprend ensemble</h2>
 <p>Le Passeport ne fait pas de vous un simple soutien. Il vous relie à une communauté. Une communauté qui observe. Qui apprend. Qui expérimente. Qui transmet. Parce que nous croyons qu'aucune personne ne détient, à elle seule, toutes les réponses. Mais que chacun peut contribuer à faire grandir l'intelligence collective.</p>
-<div class="bg-cream rounded-2xl p-8 my-8 text-center"><h2 class="text-2xl font-heading font-bold text-primary">Le Passeport Pachatopia</h2><p class="text-3xl font-heading text-primary mt-3">à partir de 5 € par mois</p><p class="text-xl text-gray-600">ou 50 € par an</p></div>
 <p>Plus qu'une adhésion, le Passeport marque le début d'un chemin. Celui d'une communauté qui choisit de faire grandir le vivant.</p>
 <p class="text-primary font-heading italic text-xl">Chaque forêt commence par une graine. Chaque voyage commence par un premier pas. Chaque mouvement commence par une personne qui choisit d'agir. Peut-être que ce premier pas est le vôtre.</p>
-<div class="bg-primary text-white rounded-2xl p-10 my-12 text-center"><h3 class="text-2xl font-heading font-bold mb-4">Rejoindre le Mouvement</h3><p class="mb-6">Devenez Gardien du Vivant. Rejoignez une communauté qui apprend du vivant.</p><a href="/pachatopia/contacts/" class="button-primary-dark">Obtenir le Passeport Pachatopia</a></div>
     </div></section>
-    <CallToAction lang={lang} />
+    <CallToAction lang={lang} buttonText="Obtenir le Passeport Pachatopia" buttonHref="/pachatopia/donation/?type=passeport" />
   </main>
   <Footer lang={lang} />
 </Layout>
